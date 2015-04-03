@@ -1,5 +1,6 @@
 #include <iostream>
 #include <Windows.h>
+#include <string>
 
 int score;      ///What is your score and total knowledge of Hamlet?
 int storyNum;   ///Where are you in the plot?
@@ -55,6 +56,19 @@ void printScr()
 }
 
 /********************************
+    Print the Intro/Tutorial
+    of the game. Will not be
+    changed.
+********************************/
+
+void printIntro()
+{
+    std::string intro;
+    intro = "Welcome to Hamlet RPG. In this game, you will play mainly as Hamlet, but also as other characters. The actions " ...
+            "of Hamlet will affect his well-being (status), while the actions of other playable characters will affect the story " ...
+            "of the game.";
+}
+/********************************
     Output the Dialogue for
     the plot of the story.
 ********************************/
@@ -63,7 +77,10 @@ int storyDialogue()
 {
     while(storyOn)
     {
-        switch()
+        switch(storyNum)
+        {
+
+        }
     }
 }
 
