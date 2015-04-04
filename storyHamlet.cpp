@@ -257,6 +257,42 @@ int storyDialogue()
                 {
                   goto //line 238
                 }
+              case 9:
+                std::cout << "Rosencrantz and Guildenstern appear." << std::endl;
+                std::cout << "They say they are honored to see you. They ask you what you are doing in Denmark?" << std::endl;
+                std::cout << "1. Welcome my friends! We have so much to catch up on!" std::endl;
+                std::cout << "2. Dude, I know that the king sent you two." << std::endl;
+                std::cin >> choice;
+                if (choice == 1)
+                {
+                  storyNum = 10;
+                }
+                else if (choice == 2)
+                {
+                  storyNum = 11
+                }
+                else ()
+                {
+                  
+                }
+              case 10:
+                std::cout << "Yeah, they actaully did... I'm sorry my friend. " << std::endl;
+                std::cout << "1. Its ok, you are welcome to stay here at Elisnore. Hey, the actors for tonights play have "
+                  "arrived. Let's go watch." << std::endl;
+                std::cin >> choice;
+                if (choice == 1)
+                {
+                  storyNum = 12;
+                }
+                else
+                {
+                  std::cout << "That isn't a choice." << std::endl;
+                }
+              case 11:
+                std::cout << "You tell all of your secrets. Rosencrantz and Guildenstern happened to be spys! The king now "
+                  "knows your true plan. You are immediatly exiled to Wittenburg." << std::endl;
+                storyNum = 5;
+              case 12:
         }
     }
 }
