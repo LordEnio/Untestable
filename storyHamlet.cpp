@@ -4,7 +4,6 @@
 #include <conio.h>
 #include <windows.h>
 
-int storyNum = 1;       ///Where are you in the plot?
 int score;          ///Score and total knowledge of Hamlet
 int choice;
 
@@ -32,7 +31,7 @@ int choice;
      the plot of the story.
  ********************************/
 
- int storyDialogue()
+ int storyDialogue(int storyNum)
  {
     switch(storyNum)
     {
@@ -74,15 +73,28 @@ int choice;
         case 2:
             std::cout << "You are the prince of Elsinore. You have discovered that your father -king hamlet- has mysteriously died." << std::endl;
             std::cout << "Your mother (Gertrude) then remarries to your uncle (Claudius), after only a month of your father's death." << std::endl;
-            std::cout << "You're obviously pissed. Claudius asks why you are sad:" << std::endl;
-            std::cout << "1: You don't understand how torn apart I am" << std::endl;
+            std::cout << "You're obviously pissed.\n Claudius: Why are you so said Hamlet?" << std::endl;
+            std::cout << "1: You would never understand how torn apart I am" << std::endl;
             std::cout << "2: Because my mother has no respect for her body." << std::endl;
             std::cout << "3: Because of this marriage, but I totally understand that this marriage is diplomatically important." << std::endl;
             std::cin >> choice;
 
+            switch (choice)
+            {
+                case 1:
+                    std::cout << "Gertrude: It is ok Hamlet. You know we love you." << std::endl;
+
+                    storyNum = 3;
+                    goto endSwitch;
+                case 2:
+                    std::cout << "Gertrude: How dare you say that Hamlet!." << std::endl;
+                    std::cout << "Claudius: No need to yell at him Gertrude. ";
+            }
+
             if (choice == 1)
             {
                 storyNum = 3;
+                goto endSwitch;
             }
 
             else if (choice == 2)
@@ -97,25 +109,23 @@ int choice;
             std::cout << "Gertrude is happy with your response, but Claudius is a little suspicious.";
             storyNum = 3;
             }
-            break;
         case 3:
-            std::cout << "Gertrude pleads you to stay in Elsinore castle." << std::endl;
+            std::cout << "Gertrude: Why don't you stay with us in the castle?" << std::endl;
             std::cout << "1. I shall in my best obey you." << std::endl;
-                 std::cout << "2. I refuse your request." << std::endl;
-                 std::cin >> choice;
+            std::cout << "2. I refuse your request." << std::endl;
+            std::cin >> choice;
 
-                 if (choice == 1)
-                 {
-                   std::cout << "Gertrude thanks you.";
-                   storyNum = 4;
-                 }
+            if (choice == 1)
+            {
+                std::cout << "Gertrude thanks you.";
+                storyNum = 4;
+            }
 
-                  else if (choice == 2)
-                 {
-                   std::cout << "You leave the castle and head to Wittenburg." << std::endl;
-                   storyNum = 5;
-                 }
-                 break;
+            else if (choice == 2)
+            {
+                std::cout << "You leave the castle and head to Wittenburg." << std::endl;
+                storyNum = 5;
+            }
                case 4:
                  std::cout << "You are left alone in the castle after the King and Queen celebrate." << std::endl;
                  std::cout << "1. Let's go to the bar and drink away my grief." << std::endl;
@@ -301,16 +311,6 @@ int choice;
     endSwitch:
     return storyNum;
  }
-
-void printScr()
-{
-
-}
-
-
-
-
-
 
 
 
