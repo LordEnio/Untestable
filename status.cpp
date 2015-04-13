@@ -1,27 +1,12 @@
-#ifndef STATUS_HPP
-#define STATUS_HPP
+#include "status.h"
 
-class Status
+Player::Player()
 {
-  public:
-  int health;
-  int maxHealth;
-  int dmg;
-  unsigned int level;
-  unsigned int exp;
-  
-  
-    Status(int health, int maxHealth, int dmg, unsigned int level = 1, unsigned int exp)
-    {
-      this->health = health;
-      this->maxHealth = maxHealth;
-      this->dmg = dmg;
-      this->level = level;
-      this->exp = 0;
-    }
-    Status()
-    {
-    
-    }
-    
-    
+    health = 70;
+    maxHealth = 70;
+    dmg = 6;
+    suspicion = 0;
+    score = 0;
+}
+
+
