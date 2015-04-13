@@ -1,9 +1,10 @@
 #include <iostream>
 #include <Windows.h>
 #include <string>
-#include "..\Untestable\storyHamlet.h"
+#include "..\#Untestable\Untestable\storyHamlet.h"
 
-int score;      ///What is your score and total knowledge of Hamlet?
+bool storyOn = true;       ///Is the game plot still moving forward?
+int storyNum = 1;
 
 /********************************
     List of Colors for Screen
@@ -43,4 +44,8 @@ void col(unsigned short color)
 int main()
 {
     printIntro();
+    while (storyOn)
+    {
+        storyNum = storyDialogue(storyNum);
+    }
 }
