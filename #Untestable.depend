@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1429054598 source:c:\users\enio h\skydrive\documents\#untestable\main.cpp
+	<iostream>
+	<Windows.h>
+	<string>
+	"..\#Untestable\Untestable\storyHamlet.h"
+	"..\#Untestable\Untestable\status.h"
+
+1428277245 source:c:\users\enio h\skydrive\documents\untestable\status.cpp
+
+1428277245 c:\users\enio h\skydrive\documents\untestable\storyhamlet.h
+
+1428280784 source:c:\users\enio h\skydrive\documents\untestable\storyhamlet.cpp
+	"C:..\Untestable\storyHamlet.h"
+	<iostream>
+	<string>
+	<conio.h>
+
+1428896199 source:c:\users\enio h\skydrive\documents\#untestable\untestable\status.cpp
+	"status.h"
+
+1429054598 source:c:\users\enio h\skydrive\documents\#untestable\untestable\storyhamlet.cpp
+	"storyHamlet.h"
+	<iostream>
+	<string>
+	<conio.h>
+	<windows.h>
+
+1429054598 c:\users\enio h\skydrive\documents\#untestable\untestable\storyhamlet.h
+
+1428895768 c:\users\enio h\skydrive\documents\#untestable\untestable\status.h
+
