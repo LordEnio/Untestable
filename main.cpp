@@ -1,10 +1,10 @@
 #include <iostream>
 #include <Windows.h>
 #include <string>
-#include "..\Untestable\Untestable\storyHamlet.h"
-#include "..\Untestable\Untestable\status.h"
+#include "Untestable\storyHamlet.h"
+#include "Untestable\status.h"
 
-bool storyOn = true;       ///Is the game plot still moving forward?
+bool storyOn = true;
 int storyNum = 1;
 
 /********************************
@@ -42,7 +42,7 @@ void col(unsigned short color)
     SetConsoleTextAttribute(hcon,color);
 }
 
-void printScr(int health, int maxHealth, int dmg, int suspicion, int score)
+void printStats(int health, int maxHealth, int dmg, int suspicion, int score)
 {
     col(2);
     std::cout << "Health: " << health << "/" << maxHealth << "                       ";
@@ -60,7 +60,7 @@ int main()
     printIntro();
     while (storyOn)
     {
-        printScr(Hamlet.health, Hamlet.maxHealth, Hamlet.dmg, Hamlet.suspicion, Hamlet.score);
+        printStats(Hamlet.health, Hamlet.maxHealth, Hamlet.dmg, Hamlet.suspicion, Hamlet.score);
         storyNum = storyDialogue(storyNum);
     }
 }
