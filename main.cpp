@@ -2,7 +2,7 @@
 #include <Windows.h>
 #include <string>
 #include "Untestable\storyHamlet.h"
-#include "Untestable\status.h"
+#include "Untestable\player.h"
 
 bool storyOn = true;
 int storyNum = 1;

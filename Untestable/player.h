@@ -3,16 +3,20 @@
 
 class Player
 {
-    public:
-        Player();
+    private:
         int health;
         int maxHealth;
         int dmg;
-        unsigned int level;
-        unsigned int exp;
-        unsigned int levelUp(unsigned int);
-        bool levelUp();
         int suspicion;
         int score;
+        unsigned int level;
+        unsigned int exp;
+
+    public:
+        Player();
+
+        unsigned int levelUp(unsigned int);
+        bool levelUp();
+
 };
 #endif // STATUS_H
