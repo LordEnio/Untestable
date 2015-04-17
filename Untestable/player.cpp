@@ -2,13 +2,13 @@
 
 Player::Player()
 {
-    health = 70;
-    maxHealth = 70;
-    dmg = 6;
-    suspicion = 0;
-    score = 0;
-    exp = 0;
-    level = 1;
+    setHealth(70);
+    setMaxHealth(70);
+    setDmg(6);
+    setSuspicion(0);
+    setScore(0);
+    setExp(0);
+    setLevel(1);
 }
 
 void Player::setHealth(int h)
@@ -71,12 +71,12 @@ int Player::getScore()
     return score;
 }
 
-int Player::getExp()
+unsigned int Player::getExp()
 {
     return exp;
 }
 
-int Player::getLevel()
+unsigned int Player::getLevel()
 {
     return level;
 }

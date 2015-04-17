@@ -60,7 +60,7 @@ int main()
     printIntro();
     while (storyOn)
     {
-        printStats(Hamlet.health, Hamlet.maxHealth, Hamlet.dmg, Hamlet.suspicion, Hamlet.score);
+        printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
         storyNum = storyDialogue(storyNum);
     }
 }
