@@ -80,3 +80,23 @@ unsigned int Player::getLevel()
 {
     return level;
 }
+
+unsigned int Player::untilLevel(int level)
+{
+    expToLevel = 4*level*level;
+    return expToLevel;
+}
+
+bool Player::levelUp(int exp)
+{
+    if(int exp >= untilLevel(level + 1))
+    {
+        ++level;
+        maxHealth += level*level + rand() % 10;
+        health = maxHealth;
+        dmg += (1 + rand() % 9) + level
+        return true;
+    }
+    return false;
+}
+
