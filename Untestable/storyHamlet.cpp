@@ -1,4 +1,5 @@
 #include "storyHamlet.h"
+#include "global.h"
 #include <iostream>
 #include <string>
 #include <conio.h>
@@ -20,10 +21,10 @@ int choice;
              "of Hamlet will affect his well-being (status),\nwhile the actions of other playable characters will affect the story "
              "of the \ngame. The choices of Hamlet are up to you, but the only way to survive is to\nfollow the storyline. We HIGHLY "
              "recommend that you have knowledge of the story\nof Hamlet.";
+     std::cout << "--------------------------------------------------------------------------------";
      std::cout << intro << std::endl;
-     std::cout << "\n--------------------------------------------------------------------------------";
+     std::cout << "--------------------------------------------------------------------------------";
      getch();
-     system("cls");
  }
 
  /********************************
@@ -36,6 +37,7 @@ int choice;
     switch(storyNum)
     {
         case 1:
+            printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
             std::cout << "\nHoratio is skeptical whether there is a ghost or not. You, Horatio, and Bernardo will keep watch.\n" << std::endl;
             std::cout << "** hour later **\n" << std::endl;
             getch();
@@ -45,7 +47,6 @@ int choice;
             std::cout << "1. Throw the spear" << std::endl;
             std::cout << "2. Don't throw spear" <<std::endl;
             std::cin >> choice;
-            system("cls");
 
             if ((choice != 1))
             {

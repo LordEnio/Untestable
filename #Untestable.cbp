@@ -32,8 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Untestable/status.cpp" />
-		<Unit filename="Untestable/status.h" />
+		<Unit filename="Untestable/player.cpp" />
+		<Unit filename="Untestable/player.h" />
+		<Unit filename="Untestable/screen.cpp" />
+		<Unit filename="Untestable/screen.h" />
 		<Unit filename="Untestable/storyHamlet.cpp" />
 		<Unit filename="Untestable/storyHamlet.h" />
 		<Unit filename="main.cpp" />
