@@ -308,6 +308,10 @@ int choice;
                 std::cout << "You tell all of your secrets. Rosencrantz and Guildenstern happened to be spys! The king now "
                   "knows your true plan. You are immediatly exiled to Wittenburg." << std::endl;
                 storyNum = 5;
+                break;
+              case 12:
+              
+              
         }
     endSwitch:
     return storyNum;
