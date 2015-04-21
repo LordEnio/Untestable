@@ -9,7 +9,6 @@ class Player
         int dmg;
         int suspicion;
         int score;
-
         unsigned int level;
         unsigned int exp;
 
@@ -24,12 +23,12 @@ class Player
         void setLevel(int);
         void setExp(int);
 
-        int getHealth();
-        int getMaxHealth();
-        int getDmg();
-        int getSuspicion();
-        int getScore();
-        unsigned int getLevel();
-        unsigned int getExp();
+        int const getHealth();
+        int const getMaxHealth();
+        int const getDmg();
+        int const getSuspicion();
+        int const getScore();
+        unsigned int const getLevel();
+        unsigned int const getExp();
 };
 #endif // STATUS_H
