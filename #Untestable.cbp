@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Untestable/global.cpp" />
+		<Unit filename="Untestable/global.h" />
 		<Unit filename="Untestable/player.cpp" />
 		<Unit filename="Untestable/player.h" />
 		<Unit filename="Untestable/screen.cpp" />

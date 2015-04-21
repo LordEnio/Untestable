@@ -30,5 +30,11 @@ class Player
         int const getScore();
         unsigned int const getLevel();
         unsigned int const getExp();
+
+        unsigned int untilLevel();
+        bool levelUp();
 };
+
+extern Player Hamlet;
+
 #endif // STATUS_H

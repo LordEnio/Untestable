@@ -43,7 +43,10 @@ void col(unsigned short int k)
 
 void clrScr()
 {
-    std::cout << std::string( 100, '\n' );
+    for (int i = 1; i=100; i++)
+    {
+        std::cout << " \n";
+    }
 }
 
 void printStats(int health, int maxHealth, int dmg, int suspicion, int score)

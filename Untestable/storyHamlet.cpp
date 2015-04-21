@@ -1,4 +1,6 @@
 #include "storyHamlet.h"
+#include "player.h"
+#include "screen.h"
 #include "global.h"
 #include <iostream>
 #include <string>
@@ -25,6 +27,7 @@ int choice;
      std::cout << intro << std::endl;
      std::cout << "--------------------------------------------------------------------------------";
      getch();
+     clrScr();
  }
 
  /********************************
@@ -309,9 +312,6 @@ int choice;
                   "knows your true plan. You are immediatly exiled to Wittenburg." << std::endl;
                 storyNum = 5;
                 break;
-              case 12:
-              
-              
         }
     endSwitch:
     return storyNum;

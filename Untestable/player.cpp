@@ -1,4 +1,9 @@
 #include "player.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+Player Hamlet;
 
 Player::Player()
 {
@@ -46,57 +51,62 @@ void Player::setLevel(int l)
     level = l;
 }
 
-int Player::getHealth()
+int const Player::getHealth()
 {
     return health;
 }
 
-int Player::getMaxHealth()
+int const Player::getMaxHealth()
 {
     return maxHealth;
 }
 
-int Player::getDmg()
+int const Player::getDmg()
 {
     return dmg;
 }
 
-int Player::getSuspicion()
+int const Player::getSuspicion()
 {
     return suspicion;
 }
 
-int Player::getScore()
+int const Player::getScore()
 {
     return score;
 }
 
-unsigned int Player::getExp()
+unsigned int const Player::getExp()
 {
     return exp;
 }
 
-unsigned int Player::getLevel()
+unsigned int const Player::getLevel()
 {
     return level;
 }
 
-unsigned int Player::untilLevel(int level)
+unsigned int Player::untilLevel()
 {
-    expToLevel = 4*level*level;
+    int expToLevel;
+    expToLevel = level*level+4;
     return expToLevel;
 }
 
-bool Player::levelUp(int exp)
+bool Player::levelUp()
 {
-    if(int exp >= untilLevel(level + 1))
+    if(exp >= untilLevel())
     {
+        srand(time(NULL));
         ++level;
-        maxHealth += level*level + rand() % 10;
+        maxHealth += level*level + rand() % 10 + 1;
         health = maxHealth;
-        dmg += (1 + rand() % 9) + level
+        dmg += (rand() % 9 + 1) + level;
         return true;
     }
-    return false;
+    else
+    {
+        return false;
+    }
 }
 
