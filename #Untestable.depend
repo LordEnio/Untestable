@@ -77,3 +77,48 @@
 
 1429676499 source:c:\users\enio h\skydrive\documents\untestable\untestable\battle.cpp
 
+1429714212 source:z:\untestable\main.cpp
+	<iostream>
+	<Windows.h>
+	<string>
+	"Untestable/screen.h"
+	"Untestable/storyHamlet.h"
+	"Untestable/player.h"
+	"Untestable/global.h"
+
+1429714212 z:\untestable\untestable\screen.h
+
+1429714212 z:\untestable\untestable\storyhamlet.h
+
+1429714212 z:\untestable\untestable\player.h
+
+1429714212 z:\untestable\untestable\global.h
+
+1429714212 source:z:\untestable\untestable\battle.cpp
+
+1429714212 source:z:\untestable\untestable\global.cpp
+	"global.h"
+	"player.h"
+
+1429714212 source:z:\untestable\untestable\player.cpp
+	"player.h"
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1429714212 source:z:\untestable\untestable\screen.cpp
+	<iostream>
+	<windows.h>
+	"screen.h"
+
+1429714212 source:z:\untestable\untestable\storyhamlet.cpp
+	"storyHamlet.h"
+	"player.h"
+	"screen.h"
+	"global.h"
+	<iostream>
+	<string>
+	<conio.h>
+	<stdio.h>
+	<windows.h>
+

@@ -24,6 +24,8 @@ class Ghostling
         int const getDmg();
         bool getIsDead();
 
+        int standardAttack();
+        int Attack();
 };
 
 #endif // GHOSTLING_H
