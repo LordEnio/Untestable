@@ -94,7 +94,11 @@
 
 1429714212 z:\untestable\untestable\global.h
 
-1429714212 source:z:\untestable\untestable\battle.cpp
+1429730744 source:z:\untestable\untestable\battle.cpp
+	"battle.h"
+	<iostream>
+	"creatures.h"
+	<conio.h>
 
 1429714212 source:z:\untestable\untestable\global.cpp
 	"global.h"
@@ -121,4 +125,8 @@
 	<conio.h>
 	<stdio.h>
 	<windows.h>
+
+1429714212 z:\untestable\untestable\battle.h
+
+1429730666 z:\untestable\untestable\creatures.h
 

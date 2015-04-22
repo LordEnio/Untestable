@@ -1,4 +1,4 @@
-#include "ghostling.h"
+#include "creatures.h"
 #include "screen.h"
 #include <stdio.h>
 #include <iostream>

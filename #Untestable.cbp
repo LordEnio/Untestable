@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Untestable/battle.cpp" />
+		<Unit filename="Untestable/battle.h" />
+		<Unit filename="Untestable/ghostling.cpp" />
+		<Unit filename="Untestable/ghostling.h" />
 		<Unit filename="Untestable/global.cpp" />
 		<Unit filename="Untestable/global.h" />
 		<Unit filename="Untestable/player.cpp" />
