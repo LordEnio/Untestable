@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <conio.h>
+#include <stdio.h>
 #include <windows.h>
 
 int score;          ///Score and total knowledge of Hamlet
@@ -27,7 +28,7 @@ int choice;
      std::cout << intro << std::endl;
      std::cout << "--------------------------------------------------------------------------------";
      getch();
-     clrScr();
+     system("cls");
  }
 
  /********************************
@@ -41,6 +42,13 @@ int choice;
     {
         case 1:
             printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+            col(8);
+            std::cout << "\n              *** You are currently playing as";
+            col(3);
+            std::cout << " Marcellus";
+            col(8);
+            std::cout << " ***" << std::endl;
+            col(7);
             std::cout << "\nHoratio is skeptical whether there is a ghost or not. You, Horatio, and Bernardo will keep watch.\n" << std::endl;
             std::cout << "** hour later **\n" << std::endl;
             getch();
@@ -55,8 +63,10 @@ int choice;
             {
                 while ((choice != 1))
                 {
-                    std::cout << "\nWrong choice!! In order to beat this game you would want to make the correct\ndecisions" << std::endl;
-                    std::cout << "Marcellus: Should I kill it?" << std::endl;
+                    system("cls");
+                    printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                    std::cout << "\nWrong choice!! In order to beat this game you would want to make the correct\ndecisions.\n" << std::endl;
+                    std::cout << "Marcellus: Should I kill it?\n" << std::endl;
                     std::cout << "1.Throw the spear\n" << std::endl;
                     std::cout << "2.Don't throw the spear\n\n" << std::endl;
                     std::cin >> choice;
@@ -67,15 +77,18 @@ int choice;
             else
             {
                 endfirstwhile:
-                std::cout << "The spear passes through, and the ghost quietly disappears..." << std::endl;
+                system("cls");
+                printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                std::cout << "\nThe spear passes through, and the ghost quietly disappears..." << std::endl;
+                getch();
                 storyNum = 2;
                 goto endSwitch;
-
             }
 
 
         case 2:
-            std::cout << "You are the prince of Elsinore. You have discovered that your father -king hamlet- has mysteriously died." << std::endl;
+            printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+            std::cout << "\nYou are the prince of Elsinore. You have discovered that your father has \nmysteriously died.";
             std::cout << "Your mother (Gertrude) then remarries to your uncle (Claudius), after only a month of your father's death." << std::endl;
             std::cout << "You're obviously pissed.\n Claudius: Why are you so said Hamlet?" << std::endl;
             std::cout << "1: You would never understand how torn apart I am" << std::endl;
@@ -86,17 +99,20 @@ int choice;
             switch (choice)
             {
                 case 1:
+                    printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
                     std::cout << "Gertrude: It is ok Hamlet. You know we love you." << std::endl;
 
                     storyNum = 3;
                     goto endSwitch;
                 case 2:
+                    printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
                     std::cout << "Gertrude: How dare you say that Hamlet!." << std::endl;
                     std::cout << "Claudius: No need to yell at him Gertrude. ";
             }
 
             if (choice == 1)
             {
+                printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
                 storyNum = 3;
                 goto endSwitch;
             }
@@ -314,6 +330,7 @@ int choice;
                 break;
         }
     endSwitch:
+    system("cls");
     return storyNum;
  }
 

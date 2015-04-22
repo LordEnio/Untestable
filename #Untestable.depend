@@ -30,7 +30,7 @@
 
 1428895768 c:\users\enio h\skydrive\documents\#untestable\untestable\status.h
 
-1429661586 source:c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.cpp
+1429669445 source:c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.cpp
 	"storyHamlet.h"
 	"player.h"
 	"screen.h"
@@ -38,6 +38,7 @@
 	<iostream>
 	<string>
 	<conio.h>
+	<stdio.h>
 	<windows.h>
 
 1429054598 c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.h
@@ -59,7 +60,7 @@
 	<stdlib.h>
 	<time.h>
 
-1429661763 source:c:\users\enio h\skydrive\documents\untestable\untestable\screen.cpp
+1429674819 source:c:\users\enio h\skydrive\documents\untestable\untestable\screen.cpp
 	<iostream>
 	<windows.h>
 	"screen.h"
