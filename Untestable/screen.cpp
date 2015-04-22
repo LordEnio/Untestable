@@ -60,4 +60,5 @@ void printStats(int health, int maxHealth, int dmg, int suspicion, int score)
     std::cout << "\nSuspicion: " << suspicion << "%" << "                       ";
     col(11);
     std::cout << "Score: " << score << std::endl;
+    col(7);
 }

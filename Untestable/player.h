@@ -1,9 +1,10 @@
-#ifndef STATUS_H
-#define STATUS_H
+#ifndef PLAYER_H
+#define PLAYER_H
 
 class Player
 {
     private:
+
         int health;
         int maxHealth;
         int dmg;
@@ -37,4 +38,4 @@ class Player
 
 extern Player Hamlet;
 
-#endif // STATUS_H
+#endif // PLAYER_H

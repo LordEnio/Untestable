@@ -90,7 +90,7 @@ int choice;
             printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
             std::cout << "\nYou are the prince of Elsinore. You have discovered that your father has \nmysteriously died.";
             std::cout << "Your mother (Gertrude) then remarries to your uncle (Claudius), after only a month of your father's death." << std::endl;
-            std::cout << "You're obviously pissed.\n Claudius: Why are you so said Hamlet?" << std::endl;
+            std::cout << "You're obviously pissed.\n Claudius: Why are you so said Hamlet?\n" << std::endl;
             std::cout << "1: You would never understand how torn apart I am" << std::endl;
             std::cout << "2: Because my mother has no respect for her body." << std::endl;
             std::cout << "3: Because of this marriage, but I totally understand that this marriage is diplomatically important." << std::endl;
