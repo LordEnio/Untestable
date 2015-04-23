@@ -55,14 +55,11 @@ bool Ghostling::getIsDead()
 
 bool Ghostling::checkDeath()
 {
-    if (getIsDead() == false)
+    if (getHealth() > 0)
     {
         return false;
     }
-    else
-    {
         return true;
-    }
 }
 
 int Ghostling::standardAttack()
