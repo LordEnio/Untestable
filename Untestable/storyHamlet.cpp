@@ -332,6 +332,103 @@ int choice;
                   "knows your true plan. You are immediatly exiled to Wittenburg." << std::endl;
                 storyNum = 5;
                 break;
+              case 12:
+               std::cout << "After separating with Rosencrantz and Guildenstern,\n you are left alone in the castle.\n";
+               std::cout << "The words, 'To be or not to be' falls our of your mouth." << std::endl;
+               std::cout << "Huh? What does that mean?:\n";
+               std::cout << "1. Whether I take Claudius' life with my own hands or not?" << std::endl;
+               std::cout << "2. Whether I should end my life or not?" << std::endl;
+               std::cout << "3. Whether I should take part in the play or not?" << std::endl;
+               
+               std::cin >> choice;
+               
+               if (choice == 1)
+               {
+                score -= 2;
+               }
+               
+               else if (choice == 2)
+               {
+                score += 3;
+               }
+               
+               else if (choice == 3)
+               {
+                score -= 4;
+               }
+               
+               std::cout << "Whether 'tis nobler in the mind to \nsuffer the slings and arrows\n";
+               std::cout << "of outrageous fortune, or to take\n arms against a sea of troubles and, by\n";
+               std::cout << "opposing, end them:" << std::endl;
+               std::cout << "1. Is it nobler to live miserably or to end \none's sorrows with a single stroke?" << std::endl;
+               std::cout << "2. Is it wiser to wait out for the fortune that \nawaits after the death of Claudius or kill him now \nand take the possible punishment?" << std::endl;
+               
+               std::cin >> choice;
+               
+               if (choice == 1)
+               {
+                score += 1;
+               }
+               
+               else if (choice == 2)
+               {
+                score -= 2;
+               }
+               getch ();
+               std::cout << " To die: to sleep;" << std::endl;
+               std::cout << "No more; and by a sleep to say we end" << std::endl;
+               std::cout << "The heart-ache and the thousand natural shocks" << std::endl;
+               std::cout << "That flesh is heir to, ’tis a consummation" << std::endl;
+               std::cout << "Devoutly to be wish’d. To die, to sleep;" << std::endl;
+               std::cout << "To sleep: perchance to dream: ay, there’s the rub;" << std::endl;
+               std::cout << "For in that sleep of death what dreams may come" << std::endl;
+               std::cout << "When we have shuffled off this mortal coil," << std::endl;
+               std::cout << "Must give us pause: there’s the respect" << std::endl;
+               std::cout << "That makes calamity of so long life;" << std::endl;
+               getch();
+               system("cls");
+               std::cout << "For who would bear the whips and scorns of time," << std::endl;
+               std::cout << "The oppressor’s wrong, the proud man’s contumely," << std::endl;
+               std::cout << "The pangs of despised love, the law’s delay," << std::endl;
+               std::cout << "The insolence of office and the spurns" << std::endl; << std::endl;
+               std::cout << "That patient merit of the unworthy takes," << std::endl;
+               std::cout << "When he himself might his quietus make" << std::endl;
+               std::cout << "With a bare bodkin? who would fardels bear," << std::endl;
+               std::cout << "To grunt and sweat under a weary life," << std::endl;
+               std::cout << "But that the dread of something after death," << std::endl;
+               std::cout << "The undiscover’d country from whose bourn" << std::endl;
+               std::cout << "No traveller returns, puzzles the will" << std::endl;
+               std::cout << "And makes us rather bear those ills we have" << std::endl;
+               std::cout << "Than fly to others that we know not of?" << std::endl;
+               getch();
+               system("cls");
+               std::cout << "Thus conscience does make cowards of us all;" << std::endl;
+               std::cout << "And thus the native hue of resolution" << std::endl;
+               std::cout << "Is sicklied o’er with the pale cast of thought," << std::endl;
+               std::cout << "And enterprises of great pith and moment" << std::endl;
+               std::cout << "With this regard their currents turn awry," << std::endl;
+               std::cout << "And lose the name of action.–Soft you now!" << std::endl;
+               std::cout << "The fair Ophelia! Nymph, in thy orisons" << std::endl;
+               std::cout << "Be all my sins remember’d." << std::endl;
+               getch();
+               system("cls");
+               storyNum = 13;
+               break;
+              case 13:
+               std::cout << "Ophelia suddenly walks in and asks you for love again." << std::endl;
+               std::cout << "1.Let's get back together." << std::endl;
+               std::cout << "2.I never gave you thought." << std::endl;
+               std::cin >> choice;
+               
+               if (choice == 1)
+               {
+                storyNum = 14;
+               }
+               
+               else if (choice == 2)
+               {
+                storyNum = 15;
+               }
         }
     endSwitch:
     system("cls");
