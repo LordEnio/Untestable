@@ -328,6 +328,38 @@ int choice;
                   "knows your true plan. You are immediatly exiled to Wittenburg." << std::endl;
                 storyNum = 5;
                 break;
+              case 12:
+               std::cout << "After separating with Rosencrantz and Guildenstern,\n you are left alone in the castle.\n";
+               std::cout << "The words, 'To be or not to be' falls our of your mouth." << std::endl;
+               std::cout << "Huh? What does that mean?:\n";
+               std::cout << "1. Whether I take Claudius' life with my own hands or not?" << std::endl;
+               std::cout << "2. Whether I should end my life or not?" << std::endl;
+               std::cout << "3. Whether I should take part in the play or not?" << std::endl;
+               
+               std::cin >> choice;
+               
+               if (choice == 1)
+               {
+                score = score - 2;
+               }
+               
+               else if (choice == 2)
+               {
+                score += 3;
+               }
+               
+               else if (choice == 3)
+               {
+                score = score - 4;
+               }
+               
+               std::cout << "Whether 'tis nobler in the mind to \nsuffer the slings and arrows\n";
+               std::cout << "of outrageous fortune, or to take\n arms against a sea of troubles and, by\n";
+               std::cout << "opposing, end them:" << std::endl;
+               std::cout << "Is it nobler to live miserably or to end one's sorrows with a single stroke?" << std::endl;
+               std::cout << "Is it wiseer to wait out for the fortune that awaits after death of Claudius?" << std::endl;
+               
+               
         }
     endSwitch:
     system("cls");
