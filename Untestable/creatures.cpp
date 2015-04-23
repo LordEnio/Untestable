@@ -59,7 +59,12 @@ bool Ghostling::checkDeath()
     {
         return false;
     }
-        return true;
+    
+    else 
+    {
+        return true;        
+    }
+
 }
 
 int Ghostling::standardAttack()
