@@ -1,5 +1,5 @@
-#ifndef GHOSTLING_H
-#define GHOSTLING_H
+#ifndef CREATURES_H
+#define CREATURES_H
 
 class Ghostling
 {
@@ -24,6 +24,18 @@ class Ghostling
         int const getDmg();
         bool getIsDead();
 
+        int standardAttack();
+        int Attack();
 };
 
-#endif // GHOSTLING_H
+class KingHamlet
+{
+    private:
+
+        unsigned int health;
+        unsigned int maxHealth;
+        unsigned int dmg;
+};
+
+
+#endif // CREATURES_H
