@@ -1,7 +1,9 @@
 #include "player.h"
+#include "screen.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <iostream>
 
 Player Hamlet;
 
@@ -110,3 +112,64 @@ bool Player::levelUp()
     }
 }
 
+int Player::standardAttack()
+{
+    srand(time(NULL));
+    int dmgDealt;
+    dmgDealt = (getDmg() - 1) + rand() % 3;
+    return dmgDealt;
+}
+
+int Player::missAttack()
+{
+    int dmgDealt;
+    dmgDealt = 0;
+    return dmgDealt;
+}
+
+int Player::Attack()
+{
+    int dmgDealt;
+    srand(time(NULL));
+    int attackChoice;
+    attackChoice = rand() % 4 + 1;
+    if (attackChoice == 1 || attackChoice == 2 || attackChoice == 3)
+    {
+        dmgDealt = standardAttack();
+        std::cout << "You deal ";
+        col(12);
+        std::cout << dmgDealt;
+        col(7);
+        std::cout << " to the enemy!" << std::endl;
+    }
+    else
+    {
+        dmgDealt = missAttack();
+        std::cout << "You missed your target with your attack!" << std::endl;
+    }
+    return dmgDealt;
+}
+
+int Player::criticalAttack()
+{
+    int dmgDealt;
+    srand(time(NULL));
+    int attackChoice;
+    attackChoice = rand() % 4 + 1;
+    if (attackChoice == 2)
+    {
+        srand(time(NULL));
+        dmgDealt = (getDmg() + getDmg()) - rand() % 4 + 1;
+        std::cout << "You deal ";
+        col(12);
+        std::cout << dmgDealt;
+        col(7);
+        std::cout << " to the enemy!" << std::endl;
+    }
+    else
+    {
+        std::cout << "You missed your target with your attack!" << std::endl;
+        dmgDealt = missAttack();
+    }
+    return dmgDealt;
+}

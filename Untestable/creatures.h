@@ -23,6 +23,7 @@ class Ghostling
         int const getMaxHealth();
         int const getDmg();
         bool getIsDead();
+        bool checkDeath();
 
         int standardAttack();
         int Attack();

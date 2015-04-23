@@ -2,6 +2,8 @@
 #include "player.h"
 #include "screen.h"
 #include "global.h"
+#include "battle.h"
+#include "creatures.h"
 #include <iostream>
 #include <string>
 #include <conio.h>
@@ -81,9 +83,11 @@ int choice;
                 printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
                 std::cout << "\nThe spear passes through, and the ghost quietly disappears..." << std::endl;
                 getch();
+                battleActI();
                 storyNum = 2;
                 goto endSwitch;
             }
+
 
 
         case 2:
@@ -146,26 +150,26 @@ int choice;
                 std::cout << "You leave the castle and head to Wittenburg." << std::endl;
                 storyNum = 5;
             }
-               case 4:
-                 std::cout << "You are left alone in the castle after the King and Queen celebrate." << std::endl;
-                 std::cout << "1. Let's go to the bar and drink away my grief." << std::endl;
-                 std::cout << "2. I wish my flesh melts away." << std::endl;
-                 std::cin >> choice;
+        case 4:
+            std::cout << "You are left alone in the castle after the King and Queen celebrate." << std::endl;
+            std::cout << "1. Let's go to the bar and drink away my grief." << std::endl;
+            std::cout << "2. I wish my flesh melts away." << std::endl;
+            std::cin >> choice;
 
-                 if (choice == 1)
-                 {
-                   std::cout << "You go to the bar and spend all your money on drinks." << std::endl;
-                   std::cout << "It seems like Horatio was looking for you in the castle." << std::endl;
-                   std::cout << "However, he eventually forgot why he was looking for you, and gave up and went home." << std::endl;
-                   storyNum = 7;
-                 }
+            if (choice == 1)
+            {
+                std::cout << "You go to the bar and spend all your money on drinks." << std::endl;
+                std::cout << "It seems like Horatio was looking for you in the castle." << std::endl;
+                std::cout << "However, he eventually forgot why he was looking for you, and gave up and went home." << std::endl;
+                storyNum = 7;
+            }
 
-                 else if (choice == 2)
-                 {
-                   storyNum = 6;
-                 }
+            else if (choice == 2)
+            {
+                storyNum = 6;
+            }
 
-                 break;
+            break;
                case 5:
                  std::cout << "You reach Wittenburg, but you greeted by german thugs." << std::endl;
                  std::cout << "They jump on you hoping to take your money." << std::endl;

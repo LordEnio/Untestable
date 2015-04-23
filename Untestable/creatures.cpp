@@ -53,6 +53,18 @@ bool Ghostling::getIsDead()
     return isDead;
 }
 
+bool Ghostling::checkDeath()
+{
+    if (getIsDead() == false)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
 int Ghostling::standardAttack()
 {
     srand(time(NULL));

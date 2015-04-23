@@ -34,6 +34,11 @@ class Player
 
         unsigned int untilLevel();
         bool levelUp();
+
+        int missAttack();
+        int Attack();
+        int standardAttack();
+        int criticalAttack();
 };
 
 extern Player Hamlet;
