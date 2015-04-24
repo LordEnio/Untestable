@@ -339,37 +339,37 @@ int choice;
                std::cout << "1. Whether I take Claudius' life with my own hands or not?" << std::endl;
                std::cout << "2. Whether I should end my life or not?" << std::endl;
                std::cout << "3. Whether I should take part in the play or not?" << std::endl;
-               
+
                std::cin >> choice;
-               
+
                if (choice == 1)
                {
                 score -= 2;
                }
-               
+
                else if (choice == 2)
                {
                 score += 3;
                }
-               
+
                else if (choice == 3)
                {
                 score -= 4;
                }
-               
+
                std::cout << "Whether 'tis nobler in the mind to \nsuffer the slings and arrows\n";
                std::cout << "of outrageous fortune, or to take\n arms against a sea of troubles and, by\n";
                std::cout << "opposing, end them:" << std::endl;
                std::cout << "1. Is it nobler to live miserably or to end \none's sorrows with a single stroke?" << std::endl;
                std::cout << "2. Is it wiser to wait out for the fortune that \nawaits after the death of Claudius or kill him now \nand take the possible punishment?" << std::endl;
-               
+
                std::cin >> choice;
-               
+
                if (choice == 1)
                {
                 score += 1;
                }
-               
+
                else if (choice == 2)
                {
                 score -= 2;
@@ -390,7 +390,7 @@ int choice;
                std::cout << "For who would bear the whips and scorns of time," << std::endl;
                std::cout << "The oppressor’s wrong, the proud man’s contumely," << std::endl;
                std::cout << "The pangs of despised love, the law’s delay," << std::endl;
-               std::cout << "The insolence of office and the spurns" << std::endl; << std::endl;
+               std::cout << "The insolence of office and the spurns" << std::endl;
                std::cout << "That patient merit of the unworthy takes," << std::endl;
                std::cout << "When he himself might his quietus make" << std::endl;
                std::cout << "With a bare bodkin? who would fardels bear," << std::endl;
@@ -419,12 +419,12 @@ int choice;
                std::cout << "1.Let's get back together." << std::endl;
                std::cout << "2.I never gave you thought." << std::endl;
                std::cin >> choice;
-               
+
                if (choice == 1)
                {
                 storyNum = 14;
                }
-               
+
                else if (choice == 2)
                {
                 storyNum = 15;

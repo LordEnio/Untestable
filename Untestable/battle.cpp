@@ -57,14 +57,17 @@ void battleActI()
             case 3:
                 break;
         }
+        if (Ghostling1.getHealth() <= 0)
+        {
+            break;
+        }
         system("cls");
         printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
-        std::cout << "The Ghostling moves into attack!" << std::endl;
+        std::cout << "\nThe Ghostling moves into attack!\n" << std::endl;
         getch();
         ghostDmg = Ghostling1.Attack();
         Hamlet.setHealth(Hamlet.getHealth() - ghostDmg);
-        printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
-        std::cout << "Your health is now at ";
+        std::cout << "\nYour health is now at ";
         col(2);
         std::cout << Hamlet.getHealth() << "/" << Hamlet.getMaxHealth();
         getch();
