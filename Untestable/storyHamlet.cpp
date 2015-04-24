@@ -43,7 +43,7 @@ int choice;
     switch(storyNum)
     {
         case 1:
-            printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+            printStats();
             col(8);
             std::cout << "\n              *** You are currently playing as";
             col(3);
@@ -66,7 +66,7 @@ int choice;
                 while ((choice != 1))
                 {
                     system("cls");
-                    printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                    printStats();
                     std::cout << "\nWrong choice!! In order to beat this game you would want to make the correct\ndecisions.\n" << std::endl;
                     std::cout << "Marcellus: Should I kill it?\n" << std::endl;
                     std::cout << "1.Throw the spear\n" << std::endl;
@@ -80,7 +80,7 @@ int choice;
             {
                 endfirstwhile:
                 system("cls");
-                printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                printStats();
                 std::cout << "\nThe spear passes through, and the ghost quietly disappears..." << std::endl;
                 getch();
                 battleActI();
@@ -91,7 +91,7 @@ int choice;
 
 
         case 2:
-            printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+            printStats();
             std::cout << "\nYou are the prince of Elsinore. You have discovered that your father has \nmysteriously died.";
             std::cout << "Your mother (Gertrude) then remarries to your uncle (Claudius), after only a month of your father's death." << std::endl;
             std::cout << "You're obviously pissed.\n Claudius: Why are you so said Hamlet?\n" << std::endl;
@@ -103,20 +103,20 @@ int choice;
             switch (choice)
             {
                 case 1:
-                    printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                    printStats();
                     std::cout << "Gertrude: It is ok Hamlet. You know we love you." << std::endl;
 
                     storyNum = 3;
                     goto endSwitch;
                 case 2:
-                    printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                    printStats();
                     std::cout << "Gertrude: How dare you say that Hamlet!." << std::endl;
                     std::cout << "Claudius: No need to yell at him Gertrude. ";
             }
 
             if (choice == 1)
             {
-                printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                printStats();
                 storyNum = 3;
                 goto endSwitch;
             }

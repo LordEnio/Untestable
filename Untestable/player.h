@@ -12,6 +12,7 @@ class Player
         int score;
         unsigned int level;
         unsigned int exp;
+        unsigned int gold;
 
     public:
         Player();
@@ -23,6 +24,7 @@ class Player
         void setScore(int);
         void setLevel(int);
         void setExp(int);
+        void setGold(int);
 
         int const getHealth();
         int const getMaxHealth();
@@ -31,6 +33,7 @@ class Player
         int const getScore();
         unsigned int const getLevel();
         unsigned int const getExp();
+        unsigned int const getGold();
 
         unsigned int untilLevel();
         bool levelUp();

@@ -16,6 +16,7 @@ Player::Player()
     setScore(0);
     setExp(0);
     setLevel(1);
+    setGold(0);
 }
 
 void Player::setHealth(int h)
@@ -53,6 +54,11 @@ void Player::setLevel(int l)
     level = l;
 }
 
+void Player::setGold(int g)
+{
+    gold = g;
+}
+
 int const Player::getHealth()
 {
     return health;
@@ -86,6 +92,11 @@ unsigned int const Player::getExp()
 unsigned int const Player::getLevel()
 {
     return level;
+}
+
+unsigned int const Player::getGold()
+{
+    return gold;
 }
 
 unsigned int Player::untilLevel()

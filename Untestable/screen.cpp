@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include "screen.h"
+#include "player.h"
 
 /********************************
     List of Colors for Screen
@@ -50,15 +51,19 @@ void clrScr()
     }
 }
 
-void printStats(int health, int maxHealth, int dmg, int suspicion, int score)
+void printStats()
 {
     col(2);
-    std::cout << "Health: " << health << "/" << maxHealth << "                       ";
+    std::cout << "Health: " << Hamlet.getHealth() << "/" << Hamlet.getMaxHealth() << "                       ";
     col(12);
-    std::cout << "Damage: " << dmg << std::endl;
+    std::cout << "Damage: " << Hamlet.getDmg() << "                 ";
+    col(10);
+    std::cout << "Exp Level: " << Hamlet.getLevel() << std::endl;
     col(14);
-    std::cout << "\nSuspicion: " << suspicion << "%" << "                       ";
+    std::cout << "\nSuspicion: " << Hamlet.getSuspicion() << "%" << "                       ";
     col(11);
-    std::cout << "Score: " << score << std::endl;
+    std::cout << "Score: " << Hamlet.getScore() << "                  ";
+    col(14);
+    std::cout << "Gold: " << Hamlet.getGold() << std::endl;
     col(7);
 }

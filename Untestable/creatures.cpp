@@ -16,10 +16,11 @@ Ghostling::Ghostling()
 void Ghostling::setHealth(int h)
 {
     health = h;
-    if (health < 0)
+    if (h < 0)
     {
         health = 0;
     }
+
 }
 
 void Ghostling::setMaxHealth(int m)

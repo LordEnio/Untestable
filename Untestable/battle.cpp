@@ -10,7 +10,7 @@
 void battleActI()
 {
     system("cls");
-    printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+    printStats();
     std::cout << "\nAfter running after your father's ghost, you see him waiting in the woods." << std::endl;
     getch();
     std::cout << "There appears to be a flock of Evil Ghostlings!!!" << std::endl;
@@ -20,7 +20,7 @@ void battleActI()
     while (Ghostling1.getIsDead() == false)
     {
         system("cls");
-        printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+        printStats();
         int dmgDealt;
         int ghostDmg;
         std::cout << "\nWhat would you like to do?\n" << std::endl;
@@ -33,7 +33,7 @@ void battleActI()
         switch (choice)
         {
             case 1:
-                printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                printStats();
                 std::cout << "\n";
                 dmgDealt = Hamlet.Attack();
                 Ghostling1.setHealth(Ghostling1.getHealth() - dmgDealt);
@@ -44,7 +44,7 @@ void battleActI()
                 getch();
                 break;
             case 2:
-                printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+                printStats();
                 std::cout << "\n";
                 dmgDealt = Hamlet.criticalAttack();
                 Ghostling1.setHealth(Ghostling1.getHealth() - dmgDealt);
@@ -62,7 +62,7 @@ void battleActI()
             break;
         }
         system("cls");
-        printStats(Hamlet.getHealth(), Hamlet.getMaxHealth(), Hamlet.getDmg(), Hamlet.getSuspicion(), Hamlet.getScore());
+        printStats();
         std::cout << "\nThe Ghostling moves into attack!\n" << std::endl;
         getch();
         ghostDmg = Ghostling1.Attack();
@@ -74,4 +74,24 @@ void battleActI()
         col(7);
         Ghostling1.setIsDead(Ghostling1.checkDeath());
      }
+
+    system("cls");
+    printStats();
+    std::cout << "\nThe Ghostling fades away...\n" << std::endl;
+    std::cout << "Your rewards are: \n" << std::endl;
+    getch();
+    system("cls");
+    Hamlet.setGold(Hamlet.getGold() + 3);
+    Hamlet.setExp(Hamlet.getExp() + 2);
+    printStats();
+    std::cout << "\nThe Ghostling fades away...\n" << std::endl;
+    std::cout << "Your rewards are: \n" << std::endl;
+    col(14);
+    std::cout << "3 Gold Coins" << std::endl;
+    std::cout << "2 Experience Points" << std::endl;
+
+    getch();
+
+    col(7);
+
 }

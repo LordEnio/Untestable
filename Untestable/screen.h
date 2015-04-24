@@ -3,6 +3,6 @@
 
 void col(unsigned short int);
 void clrScr();
-void printStats(int, int, int, int, int);
+void printStats();
 
 #endif // SCREEN_H
