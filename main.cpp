@@ -6,14 +6,14 @@
 #include "Untestable/player.h"
 #include "Untestable/global.h"
 
-bool storyOn = true;
 int storyNum = 1;
 
 int main()
 {
     printIntro();
-    while (storyOn)
+    while (Hamlet.getIsDead() == false)
     {
         storyNum = storyDialogue(storyNum);
+        Hamlet.checkDeath();
     }
 }

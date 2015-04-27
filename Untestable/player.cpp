@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <conio.h>
 #include <iostream>
 
 Player Hamlet;
@@ -13,15 +14,21 @@ Player::Player()
     setMaxHealth(70);
     setDmg(6);
     setSuspicion(0);
+    setInsanity(0);
     setScore(0);
     setExp(0);
     setLevel(1);
     setGold(0);
+    setIsDead(false);
 }
 
 void Player::setHealth(int h)
 {
     health = h;
+    if (health <= 0)
+    {
+        health = 0;
+    }
 }
 
 void Player::setMaxHealth(int m)
@@ -37,6 +44,19 @@ void Player::setDmg(int d)
 void Player::setSuspicion(int s)
 {
     suspicion = s;
+    if (suspicion >= 100)
+    {
+        suspicion = 100;
+    }
+}
+
+void Player::setInsanity(int i)
+{
+    insanity = i;
+    if (insanity >= 100)
+    {
+        insanity = 100;
+    }
 }
 
 void Player::setScore(int s)
@@ -59,6 +79,11 @@ void Player::setGold(int g)
     gold = g;
 }
 
+void Player::setIsDead(bool d)
+{
+    isDead = d;
+}
+
 int const Player::getHealth()
 {
     return health;
@@ -77,6 +102,11 @@ int const Player::getDmg()
 int const Player::getSuspicion()
 {
     return suspicion;
+}
+
+int const Player::getInsanity()
+{
+    return insanity;
 }
 
 int const Player::getScore()
@@ -99,6 +129,11 @@ unsigned int const Player::getGold()
     return gold;
 }
 
+bool Player::getIsDead()
+{
+    return isDead;
+}
+
 unsigned int Player::untilLevel()
 {
     int expToLevel;
@@ -106,7 +141,7 @@ unsigned int Player::untilLevel()
     return expToLevel;
 }
 
-bool Player::levelUp()
+void Player::levelUp()
 {
     if(exp >= untilLevel())
     {
@@ -115,11 +150,13 @@ bool Player::levelUp()
         maxHealth += level*level + rand() % 10 + 1;
         health = maxHealth;
         dmg += (rand() % 9 + 1) + level;
-        return true;
-    }
-    else
-    {
-        return false;
+        std::cout << "\nCongratulations!! You have leveled up! Your new stats are...\n" << std::endl;
+        getch();
+        col(2);
+        std::cout << "Health -> " << Hamlet.getHealth() << "/" << Hamlet.getMaxHealth() << "           ";
+        col(12);
+        std::cout << "Damage -> " << Hamlet.getDmg();
+        col(7);
     }
 }
 
@@ -184,3 +221,33 @@ int Player::criticalAttack()
     }
     return dmgDealt;
 }
+
+void Player::checkDeath()
+{
+    if (insanity >= 100 || suspicion >= 100 || health == 0)
+    {
+        if (insanity >= 100)
+        {
+            std::cout << "\nYou commit suicide from your insanity. Your emotions got the" << std::endl;
+            std::cout << "best of you and are now considered a coward by the church. " << std::endl;
+            getch();
+        }
+        else if (suspicion >= 100)
+        {
+            std::cout << "\nClaudius finds out that you have been plotting to kill him!" << std::endl;
+            std::cout << "He has you tried for treason and executed the following day. " << std::endl;
+        }
+        else if (health == 0)
+        {
+            std::cout << "\nYou have been slain. You have a grand funeral with tons of " << std::endl;
+            std::cout << "people showing. You are buried and can not revenge your father." << std::endl;
+            std::cout << "Good night, sweet prince, And flights of angels sing thee to thy rest!" << std::endl;
+        }
+        isDead = true;
+        std::cout << "Congratulations on losing the game. You are among the many " << std::endl;
+        std::cout << "individuals who don't have a knowledge of Hamlet." << std::endl;
+        std::cout << "Well I guess its time to say it then. GAME OVER.";
+    }
+}
+
+

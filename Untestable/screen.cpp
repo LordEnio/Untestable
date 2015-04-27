@@ -62,7 +62,7 @@ void printStats()
     col(14);
     std::cout << "\nSuspicion: " << Hamlet.getSuspicion() << "%" << "                       ";
     col(11);
-    std::cout << "Score: " << Hamlet.getScore() << "                  ";
+    std::cout << "Insanity: "  << Hamlet.getInsanity() << "%" << "                  ";
     col(14);
     std::cout << "Gold: " << Hamlet.getGold() << std::endl;
     col(7);
