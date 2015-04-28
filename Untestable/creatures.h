@@ -38,5 +38,17 @@ class KingHamlet
         unsigned int dmg;
 };
 
+class OldMan
+{
+    private:
+
+
+
+
+};
+
+
+
+
 
 #endif // CREATURES_H

@@ -228,8 +228,8 @@ void Player::checkDeath()
     {
         if (insanity >= 100)
         {
-            std::cout << "\nYou commit suicide from your insanity. Your emotions got the" << std::endl;
-            std::cout << "best of you and are now considered a coward by the church. " << std::endl;
+            std::cout << "\nYou commit suicide from your insanity. Your emotions got the ";
+            std::cout << "best of you and\nare now considered a coward by the church. " << std::endl;
             getch();
         }
         else if (suspicion >= 100)
@@ -244,9 +244,9 @@ void Player::checkDeath()
             std::cout << "Good night, sweet prince, And flights of angels sing thee to thy rest!" << std::endl;
         }
         isDead = true;
-        std::cout << "Congratulations on losing the game. You are among the many " << std::endl;
+        std::cout << "\nCongratulations on losing the game. You are among the many " << std::endl;
         std::cout << "individuals who don't have a knowledge of Hamlet." << std::endl;
-        std::cout << "Well I guess its time to say it then. GAME OVER.";
+        std::cout << "Well I guess its time to say it then.\n\n GAME OVER.\n\n\n\n\n\n";
     }
 }
 
