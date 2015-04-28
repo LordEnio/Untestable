@@ -76,7 +76,6 @@ void battleActI()
             getch();
             col(7);
             Hamlet.checkDeath();
-            getch();
             if (Hamlet.getIsDead() == true)
             {
                 exit(0);
@@ -104,4 +103,72 @@ void battleActI()
         Hamlet.levelUp();
     }
     getch();
+}
+
+void oldManBattle()
+{
+    system("cls");
+    OldMan oldMan1;
+    while (oldMan1.getIsDead() == false)
+    {
+        system("cls");
+        printStats();
+        int dmgDealt;
+        int oldDmg;
+        std::cout << "\nWhat would you like to do?\n" << std::endl;
+        std::cout << "1. Standard Attack " << std::endl;
+        std::cout << "2. Critical Attack " << std::endl;
+        std::cout << "3. Do Nothing " << std::endl;
+        int choice;
+        std::cin >> choice;
+        system("cls");
+        switch (choice)
+        {
+            case 1:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.Attack();
+                oldMan1.setHealth(oldMan1.getHealth() - dmgDealt);
+                std::cout << "\nThe Old Man's health is now at ";
+                col(2);
+                std::cout << oldMan1.getHealth() << "/" << oldMan1.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+            case 2:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.criticalAttack();
+                oldMan1.setHealth(oldMan1.getHealth() - dmgDealt);
+                std::cout << "\nThe Old Man's health is now at ";
+                col(2);
+                std::cout << oldMan1.getHealth() << "/" << oldMan1.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+            case 3:
+                break;
+        }
+        if (oldMan1.getHealth() <= 0)
+        {
+            break;
+        }
+        system("cls");
+        printStats();
+        std::cout << "\nThe Old Man moves into attack!\n" << std::endl;
+        getch();
+        oldDmg = oldMan1.Attack();
+        Hamlet.setHealth(Hamlet.getHealth() - oldDmg);
+        std::cout << "\nYour health is now at ";
+        col(2);
+        std::cout << Hamlet.getHealth() << "/" << Hamlet.getMaxHealth();
+        getch();
+        col(7);
+        Hamlet.checkDeath();
+        if (Hamlet.getIsDead() == true)
+        {
+            exit(0);
+        }
+        oldMan1.setIsDead(oldMan1.checkDeath());
+    }
 }

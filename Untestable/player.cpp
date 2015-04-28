@@ -224,6 +224,7 @@ int Player::criticalAttack()
 
 void Player::checkDeath()
 {
+    system("cls");
     if (insanity >= 100 || suspicion >= 100 || health == 0)
     {
         if (insanity >= 100)

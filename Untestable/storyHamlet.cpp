@@ -230,7 +230,10 @@ int storyDialogue(int storyNum)
                 case 2:
                     system("cls");
                     printStats();
-                    std::cout << "You engage on a hand to hand battle with the old man." << std::endl;
+                    std::cout << "\nYou engage on a hand to hand battle with the old man." << std::endl;
+                    getch();
+                    oldManBattle();
+                    goto endSwitch;
                 default:
                     goto begin5;
             }
