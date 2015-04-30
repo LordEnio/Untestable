@@ -180,8 +180,8 @@ int Player::Attack()
     int dmgDealt;
     srand(time(NULL));
     int attackChoice;
-    attackChoice = rand() % 4 + 1;
-    if (attackChoice == 1 || attackChoice == 2 || attackChoice == 3)
+    attackChoice = rand() % 7 + 1;
+    if (attackChoice == 1 || attackChoice == 2 || attackChoice == 3 || attackChoice == 4 || attackChoice == 5 || attackChoice == 6)
     {
         dmgDealt = standardAttack();
         std::cout << "You deal ";
@@ -220,6 +220,18 @@ int Player::criticalAttack()
         dmgDealt = missAttack();
     }
     return dmgDealt;
+}
+
+int Player::cheatAttack()
+{
+    int dmgDealt;
+    srand(time(NULL));
+    dmgDealt = (getDmg() * getDmg() *getDmg()) + rand() % 264 + 1;
+    std::cout << "Noice, you critically strike your opponent with your life credit, dealing ";
+    col(12);
+    std::cout << dmgDealt;
+    col(7);
+    std::cout << " to the enemy!" << std::endl;
 }
 
 void Player::checkDeath()
