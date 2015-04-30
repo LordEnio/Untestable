@@ -202,3 +202,40 @@ int OldMan::Attack()
 
     return dmgDealt;
 }
+
+Claudius::Claudius()
+{
+    setHealth(400);
+    setMaxHealth(400);
+    setDmg(15);
+    setIsDead(false);
+}
+
+void Claudius::setHealth(int h)
+{
+    health = h;
+    if (health < 0)
+    {
+        health = 0;
+    }
+}
+
+void Claudius::setMaxHealth(int m)
+{
+    maxHealth = m;
+}
+
+void Claudius::setDmg(int d)
+{
+    dmg = d;
+}
+
+void Claudius::setIsDead(bool d)
+{
+    isDead = d;
+}
+
+int Claudius::getHealth()
+{
+    
+}
