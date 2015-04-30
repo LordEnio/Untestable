@@ -203,6 +203,107 @@ int OldMan::Attack()
     return dmgDealt;
 }
 
+KingHamlet::KingHamlet()
+{
+    setHealth(120);
+    setMaxHealth(120);
+    setDmg(5);
+    setIsDead(false);
+    setCurse(true);
+}
+
+void KingHamlet::setHealth(int h)
+{
+    health =h;
+    if (health < 0)
+    {
+        health = 0;
+    }
+}
+
+void KingHamlet::setMaxHealth(int m)
+{
+    maxHealth = m;
+}
+
+void KingHamlet::setDmg(int d)
+{
+    dmg = d;
+}
+
+bool KingHamlet::setIsDead(bool d)
+{
+    isDead = d;
+}
+
+int const KingHamlet::getHealth()
+{
+    return health;
+}
+
+int const KingHamlet::getMaxHealth()
+{
+    return maxHealth;
+}
+
+int const KingHamlet::getDmg()
+{
+    return dmg;
+}
+
+bool KingHamlet::getIsDead()
+{
+    return isDead;
+}
+
+bool KingHamlet::checkDeath()
+{
+    if (getHealth() > 0)
+    {
+        return false;
+    }
+    
+    else
+    {
+        return true;
+    }
+}
+
+bool KingHamlet::setCurse(int c)
+{
+    curse = c;
+}
+
+bool KingHamlet::getCurse()
+{
+    return curse;
+}
+
+int KingHamlet::standardAttack()
+{
+    srand(time(NULL));
+    int dmgDealt;
+    dmgDealt = rand() % 4 + dmg;
+    return dmgDealt;
+}
+
+int KingHamlet::curse()
+{
+    if(curse == true)
+    {
+        srand(time(NULL));
+        int dmgDealt;
+        dmgDealt = rand() % 3 + 1;
+        return dmgDealt()
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int KingHamlet::Attack()
+
 Claudius::Claudius()
 {
     setHealth(400);
