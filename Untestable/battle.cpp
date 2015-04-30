@@ -59,14 +59,14 @@ void battleActI()
                     break;
                 case 3:
                     break;
-                case 69:
+                case 9:
                     printStats();
                     std::cout << "\n";
                     dmgDealt = Hamlet.cheatAttack();
-                    Ghostling.setHealth(Ghostling1.getHealth() - dmgDealt);
+                    Ghostling1.setHealth(Ghostling1.getHealth() - dmgDealt);
                     std::cout << " \nThe Ghostling's health is now at ";
                     col(2);
-                    std::cout << Ghostling1.getHealth() << "/" << Ghostling.getMaxHealth() << std::endl;
+                    std::cout << Ghostling1.getHealth() << "/" << Ghostling1.getMaxHealth() << std::endl;
                     col(7);
                     getch();
                     break;
@@ -163,13 +163,13 @@ void oldManBattle()
                 printStats();
                 std::cout << "\n";
                 dmgDealt = Hamlet.cheatAttack();
-                Ghostling.setHealth(Ghostling1.getHealth() - dmgDealt);
-                std::cout << " \nThe Ghostling's health is now at ";
+                oldMan1.setHealth(oldMan1.getHealth() - dmgDealt);
+                std::cout << " \nThe Old Man's health is now at ";
                 col(2);
-                std::cout << Ghostling1.getHealth() << "/" << Ghostling.getMaxHealth() << std::endl;
+                std::cout << oldMan1.getHealth() << "/" << oldMan1.getMaxHealth() << std::endl;
                 col(7);
                 getch();
-                break;                
+                break;
         }
         if (oldMan1.getHealth() <= 0)
         {
