@@ -48,6 +48,8 @@ class Player
         int Attack();
         int standardAttack();
         int criticalAttack();
+        int cheatAttack();
+        
 
         void checkDeath();
 };
