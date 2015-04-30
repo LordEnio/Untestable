@@ -241,9 +241,9 @@ int storyDialogue(int storyNum)
         case 6:
             system("cls");
             printStats();
-            std::cout << "Horatio comes into the castle to tell you that he saw the dead king's ghost!!" << std::endl;
-            std::cout << "The next day you decide to keep watch of the ghost with Horatio." << std::endl;
-            std::cout << "You finally see the ghost. You follow him into the woods." << std::endl;
+            std::cout << "\nHoratio, your old friend, enters the castle to your surprise." << std::endl;
+            std::cout << "\nHoratio: I am here for your father's funeral. I am terribly sorry." << std::endl;
+            std::cout << "You: HA LOL, you mean you're here for my mother's wedding?" << std::endl;
             std::cout << "The king's ghost tells you that Claudius was the murderer!!!" << std::endl;
             std::cout << "The king's ghost asks for you to take revenge." << std::endl;
             std::cout << "1: OK" << std::endl;
@@ -403,7 +403,7 @@ int storyDialogue(int storyNum)
                {
                 score -= 4;
                }
-               
+
                system("cls");
                std::cout << "Whether 'tis nobler in the mind to \nsuffer the slings and arrows\n";
                std::cout << "of outrageous fortune, or to take\n arms against a sea of troubles and, by\n";
@@ -471,33 +471,13 @@ int storyDialogue(int storyNum)
 
                if (choice == 1)
                {
-                storyNum = 15;
+                storyNum = 14;
                }
 
                else if (choice == 2)
                {
-                storyNum = 14;
+                storyNum = 15;
                }
-               break;
-             case 14:
-               system("cls");
-               std::cout << "Ophelia runs off crying. You don't give a damn because you are the prince of Denmark." << std::endl;
-               std::cout << "***Sometime later***" << std::endl;
-               std::endl;
-               std::cout << "You are ready with the play of 'The Murder of Gonzago'. \nHowever, the stupid actors forgot their parts." << std::endl;
-               std::cout << "You have to remind them, goddmamit:" << std::endl;
-               std::cout << "1. The play's about a king killed by the queen. \nThe queen then makes a diplomatic marriage with the prince of Bosnia" << std::endl;
-               std::cout << "2. The play's about a king killed by his brother. The queen then marries the brother." << std::endl;             
-               std::cout << "3. The play's about a king that kills the queen because she couldn't give birth to\n a male heir" << std::endl;
-               
-               std::cin >> choice;
-               
-               if (choice == 1)
-               {
-                
-               }
-               
-               
         }
     endSwitch:
     system("cls");
