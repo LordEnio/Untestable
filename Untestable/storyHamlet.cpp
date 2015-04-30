@@ -357,11 +357,11 @@ int storyDialogue(int storyNum)
                 std::cin >> choice;
                 if (choice == 1)
                 {
-                  storyNum = 10;
+                  storyNum = 11;
                 }
                 else if (choice == 2)
                 {
-                  storyNum = 11;
+                  storyNum = 10;
                 }
                 else
                 {
