@@ -471,13 +471,33 @@ int storyDialogue(int storyNum)
 
                if (choice == 1)
                {
-                storyNum = 14;
+                storyNum = 15;
                }
 
                else if (choice == 2)
                {
-                storyNum = 15;
+                storyNum = 14;
                }
+               break;
+             case 14:
+               system("cls");
+               std::cout << "Ophelia runs off crying. You don't give a damn because you are the prince of Denmark." << std::endl;
+               std::cout << "***Sometime later***" << std::endl;
+               std::endl;
+               std::cout << "You are ready with the play of 'The Murder of Gonzago'. \nHowever, the stupid actors forgot their parts." << std::endl;
+               std::cout << "You have to remind them, goddmamit:" << std::endl;
+               std::cout << "1. The play's about a king killed by the queen. \nThe queen then makes a diplomatic marriage with the prince of Bosnia" << std::endl;
+               std::cout << "2. The play's about a king killed by his brother. The queen then marries the brother." << std::endl;             
+               std::cout << "3. The play's about a king that kills the queen because she couldn't give birth to\n a male heir" << std::endl;
+               
+               std::cin >> choice;
+               
+               if (choice == 1)
+               {
+                
+               }
+               
+               
         }
     endSwitch:
     system("cls");
