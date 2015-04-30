@@ -243,7 +243,35 @@ int storyDialogue(int storyNum)
             printStats();
             std::cout << "\nHoratio, your old friend, enters the castle to your surprise." << std::endl;
             std::cout << "\nHoratio: I am here for your father's funeral. I am terribly sorry." << std::endl;
-            std::cout << "You: HA LOL, you mean you're here for my mother's wedding?" << std::endl;
+            col(3);
+            std::cout << "You: ";
+            col(7);
+            std::cout << "HA, you mean you're here for my mother's wedding?" << std::endl;
+            col(3);
+            std::cout << "Horatio: "
+            col(7);
+            std::cout << "Oh....sucks" << std::endl;
+            col(3);
+            std::cout << "Horatio: ";
+            col(7);
+            std::cout << "But I came here because I saw you father's ghost, Hamlet!" << std::endl;
+            col(3);
+            std::cout << "You: ";
+            col(7);
+            std::cout << "What!!? I must meet him at once!!" << std::endl;
+            getch();
+            system("cls");
+            printStats();
+            std::cout << "\n***You and your crew meets to see the ghost***" << std::endl;
+            std::cout << "After a while of waiting, you spot a figure in the distance!!" << std::endl;
+            col(3);
+            std::cout << "You: ";
+            col(7);
+            std::cout << "I must meet him!!" << std::endl;
+            std::endl;
+            std::cout << "There seems to be something lurking in the woods." << std::endl;
+            std::cout << "Prepare for some action." << std::endl;
+            
             std::cout << "The king's ghost tells you that Claudius was the murderer!!!" << std::endl;
             std::cout << "The king's ghost asks for you to take revenge." << std::endl;
             std::cout << "1: OK" << std::endl;
@@ -504,14 +532,16 @@ int storyDialogue(int storyNum)
                  std::cout << "You will continue the game without Gertrude in it."
                  getch();
                  system("cls");
-                 std::cout << "Just kidding you're dead for now. Wait for the next version of this game to be\n able to see what happens.";
+                 printStats();
+                 std::cout << "\nJust kidding you're dead for now. Wait for the next version of this game to be\n able to see what happens.";
                  getch(); 
                }
                
                else if (choice == 2)
                {
                 system("cls");
-                 std::cout << "You tell your instructions to the actors. It was a success!!" << std::endl;
+                prinStats();
+                 std::cout << "\nYou tell your instructions to the actors. It was a success!!" << std::endl;
                  std::cout << "The King's face turns blue. He doesn't seem too well." << std::endl;
                  std::cout << "He stands in the middle of the play, and leaves the theatre." << std::endl;
                  getch();
@@ -521,7 +551,8 @@ int storyDialogue(int storyNum)
                else if (choice == 3)
                {
                 system("cls");
-                std::cout << "Gertrude's face turns blue." << std::endl;
+                prinStats();
+                std::cout << "\nGertrude's face turns blue." << std::endl;
                 std::cout << "She has a feeling that Claudius will execute her if she doesn't give birth to a son." << std::endl;
                 std::cout << "Overwhelmed by fear, she murders Claudius by stabbing him on the spot." << std::endl;
                 std::cout << "She then kills herself by using the same knife." << std::endl;
@@ -533,7 +564,8 @@ int storyDialogue(int storyNum)
                break;
               case 15:
                 system("cls");
-                std::cout << "Goodstuff, you're back with her." << std::endl;
+                prinStats();
+                std::cout << "\nGoodstuff, you're back with her." << std::endl;
                 std::cout << "Even though you made the wrong choice, it will not affect the story at all." << std::endl
                 std::cout << "Can't punish someone for wanting love, right?" << std::endl;
                 getch();
@@ -541,11 +573,13 @@ int storyDialogue(int storyNum)
                 break;
               case 16:
                system("cls");
-               std::cout << "You found out Claudius was guilty after all." << std::endl;
+               prinStats();
+               std::cout << "\nYou found out Claudius was guilty after all." << std::endl;
                std::cout << "You plan on killing him the NEXT time you see him." << std::endl;
                getch();
                system("cls");
-               std::cout << "***Sometime later***" << std::endl;
+               prinStats();
+               std::cout << "\n***Sometime later***" << std::endl;
                getch();
                std::cout << "You find Claudius praying alone." << std::endl;
                std::cout << "He seems like he is deeply regretting his actions.\n";
@@ -558,18 +592,44 @@ int storyDialogue(int storyNum)
                
                if (choice == 1)
                {
-                
+                system("cls");
                }
                
                else if (choice == 2)
                {
+                system("cls");
+                prinStats();
+                std::cout << "\nYou attempt to tie him down, but you realize you don't have any rope." << std::endl;
+                std::cout << "Claudius notices you, and you are forced into a hand to hand combat to knock him out."
+                std::cout << "Be careful though, you only have 5 turns before the guards come to get your butt." << std::endl;
                 
                }
                
                else if (choice == 3)
                {
-                
+                system("cls");
+                prinStats();
+                std::cout << "\nYou let Claudius live for now because he must go to hell, not heaven." << std::endl;
+                std::cout << "You wait for another chance when he is sinning." << std::endl;
+                getch();
+                system("cls");
+                prinStats();
+                std::cout << "\n***After you leave the room***" << std::endl;
+                getch();
+                std::endl;
+                col(3);
+                std::cout << "Claudius: ";
+                col(7);
+                std::cout << "My words fly up, and my thoughts remain below." << std:endl;
+                getch();
+                storyNum = 17;
                }
+               break;
+             case 17:
+               system("cls");
+               prinStats();
+               std::cout << "\nYou summon yourself to Gertrude's chamber sometime later." << std::endl;
+               std::cout << "You see her"
         }
     endSwitch:
     system("cls");
