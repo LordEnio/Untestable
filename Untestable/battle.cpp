@@ -112,6 +112,11 @@ void battleActI()
         system("cls");
         printStats();
         Hamlet.levelUp();
+        system("cls");
+        printStats();
+        std::cout << "\nYour battle isn't over yet, however." << std::endl;
+        std::cout << "The ghost of the king seems possesed!" << std::endl;
+        std::cout << "You must face him!!" << std::endl;
     }
     getch();
 }
