@@ -369,17 +369,11 @@ int storyDialogue(int storyNum)
                 }
               case 10:
                 std::cout << "Yeah, they actaully did... I'm sorry my friend. " << std::endl;
-                std::cout << "1. Its ok, you are welcome to stay here at Elisnore. Hey, the actors for tonights play have "
+                std::cout << "Its ok, you are welcome to stay here at Elisnore. Hey, the actors for tonights play have "
                   "arrived. Let's go watch." << std::endl;
-                std::cin >> choice;
-                if (choice == 1)
-                {
-                  storyNum = 12;
-                }
-                else
-                {
-                  std::cout << "That isn't a choice." << std::endl;
-                }
+                storyNum = 12;
+                getch();
+                break;
               case 11:
                 std::cout << "You tell all of your secrets. Rosencrantz and Guildenstern happened to be spys! The king now "
                   "knows your true plan. You are immediatly exiled to Wittenburg." << std::endl;
@@ -409,7 +403,8 @@ int storyDialogue(int storyNum)
                {
                 score -= 4;
                }
-
+               
+               system("cls");
                std::cout << "Whether 'tis nobler in the mind to \nsuffer the slings and arrows\n";
                std::cout << "of outrageous fortune, or to take\n arms against a sea of troubles and, by\n";
                std::cout << "opposing, end them:" << std::endl;
@@ -428,6 +423,7 @@ int storyDialogue(int storyNum)
                 score -= 2;
                }
                getch ();
+               system("cls");
                std::cout << " To die: to sleep;" << std::endl;
                std::cout << "No more; and by a sleep to say we end" << std::endl;
                std::cout << "The heart-ache and the thousand natural shocks" << std::endl;
