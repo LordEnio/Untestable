@@ -59,7 +59,7 @@ void battleActI()
                     break;
                 case 3:
                     break;
-                case 9:
+                case 69:
                     printStats();
                     std::cout << "\n";
                     dmgDealt = Hamlet.cheatAttack();
