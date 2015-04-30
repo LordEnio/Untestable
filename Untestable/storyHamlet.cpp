@@ -471,12 +471,12 @@ int storyDialogue(int storyNum)
 
                if (choice == 1)
                {
-                storyNum = 14;
+                storyNum = 15;
                }
 
                else if (choice == 2)
                {
-                storyNum = 15;
+                storyNum = 14;
                }
                break;
              case 14:
@@ -494,9 +494,81 @@ int storyDialogue(int storyNum)
                
                if (choice == 1)
                {
+                system("cls");
+                 std::cout << "You tell your instructions to the actors." << std::endl;
+                 std::cout << "The King interprets the play as an warning from you." << std::endl;
+                 std::cout << "He believes Gertrude knows who killed King Hamlet." << std::endl;
+                 std::cout << "The King's face turns blue. He doesn't seem too well." << std::endl;
+                 std::cout << "He stands in the middle of the play, and leaves the theatre." << std::endl;
+                 std::cout << "He later orders Gertrude to be exiled to Wittenberg...." << std::endl;
+                 std::cout << "You will continue the game without Gertrude in it."
+                 getch();
+                 system("cls");
+                 std::cout << "Just kidding you're dead for now. Wait for the next version of this game to be\n able to see what happens.";
+                 getch(); 
+               }
+               
+               else if (choice == 2)
+               {
+                system("cls");
                  std::cout << "You tell your instructions to the actors. It was a success!!" << std::endl;
                  std::cout << "The King's face turns blue. He doesn't seem too well." << std::endl;
-                 std::cout << "He stands in the middle of the play, and leaves the theatre." << std::endl
+                 std::cout << "He stands in the middle of the play, and leaves the theatre." << std::endl;
+                 getch();
+                 storyNum == 16
+               }
+               
+               else if (choice == 3)
+               {
+                system("cls");
+                std::cout << "Gertrude's face turns blue." << std::endl;
+                std::cout << "She has a feeling that Claudius will execute her if she doesn't give birth to a son." << std::endl;
+                std::cout << "Overwhelmed by fear, she murders Claudius by stabbing him on the spot." << std::endl;
+                std::cout << "She then kills herself by using the same knife." << std::endl;
+                std::cout << "Well I did not see this coming..." << std::endl;
+                std::cout << "Suddenly, you find out that it was all a dream." << std::endl;
+                std::cout << "I'm giving your ignorance a second chance. You will start from the beginning." << std::endl;
+                storyNum = 1;
+               }
+               break;
+              case 15:
+                system("cls");
+                std::cout << "Goodstuff, you're back with her." << std::endl;
+                std::cout << "Even though you made the wrong choice, it will not affect the story at all." << std::endl
+                std::cout << "Can't punish someone for wanting love, right?" << std::endl;
+                getch();
+                storyNum = 14;
+                break;
+              case 16:
+               system("cls");
+               std::cout << "You found out Claudius was guilty after all." << std::endl;
+               std::cout << "You plan on killing him the NEXT time you see him." << std::endl;
+               getch();
+               system("cls");
+               std::cout << "***Sometime later***" << std::endl;
+               getch();
+               std::cout << "You find Claudius praying alone." << std::endl;
+               std::cout << "He seems like he is deeply regretting his actions.\n";
+               std::cout << "His eyes are closed and he doesn't notice you approaching him." << std::endl;
+               std::cout << "What will you do?:" << std::endl;
+               std::cout << "1. Kill him on the spot." << std::endl;
+               std::cout << "2. Tie him down and torture him in front of Gertrude, who will also be tied to a chair." << std:endl;
+               std::cout << "3. Let him be." << std::endl;
+               std::cin >> choice;
+               
+               if (choice == 1)
+               {
+                
+               }
+               
+               else if (choice == 2)
+               {
+                
+               }
+               
+               else if (choice == 3)
+               {
+                
                }
         }
     endSwitch:
