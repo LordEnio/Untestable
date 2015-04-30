@@ -478,6 +478,26 @@ int storyDialogue(int storyNum)
                {
                 storyNum = 15;
                }
+               break;
+             case 14:
+               system("cls");
+               std::cout << "Ophelia runs off crying. You don't give a damn because you are the prince of Denmark." << std::endl;
+               std::cout << "***Sometime later***" << std::endl;
+               std::endl;
+               std::cout << "You are ready with the play of 'The Murder of Gonzago'. \nHowever, the stupid actors forgot their parts." << std::endl;
+               std::cout << "You have to remind them, goddmamit:" << std::endl;
+               std::cout << "1. The play's about a king killed by the queen. \nThe queen then makes a diplomatic marriage with the prince of Bosnia" << std::endl;
+               std::cout << "2. The play's about a king killed by his brother. The queen then marries the brother." << std::endl;             
+               std::cout << "3. The play's about a king that kills the queen because she couldn't give birth to\n a male heir" << std::endl;
+               
+               std::cin >> choice;
+               
+               if (choice == 1)
+               {
+                 std::cout << "You tell your instructions to the actors. It was a success!!" << std::endl;
+                 std::cout << "The King's face turns blue. He doesn't seem too well." << std::endl;
+                 std::cout << "He stands in the middle of the play, and leaves the theatre." << std::endl
+               }
         }
     endSwitch:
     system("cls");
