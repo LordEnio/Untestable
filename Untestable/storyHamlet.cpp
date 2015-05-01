@@ -282,7 +282,7 @@ int storyDialogue(int storyNum)
             system("cls");
             printStats();
             col(8);
-            std::cout << "\n              ***You and your crew meet to see the ghost***\n" << std::endl;
+            std::cout << "\n              *** You and your crew meet to see the ghost ***\n" << std::endl;
             col(7);
             std::cout << "After a while of waiting, you spot a figure in the distance!!\n" << std::endl;
             printCharDialogue("You");
@@ -295,10 +295,15 @@ int storyDialogue(int storyNum)
             system("cls");
             printStats();
             std::cout << "\nIt appears that the ghost has been unpossesed!" << std::endl;
-            std::cout << "Its trying to tell you something" << std::endl;
+            std::cout << "Its trying to tell you something...\n" << std::endl;
             getch();
-            std::cout << "\nThe king's ghost tells you that Claudius was the murderer!!!" << std::endl;
-            std::cout << "The king's ghost asks for you to take revenge.\n" << std::endl;
+            printCharDialogue("Ghost");
+            std::cout << "AHH, avenge me my son, else I will burn in eternal flames!" << std::endl;
+            printCharDialogue("You");
+            std::cout << "But how, how will I avenge you." << std::endl;
+            printCharDialogue("Ghost");
+            std::cout << "By killing my brother, the one who killed me in my sleep!" << std::endl;
+            std::cout << "\nThe king's ghost asks for you to take revenge.\n" << std::endl;
             std::cout << "1: OK" << std::endl;
             std::cout << "2: Most definitely" << std::endl;
             std::cout << "3: Sure thing" << std::endl;
@@ -307,10 +312,21 @@ int storyDialogue(int storyNum)
 
             goto endSwitch;
         case 7:
-            std::cout << "You are now playing as Polonious." << std::endl;
-            std::cout << "Ophelia comes to ask you what is wrong with Hamlet. It seems that Hamlet has gone crazy!"
-            "What will you reply?" << std::endl;
-            std::cout << "1. Oh No! It's all my fault for forcing you to ignore him! We must let the king know right away!" << std::endl;
+            system("cls");
+            printStats();
+            col(8);
+            std::cout << "\n              ";
+            std::cout << "*** You are currently playing as";
+            col(3);
+            std::cout << " Polonius";
+            col(8);
+            std::cout << " ***\n" << std::endl;
+            col(7);
+            std::cout << "Ophelia bursts into the your room saying that Hamlet has gone mad!!!" << std::endl;
+            std::cout << "Apparently, he looked very pale and disordered when he entered Ophelia's room." << std::endl;
+            std::cout << "What could this mean?" << std::endl;
+
+            std::cout << "\n1. Oh No! It's all my fault for forcing you to ignore him! We must let the king know right away!" << std::endl;
             std::cout << "2. He was never meant for you. " << std::endl;
             std::cin >> choice;
             if (choice == 1)
