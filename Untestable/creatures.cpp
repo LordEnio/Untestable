@@ -215,7 +215,7 @@ KingHamlet::KingHamlet()
 void KingHamlet::setHealth(int h)
 {
     health = h;
-    if (health < 0)
+    if (h < 0)
     {
         health = 0;
     }
