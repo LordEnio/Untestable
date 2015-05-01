@@ -214,7 +214,7 @@ KingHamlet::KingHamlet()
 
 void KingHamlet::setHealth(int h)
 {
-    health =h;
+    health = h;
     if (health < 0)
     {
         health = 0;
@@ -231,7 +231,7 @@ void KingHamlet::setDmg(int d)
     dmg = d;
 }
 
-bool KingHamlet::setIsDead(bool d)
+void KingHamlet::setIsDead(bool d)
 {
     isDead = d;
 }
@@ -262,14 +262,14 @@ bool KingHamlet::checkDeath()
     {
         return false;
     }
-    
+
     else
     {
         return true;
     }
 }
 
-bool KingHamlet::setCurse(int c)
+void KingHamlet::setCurse(bool c)
 {
     curse = c;
 }
@@ -287,14 +287,20 @@ int KingHamlet::standardAttack()
     return dmgDealt;
 }
 
-int KingHamlet::curse()
+int KingHamlet::Curse()
 {
     if(curse == true)
     {
         srand(time(NULL));
         int dmgDealt;
         dmgDealt = rand() % 3 + 1;
-        return dmgDealt()
+        std::cout << "The Ghost curses you!" << std::endl;
+        std::cout << "You take ";
+        col(3);
+        std::cout << dmgDealt;
+        col(7);
+        std::cout << " and are spooked!" << std::endl;
+        return dmgDealt;
     }
     else
     {
@@ -303,12 +309,24 @@ int KingHamlet::curse()
 }
 
 int KingHamlet::Attack()
+{
+    int dmgDealt;
+    srand(time(NULL));
+    dmgDealt = standardAttack();
+    std::cout << "The Ghost ";
+    col(12);
+    std::cout << dmgDealt;
+    col(7);
+    std::cout << " to you!" << std::endl;
+    return dmgDealt;
+}
 
 Claudius::Claudius()
 {
     setHealth(400);
     setMaxHealth(400);
     setDmg(15);
+
     setIsDead(false);
 }
 
@@ -338,5 +356,20 @@ void Claudius::setIsDead(bool d)
 
 int Claudius::getHealth()
 {
-    
+    return health;
+}
+
+int Claudius::getMaxHealth()
+{
+    return maxHealth;
+}
+
+int Claudius::getDmg()
+{
+    return dmg;
+}
+
+bool Claudius::getIsDead()
+{
+    return isDead;
 }

@@ -30,7 +30,7 @@
 
 1428895768 c:\users\enio h\skydrive\documents\#untestable\untestable\status.h
 
-1430201563 source:c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.cpp
+1430460014 source:c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.cpp
 	"storyHamlet.h"
 	"player.h"
 	"screen.h"
@@ -43,9 +43,9 @@
 	<stdio.h>
 	<windows.h>
 
-1430183922 c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.h
+1430202407 c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.h
 
-1430183922 source:c:\users\enio h\skydrive\documents\untestable\main.cpp
+1430202407 source:c:\users\enio h\skydrive\documents\untestable\main.cpp
 	<iostream>
 	<Windows.h>
 	<string>
@@ -54,9 +54,9 @@
 	"Untestable/player.h"
 	"Untestable/global.h"
 
-1430183922 c:\users\enio h\skydrive\documents\untestable\untestable\player.h
+1430372925 c:\users\enio h\skydrive\documents\untestable\untestable\player.h
 
-1430201639 source:c:\users\enio h\skydrive\documents\untestable\untestable\player.cpp
+1430455858 source:c:\users\enio h\skydrive\documents\untestable\untestable\player.cpp
 	"player.h"
 	"screen.h"
 	<stdio.h>
@@ -65,23 +65,25 @@
 	<conio.h>
 	<iostream>
 
-1430183922 source:c:\users\enio h\skydrive\documents\untestable\untestable\screen.cpp
+1430456653 source:c:\users\enio h\skydrive\documents\untestable\untestable\screen.cpp
 	<iostream>
 	<windows.h>
+	<string>
 	"screen.h"
 	"player.h"
 
 1429581704 c:\users\enio h\skydrive\documents\untestable\untestable\color.h
 
-1430183922 c:\users\enio h\skydrive\documents\untestable\untestable\screen.h
+1430456593 c:\users\enio h\skydrive\documents\untestable\untestable\screen.h
+	<string>
 
-1430183922 c:\users\enio h\skydrive\documents\untestable\untestable\global.h
+1430202407 c:\users\enio h\skydrive\documents\untestable\untestable\global.h
 
-1430183922 source:c:\users\enio h\skydrive\documents\untestable\untestable\global.cpp
+1430202407 source:c:\users\enio h\skydrive\documents\untestable\untestable\global.cpp
 	"global.h"
 	"player.h"
 
-1430201569 source:c:\users\enio h\skydrive\documents\untestable\untestable\battle.cpp
+1430460173 source:c:\users\enio h\skydrive\documents\untestable\untestable\battle.cpp
 	"battle.h"
 	"player.h"
 	"screen.h"
@@ -143,7 +145,7 @@
 
 1429730666 z:\untestable\untestable\creatures.h
 
-1430201331 source:c:\users\enio h\skydrive\documents\untestable\untestable\creatures.cpp
+1430459379 source:c:\users\enio h\skydrive\documents\untestable\untestable\creatures.cpp
 	"creatures.h"
 	"screen.h"
 	<stdio.h>
@@ -151,7 +153,7 @@
 	<stdlib.h>
 	<time.h>
 
-1430200916 c:\users\enio h\skydrive\documents\untestable\untestable\creatures.h
+1430455807 c:\users\enio h\skydrive\documents\untestable\untestable\creatures.h
 
-1430201395 c:\users\enio h\skydrive\documents\untestable\untestable\battle.h
+1430202407 c:\users\enio h\skydrive\documents\untestable\untestable\battle.h
 

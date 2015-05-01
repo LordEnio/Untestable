@@ -232,6 +232,7 @@ int Player::cheatAttack()
     std::cout << dmgDealt;
     col(7);
     std::cout << " to the enemy!" << std::endl;
+    return dmgDealt;
 }
 
 void Player::checkDeath()

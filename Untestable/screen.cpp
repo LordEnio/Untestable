@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <string>
 #include "screen.h"
 #include "player.h"
 
@@ -49,6 +50,13 @@ void clrScr()
         std::cout << " \n";
 
     }
+}
+
+void printCharDialogue (std::string chara)
+{
+    col(3);
+    std::cout << chara << ": ";
+    col(7);
 }
 
 void printStats()

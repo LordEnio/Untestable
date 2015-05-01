@@ -36,6 +36,32 @@ class KingHamlet
         unsigned int health;
         unsigned int maxHealth;
         unsigned int dmg;
+
+        bool isDead;
+        bool curse;
+
+    public:
+        KingHamlet();
+
+        void setHealth(int);
+        void setMaxHealth(int);
+        void setDmg(int);
+
+        void setIsDead(bool);
+        void setCurse(bool);
+
+        int const getHealth();
+        int const getMaxHealth();
+        int const getDmg();
+
+        bool getIsDead();
+        bool checkDeath();
+
+        bool getCurse();
+
+        int standardAttack();
+        int Curse();
+        int Attack();
 };
 
 class OldMan
@@ -65,7 +91,28 @@ class OldMan
         int Attack();
 };
 
+class Claudius
+{
+    private:
+        unsigned int health;
+        unsigned int maxHealth;
+        unsigned int dmg;
 
+        bool isDead;
+
+    public:
+        Claudius();
+
+        void setHealth(int);
+        void setMaxHealth(int);
+        void setDmg(int);
+        void setIsDead(bool);
+
+        int getHealth();
+        int getMaxHealth();
+        int getDmg();
+        bool getIsDead();
+};
 
 
 
