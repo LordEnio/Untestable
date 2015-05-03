@@ -11,7 +11,7 @@
 #include <windows.h>
 
 int score;          ///Score and total knowledge of Hamlet
-int choice;
+int choice;         ///Your choice when prompted
 
  /********************************
      Print the Intro/Tutorial
@@ -43,7 +43,9 @@ int storyDialogue(int storyNum)
     switch(storyNum)
     {
         case 1:
+
             printStats();
+
             col(8);
             std::cout << "\n              ";
             std::cout << "*** You are currently playing as";
@@ -52,16 +54,20 @@ int storyDialogue(int storyNum)
             col(8);
             std::cout << " ***" << std::endl;
             col(7);
+
             std::cout << "\nHoratio is skeptical whether there is a ghost or not. You, Horatio, and Bernardo will keep watch.\n" << std::endl;
             std::cout << "** hour later **\n" << std::endl;
             getch();
+
             std::cout << "The Ghost appears!!\n" << std::endl;
             printCharDialogue("Horatio");
             std::cout << "Speak to me!!" << std::endl;
             printCharDialogue("You");
             std::cout << "Should I kill it?\n" << std::endl;
+
             std::cout << "1. Throw the spear" << std::endl;
             std::cout << "2. Don't throw spear" <<std::endl;
+
             std::cin >> choice;
 
             if ((choice != 1))
@@ -70,11 +76,14 @@ int storyDialogue(int storyNum)
                 {
                     system("cls");
                     printStats();
+
                     std::cout << "\nWrong choice!! In order to beat this game you would want to make the correct\ndecisions.\n" << std::endl;
                     printCharDialogue("You");
                     std::cout << " Should I kill it?\n" << std::endl;
+
                     std::cout << "1.Throw the spear\n" << std::endl;
                     std::cout << "2.Don't throw the spear\n\n" << std::endl;
+
                     std::cin >> choice;
                 }
                 goto endfirstwhile;
@@ -85,8 +94,10 @@ int storyDialogue(int storyNum)
                 endfirstwhile:
                 system("cls");
                 printStats();
+
                 std::cout << "\nThe spear passes through, and the ghost quietly disappears..." << std::endl;
                 getch();
+
                 storyNum = 2;
                 goto endSwitch;
             }
@@ -95,8 +106,10 @@ int storyDialogue(int storyNum)
 
         case 2:
             begin2:
+
             system("cls");
             printStats();
+
             col(8);
             std::cout << "\n              ";
             std::cout << "*** You are currently playing as";
@@ -105,19 +118,24 @@ int storyDialogue(int storyNum)
             col(8);
             std::cout << " ***" << std::endl;
             col(7);
+
             std::cout << "\nYou are the prince of Elsinore. You have discovered that your father has \nmysteriously died.";
             std::cout << " Your mother (Gertrude) then remarries to your uncle\n(Claudius) after only a month of your father's death." << std::endl;
             std::cout << "You're obviously pissed.\n\n";
+
             printCharDialogue("Claudius");
             std::cout << "Why are you so sad Hamlet?\n" << std::endl;
+
             std::cout << "1: You would never understand how torn apart I am." << std::endl;
             std::cout << "2: Because my mother has no respect for her body." << std::endl;
             std::cout << "3: Because of this marriage, but I totally understand that this marriage is\n   diplomatically important." << std::endl;
+
             std::cin >> choice;
 
             switch (choice)
             {
                 case 1:
+
                     system("cls");
                     printStats();
                     std::cout << "\n";
@@ -130,190 +148,268 @@ int storyDialogue(int storyNum)
                     getch();
                     storyNum = 3;
                     goto endSwitch;
+
                 case 2:
+
                     system("cls");
                     Hamlet.setInsanity(100);
                     printStats();
+
                     std::cout << "\n";
                     printCharDialogue("Gertrude");
                     std::cout << "How dare you say that Hamlet!." << std::endl;
+
                     printCharDialogue("Claudius");
                     std::cout << "No need to yell at him Gertrude. He is just angry at our marriage. \n" << std::endl;
+
                     std::cout << "After a long argument, King Claudius finds out about Gertrude's affair\n with the price of Bosnia." << std::endl;
                     std::cout << "\nHe immediately orders the execution of Gertrude." << std::endl;
                     getch();
+
                     goto endSwitch;
+
                 case 3:
+
                     system("cls");
                     Hamlet.setSuspicion(15);
                     printStats();
+
                     std::cout << "\n";
                     printCharDialogue("Gertrude");
                     std::cout << "If you say so Hamlet. I hope for the best for you." << std::endl;
+
                     printCharDialogue("Claudius");
                     std::cout << "Well then, how about we celebrate? How does that sound." << std::endl;
+
                     printCharDialogue("Gertrude");
                     std::cout << "I think thats a great idea honey." << std::endl;
                     getch();
+
                     storyNum = 3;
                     goto endSwitch;
+
                 default:
+
                     goto begin2;
             }
         case 3:
+
             begin3:
             system("cls");
             printStats();
+
             std::cout << "\n";
             printCharDialogue("Gertrude");
             std::cout << "Why don't you stay with us in the castle?" << std::endl;
             std::cout << "          We could be a family and party together.\n" << std::endl;
+
             std::cout << "1. I shall in my best obey you." << std::endl;
             std::cout << "2. I refuse your request." << std::endl;
+
             std::cin >> choice;
 
             switch (choice)
             {
                 case 1:
+
                     system("cls");
                     printStats();
+
                     std::cout << "\n";
                     printCharDialogue("Gertrude");
                     std::cout << "Thank you Hamlet, I know you will get better." << std::endl;
                     getch();
+
                     storyNum = 4;
                     goto endSwitch;
                 case 2:
+
                     system("cls");
                     printStats();
+
                     std::cout << "\nYou leave the castle and head to Wittenburg." << std::endl;
                     getch();
+
                     storyNum = 5;
                     goto endSwitch;
                 default:
+
                     goto begin3;
             }
+
         case 4:
             begin4:
+
             system("cls");
             printStats();
+
             std::cout << "\nYou are left alone in the castle after the King and Queen celebrate." << std::endl;
+
             std::cout << "\n1: Let's go to the bar and drink away my grief." << std::endl;
             std::cout << "2: I wish my flesh melts away." << std::endl;
             std::cout << "3: I'm going to go drop acid now, screw my life." << std::endl;
+
             std::cin >> choice;
 
             switch (choice)
             {
                 case 1:
+
                     system("cls");
                     printStats();
+
                     std::cout << "\nYou go to the bar and spend all your money on drinks." << std::endl;
                     std::cout << "It seems like Horatio was looking for you in the castle." << std::endl;
                     std::cout << "However, he eventually forgot why he was looking for you, gave up and went home." << std::endl;
                     getch();
+
                     storyNum = 7;
                     goto endSwitch;
+
                 case 2:
+
                     system("cls");
                     printStats();
+
                     storyNum = 6;
                     goto endSwitch;
+
                 case 3:
+
                     system("cls");
                     printStats();
+
                 default:
                     goto begin4;
             }
 
         case 5:
             begin5:
+
             system("cls");
             printStats();
+
             std::cout << "\nYou reach Wittenburg, but you greeted by German thugs." << std::endl;
             std::cout << "They jump you hoping to take your money." << std::endl;
             std::cout << "You are beaten up and hopeless, when suddenly, an old man appears in front\nof you." << std::endl;
             std::cout << "\n";
+
             printCharDialogue("Old Man");
             std::cout << "Seems like you are in trouble." << std::endl;
             printCharDialogue("Old Man");
             std::cout << "If you drink this magical liquid, you can forget about your past\nmistakes." << std::endl;
+
             std::cout << "\n1: Take the liquid." << std::endl;
             std::cout << "2: Jump the old man and take his belongings." << std::endl;
+
             std::cin >> choice;
 
             switch (choice)
             {
                 case 1:
+
                     system("cls");
                     Hamlet.setHealth(0);
                     printStats();
+
                     std::cout << "\nYou decide to take the liquid. It starts to burn your body, and you fall down\n dead." << std::endl;
                     std::cout << "The old man was the head thug, and he had tricked you into drinking poison." << std::endl;
                     getch();
+
                     goto endSwitch;
+
                 case 2:
+
                     system("cls");
                     printStats();
+
                     std::cout << "\nYou engage on a hand to hand battle with the old man." << std::endl;
                     getch();
+
                     oldManBattle();
+
                     goto endSwitch;
+
                 default:
+
                     goto begin5;
             }
 
         case 6:
+
             system("cls");
             printStats();
+
             std::cout << "\nHoratio, your old friend, enters the castle to your surprise." << std::endl;
             std::cout << "\n";
+
             printCharDialogue("Horatio");
             std::cout << "I am here for your father's funeral. I am terribly sorry." << std::endl;
+
             printCharDialogue("You");
             std::cout << "HA, you mean you're here for my mother's wedding?" << std::endl;
+
             printCharDialogue("Horatio");
             std::cout << "Oh....sucks" << std::endl;
             printCharDialogue("Horatio");
             std::cout << "But I came here because I saw you father's ghost, Hamlet!" << std::endl;
+
             printCharDialogue("You");
             std::cout << "What!!? I must meet him at once!!" << std::endl;
             getch();
+
             system("cls");
             printStats();
+
             col(8);
             std::cout << "\n              *** You and your crew meet to see the ghost ***\n" << std::endl;
             col(7);
+
             std::cout << "After a while of waiting, you spot a figure in the distance!!\n" << std::endl;
+
             printCharDialogue("You");
             std::cout << "I must meet him!!\n" << std::endl;
+
             std::cout << "You chase the shade all through the woods." << std::endl;
             std::cout << "There seems to be something lurking in the woods." << std::endl;
             std::cout << "Prepare for some action." << std::endl;
             getch();
+
             battleActI();
+
             system("cls");
             printStats();
+
             std::cout << "\nIt appears that the ghost has been unpossesed!" << std::endl;
             std::cout << "Its trying to tell you something...\n" << std::endl;
             getch();
+
             printCharDialogue("Ghost");
             std::cout << "AHH, avenge me my son, else I will burn in eternal flames!" << std::endl;
+
             printCharDialogue("You");
             std::cout << "But how, how will I avenge you." << std::endl;
+
             printCharDialogue("Ghost");
             std::cout << "By killing my brother, the one who killed me in my sleep!" << std::endl;
+
             std::cout << "\nThe king's ghost asks for you to take revenge.\n" << std::endl;
+
             std::cout << "1: OK" << std::endl;
             std::cout << "2: Most definitely" << std::endl;
             std::cout << "3: Sure thing" << std::endl;
+
             std::cin >> choice;
+
             storyNum = 7;
 
             goto endSwitch;
+
         case 7:
+
             system("cls");
             printStats();
+
             col(8);
             std::cout << "\n              ";
             std::cout << "*** You are currently playing as";
@@ -322,27 +418,51 @@ int storyDialogue(int storyNum)
             col(8);
             std::cout << " ***\n" << std::endl;
             col(7);
+
             std::cout << "Ophelia bursts into the your room saying that Hamlet has gone mad!!!" << std::endl;
             std::cout << "Apparently, he looked very pale and disordered when he entered Ophelia's room." << std::endl;
             std::cout << "What could this mean?" << std::endl;
 
             std::cout << "\n1. Oh No! It's all my fault for forcing you to ignore him! We must let the king know right away!" << std::endl;
             std::cout << "2. He was never meant for you. " << std::endl;
+
             std::cin >> choice;
-            if (choice == 1)
+
+            switch (choice)
             {
-                storyNum = 8;
+                case 1:
+
+                    system("cls");
+                    printStats();
+
+                    std::cout << "\nYou make your way to the king's castle to tell him the news." << std::endl;
+                    getch();
+
+                    goto endSwitch;
+
+                case 2:
+
+                    system("cls");
+                    printStats();
+
+                    std::cout << "\nYou sit back and smoke a cigar while listening to Ophelia yell at you." << std::endl;
+                    std::cout << "She begins to get fed up and grabs a knife to attack you." << std::endl;
+                    getch();
+
+                    std::cout << "You get stabbed by our own daughter and die in minutes from blood loss." << std::endl;
+                    getch();
+
+                    system("cls");
+                    Hamlet.setInsanity(100);
+                    printStats();
+
+                    std::cout << "\nYou find out Ophelia was locked up because of the killing and go into a deep state of depression." << std::endl;
+                    getch();
+
+                    goto endSwitch;
             }
-            else if (choice == 2)
-            {
-                storyNum = 9;
-            }
-            else
-            {
-            std::cout << "That isn't a choice..." << std::endl;
-            }
-            break;
-                      case 8:
+
+        case 8:
             std::cout << "You tell the king whats \"really\" going on with Hamlet. You try to read the letter that Hamlet sent Ophelia but you "
             "forget how to read. What was that intro phrase again?";
             std::cout << "1. To the celestial, and my soul's idol, the most beautified Ophelia" << std::endl;

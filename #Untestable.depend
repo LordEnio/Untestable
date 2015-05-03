@@ -43,9 +43,9 @@
 	<stdio.h>
 	<windows.h>
 
-1430202407 c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.h
+1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.h
 
-1430202407 source:c:\users\enio h\skydrive\documents\untestable\main.cpp
+1430461660 source:c:\users\enio h\skydrive\documents\untestable\main.cpp
 	<iostream>
 	<Windows.h>
 	<string>
@@ -54,9 +54,9 @@
 	"Untestable/player.h"
 	"Untestable/global.h"
 
-1430372925 c:\users\enio h\skydrive\documents\untestable\untestable\player.h
+1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\player.h
 
-1430455858 source:c:\users\enio h\skydrive\documents\untestable\untestable\player.cpp
+1430461660 source:c:\users\enio h\skydrive\documents\untestable\untestable\player.cpp
 	"player.h"
 	"screen.h"
 	<stdio.h>
@@ -65,7 +65,7 @@
 	<conio.h>
 	<iostream>
 
-1430456653 source:c:\users\enio h\skydrive\documents\untestable\untestable\screen.cpp
+1430461660 source:c:\users\enio h\skydrive\documents\untestable\untestable\screen.cpp
 	<iostream>
 	<windows.h>
 	<string>
@@ -74,16 +74,16 @@
 
 1429581704 c:\users\enio h\skydrive\documents\untestable\untestable\color.h
 
-1430456593 c:\users\enio h\skydrive\documents\untestable\untestable\screen.h
+1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\screen.h
 	<string>
 
-1430202407 c:\users\enio h\skydrive\documents\untestable\untestable\global.h
+1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\global.h
 
-1430202407 source:c:\users\enio h\skydrive\documents\untestable\untestable\global.cpp
+1430461660 source:c:\users\enio h\skydrive\documents\untestable\untestable\global.cpp
 	"global.h"
 	"player.h"
 
-1430460173 source:c:\users\enio h\skydrive\documents\untestable\untestable\battle.cpp
+1430461660 source:c:\users\enio h\skydrive\documents\untestable\untestable\battle.cpp
 	"battle.h"
 	"player.h"
 	"screen.h"
@@ -145,7 +145,7 @@
 
 1429730666 z:\untestable\untestable\creatures.h
 
-1430459379 source:c:\users\enio h\skydrive\documents\untestable\untestable\creatures.cpp
+1430603187 source:c:\users\enio h\skydrive\documents\untestable\untestable\creatures.cpp
 	"creatures.h"
 	"screen.h"
 	<stdio.h>
@@ -153,7 +153,7 @@
 	<stdlib.h>
 	<time.h>
 
-1430455807 c:\users\enio h\skydrive\documents\untestable\untestable\creatures.h
+1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\creatures.h
 
-1430202407 c:\users\enio h\skydrive\documents\untestable\untestable\battle.h
+1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\battle.h
 
