@@ -533,6 +533,7 @@ int storyDialogue(int storyNum)
             }
 
             std::cout << "\nYou finish reading the letter.\n You ask to peronally speak with Prince Hamlet.\nThe king Approves." << std::endl;
+            getch();
 
             system("cls");
             printStats();
@@ -1204,6 +1205,10 @@ int storyDialogue(int storyNum)
 
 
                     storyNum = 18;
+
+                    std::cout << "\n\n" << Hamlet.getScore();
+
+                    getch();
 
                     goto endSwitch;
 
