@@ -294,7 +294,7 @@ int KingHamlet::Curse()
         srand(time(NULL));
         int dmgDealt;
         dmgDealt = rand() % 3 + 1;
-        std::cout << "The Ghost curses you!" << std::endl;
+        std::cout << "\nThe Ghost curses you!" << std::endl;
         std::cout << "You take ";
         col(3);
         std::cout << dmgDealt;

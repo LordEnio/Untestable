@@ -242,8 +242,8 @@ void Player::checkDeath()
     {
         if (insanity >= 100)
         {
-            std::cout << "\nYou commit suicide from your insanity. Your emotions got the ";
-            std::cout << "best of you and\nare now considered a coward by the church. " << std::endl;
+            std::cout << "\nYou commit suicide from your 'fake' insanity. Your emotions got the ";
+            std::cout << "best of you and are now considered a coward by the church. " << std::endl;
             getch();
         }
         else if (suspicion >= 100)
