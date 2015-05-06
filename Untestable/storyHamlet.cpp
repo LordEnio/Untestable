@@ -1200,11 +1200,7 @@ int storyDialogue(int storyNum)
                     std::cout << "Alright then. Goodnight mother." << std::endl;
                     getch();
 
-                    std::cout << "\nYou exit the room." << std::endl;
-                    getch();
-
-
-                    storyNum = 18;
+		    storyNum = 18;
 
                     std::cout << "\n\n" << Hamlet.getScore();
 
@@ -1212,9 +1208,120 @@ int storyDialogue(int storyNum)
 
                     goto endSwitch;
 
+	    case 2:
+
+	      system("cls");
+	      printStats();
+
+	      std::cout << "\nYou make your way to kill Gertrude with your sword.\n" << std::endl;
+	      getch();
+
+	      printCharDialogue("Gertrude");
+	      std::cout << "No Hamlet! Please don\'t!" << std::endl;
+
+	      printCharDialogue("You");
+	      std::cout << "I\'m sorry mother. I must do it." << std::endl;
+	      getch();
+
+	      std::cout << "\nBefore you do the deed, someone jumps out of the closet and stabs you to protect Gertrude!" << std::endl;
+	      getch();
+
+	      Hamlet.setHealth(0);
+
+	      goto endSwitch;
+
+	    case 3:
+
+            system("cls");
+	      //Duel against Polonius, Impossible
+
+
             }
 
-        }
+    case 18:
+
+      system("cls");
+      printStats();
+
+      std::cout << "\nYou drag Polonius's body with you as you leave the room.\n" << std::endl;
+      getch();
+
+      std::cout << "Gertude later hurries to Claudius, and explains everything to him." << std::endl;
+      std::cout << "The King finds out about your plan, and order's you to be exiled to England." << std::endl;
+      std::cout << "He sends Rosencrantz and Guildenstern to go and find you.\n" << std::endl;
+      getch();
+
+      std::cout << "Rosencrantz and Guildenstern approach you." << std::endl;
+      std::cout << "You release your anger by comparing them to..." << std::endl;
+
+      std::cout << "\n1. A bat that is double sided" << std::endl;
+      std::cout << "2. A cat that bertrays its owner for food" << std::endl;
+      std::cout << "3. A sponge that soaks up the king's rewards" << std::endl;
+      std::cout << "4. A leech that sucks on the powers of the king" << std::endl;
+
+      std::cin >> choice;
+
+      storyNum = 19;
+
+      switch (choice)
+	{
+	case 1:
+
+	  Hamlet.setScore(Hamlet.getScore() - 2);
+	  goto endSwitch;
+
+	case 2:
+
+	  Hamlet.setScore(Hamlet.getScore() - 2);
+	  goto endSwitch;
+
+	case 3:
+
+	  Hamlet.setScore(Hamlet.getScore() + 2);
+	  goto endSwitch;
+
+	case 4:
+
+	  Hamlet.setScore(Hamlet.getScore() - 2);
+	  goto endSwitch;
+
+	}
+
+    case 19:
+
+      system("cls");
+      printStats();
+
+      std::cout << "\nAfter some arguing, you agree to be escorted to Claudius.\n" << std::endl;
+      getch();
+
+      std::cout << "Claudius is engraged at you, demanding you to at once reveal the location of\nPolonius." << std::endl;
+      std::cout << "You hint to him that it is located next to stairs." << std::endl;
+      getch();
+
+      std::cout << "Claudius lets you know that you have to leave for England at once." << std::endl;
+
+      std::cout << "\n1. Yeah, sure, whatever." << std::endl;
+      std::cout << "2. No way!. I know you killed the true King!!" << std::endl;
+
+      std::cin >> choice;
+
+      switch (choice)
+	{
+	case 1:
+
+	  system("cls");
+	  printStats();
+	case 2:
+
+        system("cls");
+	  //Battle with claudius
+	}
+
+
+
+    }
+
     endSwitch:
     system("cls");
     return storyNum;

@@ -30,7 +30,7 @@
 
 1428895768 c:\users\enio h\skydrive\documents\#untestable\untestable\status.h
 
-1430716697 source:c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.cpp
+1430778644 source:c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.cpp
 	"storyHamlet.h"
 	"player.h"
 	"screen.h"
@@ -45,7 +45,7 @@
 
 1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\storyhamlet.h
 
-1430712021 source:c:\users\enio h\skydrive\documents\untestable\main.cpp
+1430778644 source:c:\users\enio h\skydrive\documents\untestable\main.cpp
 	<iostream>
 	<Windows.h>
 	<string>
@@ -156,4 +156,76 @@
 1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\creatures.h
 
 1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\battle.h
+
+1430778644 source:c:\users\enio h\documents\github\main.cpp
+	<iostream>
+	<Windows.h>
+	<string>
+	"Untestable/screen.h"
+	"Untestable/storyHamlet.h"
+	"Untestable/player.h"
+	"Untestable/global.h"
+
+1430461660 c:\users\enio h\documents\github\untestable\screen.h
+	<string>
+
+1430461660 c:\users\enio h\documents\github\untestable\storyhamlet.h
+
+1430461660 c:\users\enio h\documents\github\untestable\player.h
+
+1430461660 c:\users\enio h\documents\github\untestable\global.h
+
+1430461660 source:c:\users\enio h\documents\github\untestable\battle.cpp
+	"battle.h"
+	"player.h"
+	"screen.h"
+	<iostream>
+	"creatures.h"
+	<conio.h>
+	<windows.h>
+
+1430461660 c:\users\enio h\documents\github\untestable\battle.h
+
+1430461660 c:\users\enio h\documents\github\untestable\creatures.h
+
+1430695225 source:c:\users\enio h\documents\github\untestable\creatures.cpp
+	"creatures.h"
+	"screen.h"
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<time.h>
+
+1430461660 source:c:\users\enio h\documents\github\untestable\global.cpp
+	"global.h"
+	"player.h"
+
+1430695489 source:c:\users\enio h\documents\github\untestable\player.cpp
+	"player.h"
+	"screen.h"
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<iostream>
+
+1430461660 source:c:\users\enio h\documents\github\untestable\screen.cpp
+	<iostream>
+	<windows.h>
+	<string>
+	"screen.h"
+	"player.h"
+
+1430894474 source:c:\users\enio h\documents\github\untestable\storyhamlet.cpp
+	"storyHamlet.h"
+	"player.h"
+	"screen.h"
+	"global.h"
+	"battle.h"
+	"creatures.h"
+	<iostream>
+	<string>
+	<conio.h>
+	<stdio.h>
+	<windows.h>
 
