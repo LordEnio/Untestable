@@ -6,7 +6,7 @@
 #include "Untestable/player.h"
 #include "Untestable/global.h"
 
-int storyNum = 12;
+int storyNum = 22;
 
 int main()
 {

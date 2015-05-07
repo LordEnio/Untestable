@@ -812,9 +812,9 @@ int storyDialogue(int storyNum)
             std::cout << "\nTo die: to sleep;" << std::endl;
             std::cout << "No more; and by a sleep to say we end" << std::endl;
             std::cout << "The heart-ache and the thousand natural shocks" << std::endl;
-            std::cout << "That flesh is heir to,\’tis a consummation" << std::endl;
-            std::cout << "Devoutly to be wish\’d. To die, to sleep;" << std::endl;
-            std::cout << "To sleep: perchance to dream: ay, there\’s the rub;" << std::endl;
+            std::cout << "That flesh is heir to,\'tis a consummation" << std::endl;
+            std::cout << "Devoutly to be wish\'d. To die, to sleep;" << std::endl;
+            std::cout << "To sleep: perchance to dream: ay, there\'s the rub;" << std::endl;
             std::cout << "For in that sleep of death what dreams may come" << std::endl;
             std::cout << "When we have shuffled off this mortal coil," << std::endl;
             std::cout << "Must give us pause: there’s the respect" << std::endl;
@@ -1329,7 +1329,7 @@ int storyDialogue(int storyNum)
 	  system("cls");
 	  printStats();
 
-	  std::cout << "\nYou begin to make your way to England by foot." << std::endl;
+	  std::cout << "\nYou begin to make your way to England." << std::endl;
 	  getch();
 
 	  storyNum = 20;
@@ -1341,7 +1341,7 @@ int storyDialogue(int storyNum)
         system("cls");
 	printStats();
 
-	std::cout << "\nClaudius immediatly orders the execution of you now that he is certain of you knowledge." << std::endl;
+	std::cout << "\nClaudius immediatly orders the execution of you now that he is certain of your\nknowledge." << std::endl;
 	getch();
 
 	Hamlet.setHealth(0);
@@ -1355,7 +1355,7 @@ int storyDialogue(int storyNum)
       system("cls");
       printStats();
 
-      std::cout << "You feel like you should do something before you leave." << std::endl;
+      std::cout << "\nYou feel like you should do something before you leave." << std::endl;
 
       std::cout << "\n1. Stop by and get something to eat." << std::endl;
       std::cout << "2. Head straight to England." << std::endl;
@@ -1373,6 +1373,7 @@ int storyDialogue(int storyNum)
 	  std::cout << "\nYou head to the bar to get something to eat before you head out." << std::endl;
 	  std::cout << "When you enter the bar you see a group of guys fighting." << std::endl;
 	  std::cout << "You try to break it up but get a bottle broken on your head." << std::endl;
+	  getch();
 
 	  Hamlet.setHealth(0);
 
@@ -1383,7 +1384,8 @@ int storyDialogue(int storyNum)
 	  system("cls");
 	  printStats();
 
-	  std::cout << "Your trip must stop by Wittenberg in order to reach England from where you are." << std::endl;
+	  std::cout << "\nYour trip must stop by Wittenberg in order to reach England from where you are." << std::endl;
+	  getch();
 
 	  storyNum = 5;
 
@@ -1399,19 +1401,19 @@ int storyDialogue(int storyNum)
 
 	  std::cout << "\nYou can't believe your eyes!!!" << std::endl;
 	  std::cout << "It\'s the army of Norway!!" << std::endl;
-	  std::cout << "The captain makes his way to you." << std::endl;
+	  std::cout << "The captain makes his way to you.\n" << std::endl;
 
 	  printCharDialogue("You");
 	  std::cout << "Who are you and what are you doing here." << std::endl;
 
 	  printCharDialogue("Captain");
-	  std::cout << "We are of Norway, under young Fortinbras, coming to acquire a small part of Poland." << std::endl;
+	  std::cout << "We are of Norway, under young Fortinbras, coming to acquire a small\npart of Poland." << std::endl;
 
 	  printCharDialogue("You");
 	  std::cout << "Wouldn\'t that lead your army to their deaths. Whatever, Thank you." << std::endl;
 
 	  printCharDialogue("Captain");
-	  std::cout << "God be wi\' you" << std::endl;
+	  std::cout << "God be wi\' you\n" << std::endl;
 	  getch();
 
 	  storyNum = 21;
@@ -1426,9 +1428,9 @@ int storyDialogue(int storyNum)
 
       std::cout << "\nHmm, if Fortinbras can lead his army to their deaths, then..." << std::endl;
 
-      std::cout << "\n1. I can rasie one and storn the castle and reclaim my throne." << std::endl;
+      std::cout << "\n1. I can raise one and storm the castle and reclaim my throne." << std::endl;
       std::cout << "2. I can get revenge on the man who killed my father." << std::endl;
-      std::cout << "3. I can convice the army to attack Denmark instead to spare them their lives." << std::endl;
+      std::cout << "3. I can convince the army to attack Denmark instead to spare them their lives." << std::endl;
 
       std::cin >> choice;
 
@@ -1452,7 +1454,7 @@ int storyDialogue(int storyNum)
 	  system("cls");
 	  printStats();
 
-	  std::cout << "You swear that you will not be delaying your revenge anymore." << std::endl;
+	  std::cout << "\nYou swear that you will not be delaying your revenge anymore." << std::endl;
 	  getch();
 
 	  storyNum = 22;
@@ -1593,7 +1595,7 @@ int storyDialogue(int storyNum)
       system("cls");
       printStats();
 
-      std::cout << "\nYou see Claudius sitting at his throne. You point your rapier at him ready to kill." << std::endl;
+      std::cout << "\nYou see Claudius sitting at his throne. You point your rapier at him ready\nto kill." << std::endl;
 
       std::cout << "\n1. Kill him" << std::endl;
       std::cout << "2. Let him speak" << std::endl;
@@ -1607,7 +1609,7 @@ int storyDialogue(int storyNum)
 	  system("cls");
 	  printStats();
 
-	  std::cout << "\nYou thrust your rapier through his throat and leave with pleasure from your revenge." << std::endl;
+	  std::cout << "\nYou thrust your rapier through his throat and leave with pleasure from your\nrevenge." << std::endl;
 	  getch();
 
 	  system("cls");
@@ -1638,7 +1640,7 @@ int storyDialogue(int storyNum)
 	  system("cls");
 	  printStats();
 
-	  std::cout << "\nYou allow him to speak." << std::endl;
+	  std::cout << "\nYou allow him to speak.\n" << std::endl;
 
 	  printCharDialogue("Claudius");
 	  std::cout << "Laertes, please calm down." << std::endl;
@@ -1651,8 +1653,19 @@ int storyDialogue(int storyNum)
 
 	  printCharDialogue("You");
 	  std::cout << "THEN BY WHOM?!?!" << std::endl;
+      getch();
 
-	  printCharDialogue("Claudius");
+      std::cout << "\nYou see Ophelia walk into the room." << std::endl;
+
+      printCharDialogue("You");
+      std::cout << "Oh My God, My sweet lovable sister.\n" << std::endl;
+      std::cout << "You swear to get revenge on the person who did this." << std::endl;
+      getch();
+
+      storyNum = 24;
+
+      goto endSwitch;
+
 	}
 
     }
