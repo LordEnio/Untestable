@@ -1905,7 +1905,7 @@ int storyDialogue(int storyNum)
         getch();
         system("cls");
         printStats();
-        std::cout << "\n"
+        std::cout << "\n";
         printCharDialogue("Hamlet");
         std::cout << "Don't even think about drinking the poison!" << std::endl;
         printCharDialogue("Horatio");
