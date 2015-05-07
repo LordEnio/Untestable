@@ -497,3 +497,91 @@ int Polonius::Attack()
     return dmgDealt;
 }
 
+Laertes::Laertess()
+{
+    setHealth(700);
+    setMaxHealth(700);
+    setDmg(19);
+
+    setIsDead(false);
+}
+
+void Laertes::setHealth(int h)
+{
+    health = h;
+    if (health < 0)
+    {
+        health = 0;
+    }
+}
+
+void Laertes::setMaxHealth(int m)
+{
+    maxHealth = m;
+}
+
+void Laertes::setDmg(int d)
+{
+    dmg = d;
+}
+
+void Laertes::setIsDead(bool d)
+{
+    isDead = d;
+}
+
+int Laertes::getHealth()
+{
+    return health;
+}
+
+int Laertes::getMaxHealth()
+{
+    return maxHealth;
+}
+
+int Laertes::getDmg()
+{
+    return dmg;
+}
+
+bool Laertes::getIsDead()
+{
+    return isDead;
+}
+
+bool Laertes::checkDeath()
+{
+    if (health > 0)
+    {
+        return false;
+    }
+
+    else
+    {
+        return true;
+    }
+}
+
+int Laertes::standardAttack()
+{
+    srand(time(NULL));
+    int dmgDealt;
+    dmgDealt = rand() % 4 + dmg;
+    return dmgDealt;
+}
+
+
+int Laertes::Attack()
+{
+    int dmgDealt;
+    srand(time(NULL));
+    dmgDealt = standardAttack();
+    std::cout << "Laertes deals ";
+    col(12);
+    std::cout << dmgDealt;
+    col(7);
+    std::cout << " to you!" << std::endl;
+    return dmgDealt;
+}
+
