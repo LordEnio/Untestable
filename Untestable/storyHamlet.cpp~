@@ -1312,68 +1312,12 @@ int storyDialogue(int storyNum)
 
 	  system("cls");
 	  printStats();
-
-	  std::cout << "\nYou begin to make your way to England by foot." << std::endl;
-	  getch();
-
-	  storyNum = 20;
-
-	  goto endSwitch;
-	  
 	case 2:
 
         system("cls");
 	  //Battle with claudius
-	
 	}
-    case 20:
 
-      system("cls");
-      printStats();
-      
-      std::cout << "You feel like you should do something before you leave." << std::endl;
-
-      std::cout << "\n1. Stop by and get something to eat." << std::endl;
-      std::cout << "2. Head straight to England." << std::endl;
-      std::cout << "3. Take a stroll first to the coast before you leave." << std::endl;
-
-      std::cin >> choice;
-
-      switch (choice)
-	{
-	case 1:
-
-	  system("cls");
-	  printStats();
-
-	  std::cout << "\nYou head to the bar to get something to eat before you head out." << std::endl;
-	  std::cout << "When you enter the bar you see a group of guys fighting." << std::endl;
-	  std::cout << "You try to break it up but get a bottle broken on your head." << std::endl;
-
-	  Hamlet.setHealth(0);
-
-	  goto endSwitch;
-
-	case 2:
-
-	  system("cls");
-	  printStats();
-
-	  std::cout << "Your trip must go through Wittenberg in order to reach England from where you are." << std::endl;
-
-	  storyNum = 5;
-
-	  goto endSwitch;
-
-	case 3:
-
-	  system("cls");
-	  printStats();
-
-	  std::cout << "
-	  
-	}
-      
 
 
     }
