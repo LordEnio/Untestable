@@ -386,8 +386,12 @@ void PoloniusBattle()
     std::cout << "He quietly falls to the ground." << std::endl
     getch();
     system("cls");
+    printStats();
+    std::cout << "Your rewards are: \n" << std::endl;
     Hamlet.setGold(Hamlet.getGold() + 4200);
     Hamlet.setExp(Hamlet.getExp() + 13);
+    getch();
+    system("cls");
     printStats();
     std::cout << "Your rewards are: \n" << std::endl;
     col(14);
@@ -492,7 +496,11 @@ void LaertesBattle()
     Hamlet.setGold(Hamlet.getGold() + 5350);
     Hamlet.setExp(Hamlet.getExp() + 20);
     printStats();
-    std::cout << "Your rewards are: \n" << std::endl;
+    std::cout << "Your rewards are: \n" <<;
+    getch();
+    system("cls");
+    printStats();
+    std::cout << "Your rewards are: \n" <<;
     col(14);
     std::cout << "4200 Gold Coins" << std::endl;
     std::cout << "20 Experience Points" << std::endl;
