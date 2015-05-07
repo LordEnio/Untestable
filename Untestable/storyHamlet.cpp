@@ -333,6 +333,11 @@ int storyDialogue(int storyNum)
 
                     goto endSwitch;
 
+                case 17:
+
+                    storyNum = 4;
+                    goto endSwitch;
+
                 default:
 
                     goto begin5;
@@ -1671,6 +1676,8 @@ int storyDialogue(int storyNum)
 	}
 
     case 24:
+
+        LaertesBattle();
 
       system("cls");
       printStats();

@@ -300,12 +300,14 @@ void oldManBattle()
     }
     system("cls");
     printStats();
-    std::cout << "You beat the old man!" << std::endl;
-    std::cout << "You earn 10 exp points!!" << std::endl;
+    std::cout << "\nYou beat the old man!" << std::endl;
+    getch();
+    std::cout << "You earn 13 exp points!!" << std::endl;
+    getch();
     std::cout << "You take the liquid he dropped." << std::endl;
     std::cout << "You suddenly lose consciousness, and wake up to thugs." << std::endl;
     std::cout << "It seems like you traveled back in time!" << std::endl;
-    std::cout << "***Hint: Next time you can press 3 to neither take the liquid nor\n jump the man, and instead get back into the game." << std::endl;
+    std::cout << "\n***Hint: Next time you can press 17 to neither take the liquid nor\n jump the man, and instead get back into the game." << std::endl;
     Hamlet.setGold(1);
     Hamlet.setExp(Hamlet.getExp() + 13);
     getch();
@@ -456,7 +458,7 @@ void LaertesBattle()
                 std::cout << "\n";
                 dmgDealt = Hamlet.criticalAttack();
                 Laertes1.setHealth(Laertes1.getHealth() - dmgDealt);
-                std::cout << "\nPolonius\'s health is now at ";
+                std::cout << "\nLaertes\'s health is now at ";
                 col(2);
                 std::cout << Laertes1.getHealth() << "/" << Laertes1.getMaxHealth() << std::endl;
                 col(7);
@@ -469,7 +471,7 @@ void LaertesBattle()
                 std::cout << "\n";
                 dmgDealt = Hamlet.cheatAttack();
                 Laertes1.setHealth(Laertes1.getHealth() - dmgDealt);
-                std::cout << " \nPolonius\'s health is now at ";
+                std::cout << " \nLaertes\'s health is now at ";
                 col(2);
                 std::cout << Laertes1.getHealth() << "/" << Laertes1.getMaxHealth() << std::endl;
                 col(7);

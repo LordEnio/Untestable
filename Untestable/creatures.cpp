@@ -618,7 +618,7 @@ int Laertes::poisonAttack()
         int dmgDealt;
         dmgDealt = rand() % 3 + 8;
 
-        std::cout << "The poison deals ";
+        std::cout << "\nThe poison deals ";
         col(10);
         std::cout << dmgDealt;
         col(7);
@@ -644,7 +644,7 @@ int Laertes::Attack()
         std::cout << "Laertes stabs you with his poison sword!!\n You will now take continous damage!" << std::endl;
         poison = true;
     }
-    std::cout << "Laertes deals ";
+    std::cout << "\nLaertes deals ";
     col(12);
     std::cout << dmgDealt;
     col(7);
