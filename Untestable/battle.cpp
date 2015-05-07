@@ -625,14 +625,15 @@ void LaertesFinalBattle()
 
     system("cls");
     printStats();
-    std::cout << "Gertrude falls to the ground dead.";
+    std::cout << "\nGertrude falls to the ground dead.";
     std::cout << "\nLaertes falls to the ground." << std::endl;
     std::cout << "I am justly killed with my own treachery." << std::endl;
     getch();
     system("cls");
     printStats();
+    std::cout << "\n";
     printCharDialogue("Hamlet");
-    std::cout << "\nI have one more work to finish before I die!" << std::endl;
+    std::cout << "I have one more work to finish before I die!" << std::endl;
     std::cout << "You make a swift throw of the sword and stirke Claudius." << std::endl;
     std::cout << "After that you make him drink the poison wine." << std::endl;
     getch();
