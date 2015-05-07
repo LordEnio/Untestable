@@ -531,6 +531,7 @@ Laertes::Laertes()
     setDmg(19);
     setPoison(false);
     setGertrudeEvent(false);
+    setBattleNum(1);
 
     setIsDead(false);
 }
@@ -559,6 +560,10 @@ void Laertes::setPoison(bool p)
     poison = p;
 }
 
+void Laertes::setBattleNum(int b)
+{
+    battleNum = b;
+}
 
 void Laertes::setIsDead(bool d)
 {
@@ -611,6 +616,11 @@ void Laertes::setGertrudeEvent(bool g)
 bool Laertes::getGertrudeEvent()
 {
     return gertrudeEvent;
+}
+
+int Laertes::getBattleNum()
+{
+    return battleNum;
 }
 
 int Laertes::standardAttack()

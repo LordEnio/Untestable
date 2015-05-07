@@ -1839,6 +1839,10 @@ int storyDialogue(int storyNum)
      	std::cout << "AAAAAAAAA!!!!!!!!" << std::endl;
      	printCharDialogue("Hamlet");
      	std::cout << "AAAAAAAAA!!!!!!!!" << std::endl;
+     	LaertesBattle();
+
+     	storyNum = 26;
+     	goto endSwitch;
 
      case 26:
 
@@ -1878,7 +1882,7 @@ int storyDialogue(int storyNum)
         printCharDialogue("Laertes");
         std::cout << "I accept but we must still fight." << std::endl;
 
-        LaertesBattle();
+        LaertesFinalBattle();
 
     }
 

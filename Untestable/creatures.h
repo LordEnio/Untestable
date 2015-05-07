@@ -153,6 +153,7 @@ private:
     unsigned int health;
     unsigned int maxHealth;
     unsigned int dmg;
+    int battleNum;
 
     bool poison;
     bool isDead;
@@ -167,6 +168,7 @@ public:
     void setPoison(bool);
     void setIsDead(bool);
     void setGertrudeEvent(bool);
+    void setBattleNum(int);
 
     int getHealth();
     int getMaxHealth();
@@ -174,6 +176,7 @@ public:
     bool getPoison();
     bool getIsDead();
     bool getGertrudeEvent();
+    int getBattleNum();
     bool checkDeath();
     int standardAttack();
     int poisonAttack();
