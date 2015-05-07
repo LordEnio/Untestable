@@ -298,6 +298,15 @@ void oldManBattle()
         }
         oldMan1.setIsDead(oldMan1.checkDeath());
     }
+    system("cls");
+    printStats();
+    std::cout << "You beat the old man!" << std::endl;
+    std::cout << "You earn 10 exp points!!" << std::endl;
+    std::cout << "You take the liquid he dropped." << std::endl;
+    std::cout << "You suddenly lose consciousness, and wake up to thugs." << std::endl;
+    std::cout << "It seems like you traveled back in time!" << std::endl;
+    std::cout << "***Hint: Next time you can press 3 to neither take the liquid nor\n jump the man, and instead get back into the game." << std::endl;
+    
 }
 
 void PoloniusBattle()
