@@ -1740,6 +1740,51 @@ int storyDialogue(int storyNum)
      	printCharDialogue("Hamlet");
         getch();
 
+     case 26:
+
+        system("cls");
+        printStats();
+
+        std::cout << "\nYou tell Horatio about all of your adventures out of Denmark." << std::endl;
+
+        printCharDialogue("You");
+        std::cout << "And you'll never guess what else, I found a letter to have me killed." << std::endl;
+        std::cout << "So I decided to pull a meme and changed the names to Rosencrantz\n";
+        std::cout << "and Guidenstern." << std::endl;
+        std::cout << "I am kinda sorry about Laertes though, I didn\'t want him to be\n";
+        std::cout << "caught up in all of this. I will find a way to make it better." << std::endl;
+
+        std::cout << "\nOsric, a member of the court, approaches you.\n" << std::endl;
+
+        printCharDialogue("Osric");
+        std::cout << "Hello Hamlet, Laertes would like to challenge you to a friendly duel." << std::endl;
+        std::cout << "Do you accept this challenge?" << std::endl;
+        getch();
+
+        printCharDialogue("You");
+        std::cout << "Of course";
+        getch();
+
+        system("cls");
+        printStats();
+
+        std::cout << "\nEveryone gathers around to watch the duel of the century." << std::endl;
+        std::cout << "Hamlet vs Laertes aka Pac-man vs Money" << std::endl;
+        getch();
+
+        printCharDialogue("You");
+        std::cout << "Ehh, Laertes I'm sorry. I am just an enemy of my madness." << std::endl;
+
+        printCharDialogue("Laertes");
+        std::cout << "I accept but we must still fight." << std::endl;
+
+
+
+
+
+
+
+
     }
 
     endSwitch:
