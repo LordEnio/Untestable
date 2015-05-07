@@ -112,6 +112,39 @@ class Claudius
         int getMaxHealth();
         int getDmg();
         bool getIsDead();
+
+        bool checkDeath();
+
+        int standardAttack();
+        int Attack();
+};
+
+class Polonius
+{
+    private:
+        unsigned int health;
+        unsigned int maxHealth;
+        unsigned int dmg;
+
+        bool isDead;
+
+    public:
+        Polonius();
+
+        void setHealth(int);
+        void setMaxHealth(int);
+        void setDmg(int);
+        void setIsDead(bool);
+
+        int getHealth();
+        int getMaxHealth();
+        int getDmg();
+        bool getIsDead();
+
+        bool checkDeath();
+
+        int standardAttack();
+        int Attack();
 };
 
 
