@@ -530,6 +530,7 @@ Laertes::Laertes()
     setMaxHealth(550);
     setDmg(19);
     setPoison(false);
+    setGertrudeEvent(false);
 
     setIsDead(false);
 }
@@ -600,6 +601,16 @@ bool Laertes::checkDeath()
     {
         return true;
     }
+}
+
+void Laertes::setGertrudeEvent(bool g)
+{
+    gertrudeEvent = g;
+}
+
+bool Laertes::getGertrudeEvent()
+{
+    return g;
 }
 
 int Laertes::standardAttack()
