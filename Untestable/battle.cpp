@@ -530,7 +530,8 @@ void LaertesFinalBattle()
 {
     system("cls");
     Laertes Laertes2;
-    Laertes2.setHealth(550);
+    Laertes2.setHealth(600);
+    Laertes2.setMaxHealth(600);
     Laertes2.setBattleNum(2);
 
     while (Laertes2.getIsDead() == false)
