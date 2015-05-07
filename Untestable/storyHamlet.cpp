@@ -1542,7 +1542,8 @@ int storyDialogue(int storyNum)
 	  std::cout << "You arrive at the castle ready to get your revenge when you find Claudius dead." << std::endl;
 	  getch();
 
-	  std::cout << "You end your life because you have failed your father\'s last wish." << std::endl;
+	  std::cout << "Laertes pulls off another batman and slits your throat." << std::endl;
+	  std::cout << "You die." << std::endl;
 
 	  Hamlet.setHealth(0);
 
@@ -1580,7 +1581,8 @@ int storyDialogue(int storyNum)
 	  std::cout << "You arrive at the castle ready to get your revenge when you find Claudius dead." << std::endl;
 	  getch();
 
-	  std::cout << "You end your life because you have failed your father\'s last wish." << std::endl;
+	  std::cout << "You go closer to look, but then the rope snaps and Claudius crushes you." << std::endl;
+	  std::cout << "You die." << std::endl;
 
 	  Hamlet.setHealth(0);
 
@@ -1627,7 +1629,8 @@ int storyDialogue(int storyNum)
 	  std::cout << "You arrive at the castle ready to get your revenge when you find Claudius dead." << std::endl;
 	  getch();
 
-	  std::cout << "You end your life because you have failed your father\'s last wish." << std::endl;
+	  std::cout << "You try to cut off his head for your prize,\n but instead you cut off your own head." << std::endl;
+	  std::cout << "You die." << std::endl;
 
 	  Hamlet.setHealth(0);
 
