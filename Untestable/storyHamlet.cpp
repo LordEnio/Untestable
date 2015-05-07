@@ -928,7 +928,7 @@ int storyDialogue(int storyNum)
             std::cout << "You have to remind them of their parts." << std::endl;
 
             std::cout << "\n1. The play's about a king killed by the queen. The queen then makes a \ndiplomatic marriage with the prince of Bosnia" << std::endl;
-            std::cout << "2. The play's about a king killed by his brother. The queen then marries the\nbrother." << std::endl;
+            std::cout << "2. The play's about a king killed by his companion. The queen then marries the\ntraitor." << std::endl;
             std::cout << "3. The play's about a king that kills the queen because she couldn't give\nbirth to a male heir" << std::endl;
 
             std::cin >> choice;
@@ -1233,7 +1233,16 @@ int storyDialogue(int storyNum)
 	    case 3:
 
             system("cls");
-	      //Duel against Polonius, Impossible
+            printStats();
+
+            std::cout << "\nYou call out to the man behind the curtain to duel you." << std::endl;
+            std::cout << "He accepts your challenge and shows himself." << std::endl;
+            getch();
+
+            std::cout << "Its Polonius!" << std::endl;
+            std::cout << "You get ready to fight him." << std::endl;
+
+            PoloniusBattle();
 
 
             }
@@ -1319,18 +1328,18 @@ int storyDialogue(int storyNum)
 	  storyNum = 20;
 
 	  goto endSwitch;
-	  
+
 	case 2:
 
         system("cls");
 	  //Battle with claudius
-	
+
 	}
     case 20:
 
       system("cls");
       printStats();
-      
+
       std::cout << "You feel like you should do something before you leave." << std::endl;
 
       std::cout << "\n1. Stop by and get something to eat." << std::endl;
@@ -1370,10 +1379,9 @@ int storyDialogue(int storyNum)
 	  system("cls");
 	  printStats();
 
-	  std::cout << "
-	  
+
 	}
-      
+
 
 
     }
