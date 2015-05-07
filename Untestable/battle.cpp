@@ -431,6 +431,7 @@ void LaertesBattle()
     {
         system("cls");
         printStats();
+        int battleNum = 1;
         int dmgDealt;
         int oldDmg;
         std::cout << "\nWhat would you like to do?\n" << std::endl;
@@ -531,6 +532,7 @@ void LaertesBattle()
 void LaertesFinalBattle()
 {
     system("cls");
+    int battleNum = 2;
     Laertes Laertes2;
 
 
