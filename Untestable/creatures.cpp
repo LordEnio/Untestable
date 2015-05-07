@@ -631,7 +631,7 @@ int Laertes::poisonAttack()
     col(7);
     std::cout << " to you!" << std::endl;
     std::cout << "The poison deals ";
-    col(12);
+    col(3);
     std::cout << dmgPoison;
     col(7);
     std::cout << " to you!" << std::endl;
