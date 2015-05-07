@@ -157,7 +157,7 @@
 
 1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\battle.h
 
-1430988219 source:c:\users\enio h\documents\github\main.cpp
+1430993591 source:c:\users\enio h\documents\github\main.cpp
 	<iostream>
 	<Windows.h>
 	<string>
@@ -175,7 +175,7 @@
 
 1430461660 c:\users\enio h\documents\github\untestable\global.h
 
-1430992384 source:c:\users\enio h\documents\github\untestable\battle.cpp
+1430993150 source:c:\users\enio h\documents\github\untestable\battle.cpp
 	"battle.h"
 	"player.h"
 	"screen.h"

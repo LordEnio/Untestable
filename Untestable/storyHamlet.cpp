@@ -1159,6 +1159,9 @@ int storyDialogue(int storyNum)
 
                     PoloniusBattle();
 
+                    system("cls");
+                    printStats();
+
                     std::cout << "\nYou see Polonius\'s body fall to the ground.\n" << std::endl;
 
                     printCharDialogue("You");
@@ -1207,9 +1210,8 @@ int storyDialogue(int storyNum)
                     std::cout << "Alright then. Goodnight mother." << std::endl;
                     getch();
 
-		    storyNum = 18;
+                    storyNum = 18;
 
-                    std::cout << "\n\n" << Hamlet.getScore();
 
                     getch();
 
@@ -1890,7 +1892,7 @@ int storyDialogue(int storyNum)
         std::cout << "I accept but we must still fight." << std::endl;
 
         LaertesFinalBattle();
-        
+
         system("cls");
         printStats();
         std::cout << "\n You fall to the ground." << std::endl;
@@ -1903,6 +1905,7 @@ int storyDialogue(int storyNum)
         getch();
         system("cls");
         printStats();
+        std::cout << "\n"
         printCharDialogue("Hamlet");
         std::cout << "Don't even think about drinking the poison!" << std::endl;
         printCharDialogue("Horatio");
@@ -1918,35 +1921,36 @@ int storyDialogue(int storyNum)
         getch();
         system("cls");
         printStats();
+        std::cout << "\n";
         printCharDialogue("Hamlet");
         std::cout << "Good to hear that you're cool." << std::endl;
         printCharDialogue("Hamlet");
         std::cout << "*Cough* You spit our blood." << std::endl;
         printCharDialogue("Hamlet");
-        std:cout << "I think this is the end of me." << std::endl;
+        std::cout << "I think this is the end of me." << std::endl;
         getch();
         system("cls");
         printStats();
         printCharDialogue("Horatio");
+        std::cout << "\n";
         std::cout << "MY FRIEND!!!!" << std::endl;
         std::cout <<"Fortinbras walks in the castle." << std::endl;
         std::cout << "He sees the numourous dead bodies on the ground." << std::endl;
         printCharDialogue("Fortinbras");
         std::cout << "Well that was easy." << std::endl;
         std::cout << "He declares himself the next king of Denmark." << std::endl;
-        std::cout << "Horatio is left to pass the story for generations to come..." << std:::endl;
+        std::cout << "Horatio is left to pass the story for generations to come..." << std::endl;
         getch();
-        
-        
+
         storyNum = 30;
-        break();
-        
+        goto endSwitch;
+
      case 30:
      	system("cls");
-        printStats();
-     	std::cout << "THE END....." << std::endl;
-     	
-     	break();
+
+     	std::cout << "THE END.....\n\n\n\n" << std::endl;
+
+     	exit(0);
 
     }
 
