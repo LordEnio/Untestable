@@ -526,8 +526,8 @@ int Polonius::Attack()
 
 Laertes::Laertes()
 {
-    setHealth(700);
-    setMaxHealth(700);
+    setHealth(550);
+    setMaxHealth(550);
     setDmg(19);
     setPoison(false);
 
