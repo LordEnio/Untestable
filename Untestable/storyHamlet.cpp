@@ -1596,7 +1596,7 @@ int storyDialogue(int storyNum)
 	  goto endSwitch;
 
 	}
-     
+
      case 23:
 
       system("cls");
@@ -1673,18 +1673,16 @@ int storyDialogue(int storyNum)
       storyNum = 24;
 
       goto endSwitch;
-	
+
 	}
-	
+
 
     case 24:
-
-        LaertesBattle();
 
       system("cls");
       printStats();
 
-          col(8);
+      col(8);
 	  std::cout << "\n              ";
 	  std::cout << "*** You are currently playing as";
 	  col(3);
@@ -1711,9 +1709,14 @@ int storyDialogue(int storyNum)
 	  std::cout << "                                               Hamlet";
 	  getch();
 
+	  storyNum = 25;
+
+	  goto endSwitch;
+
      case 25:
-     	system("cls")
+     	system("cls");
      	printStats();
+
      	col(8);
         std::cout << "\n              ";
         std::cout << "*** You are currently playing as";
@@ -1722,19 +1725,20 @@ int storyDialogue(int storyNum)
         col(8);
         std::cout << " ***\n" << std::endl;
         col(7);
-        
+
         printCharDialogue("Gravedigger");
      	std::cout << "Hey should this girl get a Christian burial?" << std::endl;
      	printCharDialogue("Other_digger");
      	std::cout << "Yeah she should." << std::endl;
+     	getch();
      	printCharDialogue("Gravedigger");
      	std::cout << "Why? she drowned herself." << std::endl;
      	printCharDialogue("Other_digger");
      	std::cout << "Yeah, I guess if she wasn't a young lady then\n she wouldn't even be considered." << std::endl;
      	std::cout << "***After the two cross some more conversations, Hamlet and Horatio comes in." << std::endl;
-     	std::cout << "***The Other grave digger "
+     	std::cout << "***The Other grave digger \n";
      	printCharDialogue("Hamlet");
-     	
+        getch();
 
     }
 
