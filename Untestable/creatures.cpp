@@ -529,6 +529,7 @@ Laertes::Laertes()
     setHealth(700);
     setMaxHealth(700);
     setDmg(19);
+    setPoison(false);
 
     setIsDead(false);
 }
@@ -552,6 +553,12 @@ void Laertes::setDmg(int d)
     dmg = d;
 }
 
+void Laertes::setPoison(bool p)
+{
+    poison = p;
+}
+
+
 void Laertes::setIsDead(bool d)
 {
     isDead = d;
@@ -570,6 +577,11 @@ int Laertes::getMaxHealth()
 int Laertes::getDmg()
 {
     return dmg;
+}
+
+bool Laertes::getPoison()
+{
+    return poison;
 }
 
 bool Laertes::getIsDead()
@@ -596,6 +608,35 @@ int Laertes::standardAttack()
     int dmgDealt;
     dmgDealt = rand() % 4 + dmg;
     return dmgDealt;
+}
+
+int Laertes::poisonAttack()
+{
+    srand(time(NULL));
+    int dmgDealt;
+    int dmgPoison;
+    int dmgTotal;
+    dmgPoison = rand() % 3 + 8;
+    dmgDealt = standardAttack();
+    dmgTotal = dmgDealt + dmgPoison;
+    if (Laertes::getPoison() == false)
+    {
+        std::cout << "Laertes stabs you with his poison sword!!\n You will now take continous damage!" << std:endl;
+        setPoison() = true;
+    }
+    
+    std::cout << "Laertes deals ";
+    col(12);
+    std::cout << dmgDealt;
+    col(7);
+    std::cout << " to you!" << std::endl;
+    std::cout << "The poison deals ";
+    col(12);
+    std::cout << dmgPoison;
+    col(7);
+    std::cout << " to you!" << std::endl;
+    return dmgTotal;
+    
 }
 
 
