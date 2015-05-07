@@ -335,7 +335,7 @@ int storyDialogue(int storyNum)
                     
                 case 3:
                 
-                	if (getGold() = 1)
+                	if (Hamlet.getGold() = 1)
                 	{
                 		storyNum = 3;
                 	}
