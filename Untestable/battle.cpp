@@ -431,6 +431,7 @@ void LaertesBattle()
     {
         system("cls");
         printStats();
+        int battleNum = 1;
         int dmgDealt;
         int oldDmg;
         std::cout << "\nWhat would you like to do?\n" << std::endl;
@@ -511,11 +512,11 @@ void LaertesBattle()
     Hamlet.setGold(Hamlet.getGold() + 5350);
     Hamlet.setExp(Hamlet.getExp() + 20);
     printStats();
-    std::cout << "\nYour rewards are: \n";
+    std::cout << "Your rewards are: \n";
     getch();
     system("cls");
     printStats();
-    std::cout << "\nYour rewards are: \n";
+    std::cout << "Your rewards are: \n";
     col(14);
     std::cout << "4200 Gold Coins" << std::endl;
     std::cout << "20 Experience Points" << std::endl;
@@ -529,8 +530,9 @@ void LaertesBattle()
 void LaertesFinalBattle()
 {
     system("cls");
+    int battleNum = 2;
     Laertes Laertes2;
-    Laertes2.setBattleNum(2);
+    Laertes2.setHealth(550);
 
 
     while (Laertes2.getIsDead() == false)
@@ -592,13 +594,12 @@ void LaertesFinalBattle()
         {
             system("cls");
             printStats();
-            std::cout << "\nYou win the first round.\n" << std::endl;
-            getch();
-            std::cout << "Gertrude celebrates, and moves a wine\nglass toward her lip to take a sip.\n" << std::endl;
+            std::cout << "\n You win the first round." << std::endl;
+            std::cout << "Gertrude celebrates, and moves a wine\n glass toward her lip to take a sip." << std::endl;
             getch();
             printCharDialogue("Claudius");
             std::cout << "Gertrude No!!!" << std::endl;
-            std::cout << "\nToo late for Claudius, she drinks a sip of wine." << std::endl;
+            std::cout << "Too late for Claudius, she drinks a sip of wine." << std::endl;
             std::cout << "You continue your battle." << std::endl;
             getch();
             Laertes2.setGertrudeEvent(true);
@@ -626,9 +627,16 @@ void LaertesFinalBattle()
 
     system("cls");
     printStats();
-    std::cout << "\nThe skirmish between you and Laertes is stopped" << std::endl;
-    std::cout << "Laertes spits blood at your shoes." << std::endl;
-    std::cout << "You exit the scene....." << std::endl;
+    std::cout << "Gertrude falls to the ground dead."
+    std::cout << "\nLaertes falls to the ground." << std::endl;
+    std::cout << "I am justly killed with my own treachery." << std::endl;
+    getch();
+    system("cls");
+    printStats();
+    printCharDialogue("Hamlet");
+    std::cout << "\nI have one more work to finish before I die!" << std::endl;
+    std::cout << "You make a swift throw of the sword and stirke Claudius." << std::endl;
+    std::cout << "After that you make him drink the poison wine." << std::endl;
     getch();
     system("cls");
     Hamlet.setGold(Hamlet.getGold() + 5350);
@@ -640,7 +648,7 @@ void LaertesFinalBattle()
     printStats();
     std::cout << "\nYour rewards are: \n";
     col(14);
-    std::cout << "4200 Gold Coins" << std::endl;
+    std::cout << "5350 Gold Coins" << std::endl;
     std::cout << "20 Experience Points" << std::endl;
     getch();
     system("cls");
