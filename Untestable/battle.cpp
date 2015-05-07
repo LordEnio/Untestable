@@ -482,6 +482,20 @@ void LaertesBattle()
         {
             break;
         }
+        else if (Laertes1.getHealth() < 450 && Laertes1.getGertrudeEvent() == false)
+        {
+            system("cls");
+            printStats();
+            std::cout << "\n You win the first round." << std::endl;
+            std::cout << "Gertrude celebrates, and moves a wine\n glass toward her lip to take a sip." << std::endl;
+            getch();
+            printCharDialogue("Claudius");
+            std::cout << "Gertrude No!!!" << std:endl;
+            std::cout << "Too late for Claudius, she drinks a sip of wine." << std::endl;
+            std::cout << "You continue your battle." << std::endl;
+            getch();
+            Laertes1.setGertrudeEvent(true);
+        }
         system("cls");
         printStats();
         std::cout << "\nLaertes moves into attack!\n" << std::endl;
