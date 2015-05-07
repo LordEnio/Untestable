@@ -411,8 +411,8 @@ int Claudius::Attack()
 
 Polonius::Polonius()
 {
-    setHealth(500);
-    setMaxHealth(500);
+    setHealth(400);
+    setMaxHealth(400);
     setDmg(15);
 
     setIsDead(false);
@@ -526,8 +526,8 @@ int Polonius::Attack()
 
 Laertes::Laertes()
 {
-    setHealth(700);
-    setMaxHealth(700);
+    setHealth(550);
+    setMaxHealth(550);
     setDmg(19);
     setPoison(false);
 
