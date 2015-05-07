@@ -299,3 +299,85 @@ void oldManBattle()
         oldMan1.setIsDead(oldMan1.checkDeath());
     }
 }
+
+void PoloniusBattle()
+{
+    system("cls");
+    Polonius Polonius1;
+
+
+    while (Polonius1.getIsDead() == false)
+    {
+        system("cls");
+        printStats();
+        int dmgDealt;
+        int oldDmg;
+        std::cout << "\nWhat would you like to do?\n" << std::endl;
+        std::cout << "1. Standard Attack " << std::endl;
+        std::cout << "2. Critical Attack " << std::endl;
+        std::cout << "3. Do Nothing " << std::endl;
+        int choice;
+        std::cin >> choice;
+        system("cls");
+        switch (choice)
+        {
+            case 1:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.Attack();
+                Polonius1.setHealth(Polonius1.getHealth() - dmgDealt);
+                std::cout << "\nPolonius\'s health is now at ";
+                col(2);
+                std::cout << Polonius1.getHealth() << "/" << Polonius1.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+            case 2:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.criticalAttack();
+                Polonius1.setHealth(Polonius1.getHealth() - dmgDealt);
+                std::cout << "\nPolonius\'s health is now at ";
+                col(2);
+                std::cout << Polonius1.getHealth() << "/" << Polonius1.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+            case 3:
+                break;
+            case 69:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.cheatAttack();
+                Polonius1.setHealth(Polonius1.getHealth() - dmgDealt);
+                std::cout << " \nPolonius\'s health is now at ";
+                col(2);
+                std::cout << Polonius1.getHealth() << "/" << Polonius1.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+        }
+        if (Polonius1.getHealth() <= 0)
+        {
+            break;
+        }
+        system("cls");
+        printStats();
+        std::cout << "\nPolonius moves into attack!\n" << std::endl;
+        getch();
+        oldDmg = Polonius1.Attack();
+        Hamlet.setHealth(Hamlet.getHealth() - oldDmg);
+        std::cout << "\nYour health is now at ";
+        col(2);
+        std::cout << Hamlet.getHealth() << "/" << Hamlet.getMaxHealth();
+        getch();
+        col(7);
+        Hamlet.checkDeath();
+        if (Hamlet.getIsDead() == true)
+        {
+            exit(0);
+        }
+        Polonius1.setIsDead(Polonius1.checkDeath());
+    }
+}
+
