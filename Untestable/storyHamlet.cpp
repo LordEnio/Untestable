@@ -1671,39 +1671,39 @@ int storyDialogue(int storyNum)
 	
 	}
 	
--
--    case 24:
--
--      system("cls");
--      printStats();
--
--      col(8);
--	  std::cout << "\n              ";
--	  std::cout << "*** You are currently playing as";
--	  col(3);
--	  std::cout << " Horatio";
--	  col(8);
--	  std::cout << " ***\n" << std::endl;
--	  col(7);
--
--	  std::cout << "While you are in the palace, some sailors approach you.\n" << std::endl;
--
--	  printCharDialogue("Sailors");
--	  std::cout << "We have some letters for you, from Hamlet." << std::endl;
--
--	  printCharDialogue("You");
--	  std::cout << "Thank you, carry on.\n" << std::endl;
--
--	  getch();
--
--	  printCharDialogue("Letter");
--	  std::cout << "Our ship for England was attacked by pirates. Luckily, I was the only\n";
--	  std::cout << "one taken prisoner and able to live. Get these letters to the King\n";
--	  std::cout << "and Queen and meet me later. \n";
--	  std::cout << "                                              <3 <3 <3\n";
--	  std::cout << "                                               Hamlet";
--	  getch();
--
+
+    case 24:
+
+      system("cls");
+      printStats();
+
+          col(8);
+	  std::cout << "\n              ";
+	  std::cout << "*** You are currently playing as";
+	  col(3);
+	  std::cout << " Horatio";
+	  col(8);
+	  std::cout << " ***\n" << std::endl;
+	  col(7);
+
+	  std::cout << "While you are in the palace, some sailors approach you.\n" << std::endl;
+
+	  printCharDialogue("Sailors");
+	  std::cout << "We have some letters for you, from Hamlet." << std::endl;
+
+	  printCharDialogue("You");
+	  std::cout << "Thank you, carry on.\n" << std::endl;
+
+	  getch();
+
+	  printCharDialogue("Letter");
+	  std::cout << "Our ship for England was attacked by pirates. Luckily, I was the only\n";
+	  std::cout << "one taken prisoner and able to live. Get these letters to the King\n";
+	  std::cout << "and Queen and meet me later. \n";
+	  std::cout << "                                              <3 <3 <3\n";
+	  std::cout << "                                               Hamlet";
+	  getch();
+
      case 25:
      	system("cls")
      	printStats();
