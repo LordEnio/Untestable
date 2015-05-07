@@ -650,7 +650,7 @@ int Laertes::Attack()
     int dmgDealt;
     srand(time(NULL));
     dmgDealt = standardAttack();
-    if (health < 200 && poison == false)
+    if (health < 200 && poison == false && battleNum == 2)
     {
         std::cout << "Laertes stabs you with his poison sword!!\n You will now take continous damage!" << std::endl;
         poison = true;
