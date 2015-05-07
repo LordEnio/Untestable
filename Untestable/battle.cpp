@@ -489,8 +489,6 @@ void LaertesBattle()
         getch();
         oldDmg = Laertes1.Attack();
         Hamlet.setHealth(Hamlet.getHealth() - oldDmg);
-        oldDmg = Laertes1.poisonAttack();
-        Hamlet.setHealth(Hamlet.getHealth() - oldDmg);
         std::cout << "\nYour health is now at ";
         col(2);
         std::cout << Hamlet.getHealth() << "/" << Hamlet.getMaxHealth();
