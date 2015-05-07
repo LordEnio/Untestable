@@ -157,7 +157,7 @@
 
 1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\battle.h
 
-1430986010 source:c:\users\enio h\documents\github\main.cpp
+1430987103 source:c:\users\enio h\documents\github\main.cpp
 	<iostream>
 	<Windows.h>
 	<string>
@@ -216,7 +216,7 @@
 	"screen.h"
 	"player.h"
 
-1430985997 source:c:\users\enio h\documents\github\untestable\storyhamlet.cpp
+1430987035 source:c:\users\enio h\documents\github\untestable\storyhamlet.cpp
 	"storyHamlet.h"
 	"player.h"
 	"screen.h"
