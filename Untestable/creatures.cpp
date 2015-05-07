@@ -411,8 +411,8 @@ int Claudius::Attack()
 
 Polonius::Polonius()
 {
-    setHealth(150);
-    setMaxHealth(150);
+    setHealth(500);
+    setMaxHealth(500);
     setDmg(15);
 
     setIsDead(false);
@@ -487,21 +487,49 @@ int Polonius::standardAttack()
 int Polonius::Attack()
 {
     int dmgDealt;
+    int attackChoice;
     srand(time(NULL));
-    dmgDealt = standardAttack();
-    std::cout << "Polonius deals ";
-    col(12);
-    std::cout << dmgDealt;
-    col(7);
-    std::cout << " to you!" << std::endl;
+    attackChoice = rand() % 6 + 1;
+    if (Polonius::getHealth() > 150)
+    {
+        dmgDealt = standardAttack();
+        std::cout << "Polonius deals ";
+        col(12);
+        std::cout << dmgDealt;
+        col(7);
+        std::cout << " to you!" << std::endl;
+    }
+    
+    else if(Polonius::getHealth() < 150 && attackChoice = 1 || attackChoice = 2 || attackChoice = 3 || attackChoice = 4 || attackChoice = 5)
+    {
+        dmgDealt = standardAttack();
+        std::cout << "Polonius deals ";
+        col(12);
+        std::cout << dmgDealt;
+        col(7);
+        std::cout << " to you!" << std::endl;
+    }
+    
+    else if(Polonius::getHealth() < 150 && attackChoice == 6)
+    {
+        dmgDealt = standardAttack() * (rand() % 2 + 2;) + rand() % 4;
+        std::cout << "Polonius goes BERSERK!! He deals ";
+        col(12);
+        std::cout << dmgDealt;
+        col(7);
+        std::cout << " to you!" << std::endl;
+    }
+    
+    
     return dmgDealt;
 }
 
-Laertes::Laertess()
+Laertes::Laertes()
 {
     setHealth(700);
     setMaxHealth(700);
     setDmg(19);
+    setPoison(false);
 
     setIsDead(false);
 }
@@ -525,6 +553,12 @@ void Laertes::setDmg(int d)
     dmg = d;
 }
 
+void Laertes::setPoison(bool p)
+{
+    poison = p;
+}
+
+
 void Laertes::setIsDead(bool d)
 {
     isDead = d;
@@ -543,6 +577,11 @@ int Laertes::getMaxHealth()
 int Laertes::getDmg()
 {
     return dmg;
+}
+
+bool Laertes::getPoison()
+{
+    return poison;
 }
 
 bool Laertes::getIsDead()
@@ -571,12 +610,40 @@ int Laertes::standardAttack()
     return dmgDealt;
 }
 
+int Laertes::poisonAttack()
+{
+    if (Laertes::getPoison() = true)
+    {
+        srand(time(NULL));
+        int dmgDealt;
+        dmgDealt = rand() % 3 + 8;
+
+        std::cout << "The poison deals ";
+        col(10);
+        std::cout << dmgDealt;
+        col(7);
+        std::cout << " to you!" << std::endl;
+        return dmgDealt;
+    }
+    
+    else()
+    {
+        return 0;
+    }
+    
+}
+
 
 int Laertes::Attack()
 {
     int dmgDealt;
     srand(time(NULL));
     dmgDealt = standardAttack();
+    if (Laertes::getHealth() < 200 && Laertes::getPoison() == false)
+    {
+        std::cout << "Laertes stabs you with his poison sword!!\n You will now take continous damage!" << std:endl;
+        setPoison() = true;
+    }
     std::cout << "Laertes deals ";
     col(12);
     std::cout << dmgDealt;

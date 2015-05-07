@@ -98,7 +98,7 @@ void battleActI()
         std::cout << "Your rewards are: \n" << std::endl;
         getch();
         system("cls");
-        Hamlet.setGold(Hamlet.getGold() + 3);
+        Hamlet.setGold(Hamlet.getGold() + 900);
         Hamlet.setExp(Hamlet.getExp() + 2);
         printStats();
         std::cout << "\nThe Ghostling fades away...\n" << std::endl;
@@ -204,13 +204,13 @@ void battleActI()
     std::cout << "Your rewards are: \n" << std::endl;
     getch();
     system("cls");
-    Hamlet.setGold(Hamlet.getGold() + 10);
+    Hamlet.setGold(Hamlet.getGold() + 2400);
     Hamlet.setExp(Hamlet.getExp() + 7);
     printStats();
     std::cout << "\nThe Ghost screams in anger, then quiets down...\n" << std::endl;
     std::cout << "Your rewards are: \n" << std::endl;
     col(14);
-    std::cout << "10 Gold Coins" << std::endl;
+    std::cout << "2400 Gold Coins" << std::endl;
     std::cout << "7 Experience Points" << std::endl;
     getch();
     system("cls");
@@ -298,6 +298,22 @@ void oldManBattle()
         }
         oldMan1.setIsDead(oldMan1.checkDeath());
     }
+    system("cls");
+    printStats();
+    std::cout << "You beat the old man!" << std::endl;
+    std::cout << "You earn 10 exp points!!" << std::endl;
+    std::cout << "You take the liquid he dropped." << std::endl;
+    std::cout << "You suddenly lose consciousness, and wake up to thugs." << std::endl;
+    std::cout << "It seems like you traveled back in time!" << std::endl;
+    std::cout << "***Hint: Next time you can press 3 to neither take the liquid nor\n jump the man, and instead get back into the game." << std::endl;
+    Hamlet.setGold(1);
+    Hamlet.setExp(Hamlet.getExp() + 13);
+    getch();
+    system("cls");
+    printStats();
+    Hamlet.levelUp();
+    getch();
+    
 }
 
 void PoloniusBattle()
@@ -379,5 +395,134 @@ void PoloniusBattle()
         }
         Polonius1.setIsDead(Polonius1.checkDeath());
     }
+    
+    system("cls");
+    printStats();
+    std::cout << "\nThe person you stabbed was Polonius!\n" <<;
+    std::cout << "He quietly falls to the ground." << std::endl
+    getch();
+    system("cls");
+    printStats();
+    std::cout << "Your rewards are: \n" << std::endl;
+    Hamlet.setGold(Hamlet.getGold() + 4200);
+    Hamlet.setExp(Hamlet.getExp() + 13);
+    getch();
+    system("cls");
+    printStats();
+    std::cout << "Your rewards are: \n" << std::endl;
+    col(14);
+    std::cout << "4200 Gold Coins" << std::endl;
+    std::cout << "13 Experience Points" << std::endl;
+    getch();
+    system("cls");
+    printStats();
+    Hamlet.levelUp();
+    getch();
 }
 
+void LaertesBattle()
+{
+    system("cls");
+    Laertes Laertes1;
+
+
+    while (Laertes1.getIsDead() == false)
+    {
+        system("cls");
+        printStats();
+        int dmgDealt;
+        int oldDmg;
+        std::cout << "\nWhat would you like to do?\n" << std::endl;
+        std::cout << "1. Standard Attack " << std::endl;
+        std::cout << "2. Critical Attack " << std::endl;
+        std::cout << "3. Do Nothing " << std::endl;
+        int choice;
+        std::cin >> choice;
+        system("cls");
+        switch (choice)
+        {
+            case 1:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.Attack();
+                Laertes1.setHealth(Laertes1.getHealth() - dmgDealt);
+                std::cout << "\nLaertes\'s health is now at ";
+                col(2);
+                std::cout << Laertes1.getHealth() << "/" << Laertes1.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+            case 2:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.criticalAttack();
+                Laertes1.setHealth(Laertes1.getHealth() - dmgDealt);
+                std::cout << "\nPolonius\'s health is now at ";
+                col(2);
+                std::cout << Laertes1.getHealth() << "/" << Laertes1.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+            case 3:
+                break;
+            case 69:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.cheatAttack();
+                Laertes1.setHealth(Laertes1.getHealth() - dmgDealt);
+                std::cout << " \nPolonius\'s health is now at ";
+                col(2);
+                std::cout << Laertes1.getHealth() << "/" << Laertes1.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+        }
+        if (Laertes1.getHealth() <= 0)
+        {
+            break;
+        }
+        system("cls");
+        printStats();
+        std::cout << "\nLaertes moves into attack!\n" << std::endl;
+        getch();
+        oldDmg = Laertes1.Attack();
+        Hamlet.setHealth(Hamlet.getHealth() - oldDmg);
+        oldDmg = Laertes1.poisonAttack();
+        Hamlet.setHealth(Hamlet.getHealth() - oldDmg);
+        std::cout << "\nYour health is now at ";
+        col(2);
+        std::cout << Hamlet.getHealth() << "/" << Hamlet.getMaxHealth();
+        getch();
+        col(7);
+        Hamlet.checkDeath();
+        if (Hamlet.getIsDead() == true)
+        {
+            exit(0);
+        }
+        Laertes1.setIsDead(Laertes1.checkDeath());
+    }
+    
+    system("cls");
+    printStats();
+    std::cout << "\nThe skirmish between you and Laertes is stopped\n" <<;
+    std::cout << "Laertes spits blood at your shoes." << std::endl
+    std::cout << "You exit the scene....." << std::endl;
+    getch();
+    system("cls");
+    Hamlet.setGold(Hamlet.getGold() + 5350);
+    Hamlet.setExp(Hamlet.getExp() + 20);
+    printStats();
+    std::cout << "Your rewards are: \n" <<;
+    getch();
+    system("cls");
+    printStats();
+    std::cout << "Your rewards are: \n" <<;
+    col(14);
+    std::cout << "4200 Gold Coins" << std::endl;
+    std::cout << "20 Experience Points" << std::endl;
+    getch();
+    system("cls");
+    printStats();
+    Hamlet.levelUp();
+    getch();
+}
