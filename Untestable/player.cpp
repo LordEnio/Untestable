@@ -149,11 +149,11 @@ void Player::levelUp()
         ++level;
         if (level % 3 == 0)
         {
-            maxHealth += 20 * level;
+            maxHealth += 25 * level;
         }
-        maxHealth += level*level + rand() % 8 + 40;
+        maxHealth += level*level + rand() % 8 + 70;
         health = maxHealth;
-        dmg += (rand() % 8 + 11) + level;
+        dmg += (rand() % 14 + 18) + level;
         std::cout << "\nCongratulations!! You have leveled up! Your new stats are...\n" << std::endl;
         getch();
         col(2);
