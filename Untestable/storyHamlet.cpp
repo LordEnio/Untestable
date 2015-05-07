@@ -335,7 +335,16 @@ int storyDialogue(int storyNum)
                     
                 case 3:
                 
-                	if ()
+                	if (getGold() = 1)
+                	{
+                		storyNum = 3;
+                	}
+                	
+                	else()
+                	{
+                		storyNum = 5;
+                	}
+                	break;
 
                 default:
 
