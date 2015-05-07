@@ -1838,11 +1838,17 @@ int storyDialogue(int storyNum)
      	printCharDialogue("Laertes");
      	std::cout << "AAAAAAAAA!!!!!!!!" << std::endl;
      	printCharDialogue("Hamlet");
+<<<<<<< HEAD
      	std::cout << "AAAAAAAAA!!!!!!!!" << std::endl;
      	LaertesBattle();
 
      	storyNum = 26;
      	goto endSwitch;
+=======
+     	std::cout << "AAAAAAAAA!!!!!!!!" << std:endl;
+     	
+     	laertesBattle();
+>>>>>>> 23b93b168a8650ecb470e534fd7154aa82042f1a
 
      case 26:
 
