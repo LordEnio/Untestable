@@ -292,7 +292,7 @@ int storyDialogue(int storyNum)
             system("cls");
             printStats();
 
-            std::cout << "\nYou reach Wittenburg, but you greeted by German thugs." << std::endl;
+            std::cout << "\nYou reach Wittenburg, but you are greeted by German thugs." << std::endl;
             std::cout << "They jump you hoping to take your money." << std::endl;
             std::cout << "You are beaten up and hopeless, when suddenly, an old man appears in front\nof you." << std::endl;
             std::cout << "\n";
@@ -332,6 +332,10 @@ int storyDialogue(int storyNum)
                     oldManBattle();
 
                     goto endSwitch;
+                    
+                case 3:
+                
+                	if ()
 
                 default:
 
