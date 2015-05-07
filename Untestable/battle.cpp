@@ -306,6 +306,13 @@ void oldManBattle()
     std::cout << "You suddenly lose consciousness, and wake up to thugs." << std::endl;
     std::cout << "It seems like you traveled back in time!" << std::endl;
     std::cout << "***Hint: Next time you can press 3 to neither take the liquid nor\n jump the man, and instead get back into the game." << std::endl;
+    Hamlet.setGold(1);
+    Hamlet.setExp(Hamlet.getExp() + 13);
+    getch();
+    system("cls");
+    printStats();
+    Hamlet.levelUp();
+    getch();
     
 }
 
