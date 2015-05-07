@@ -203,11 +203,11 @@ int Player::criticalAttack()
     int dmgDealt;
     srand(time(NULL));
     int attackChoice;
-    attackChoice = rand() % 4 + 1;
-    if (attackChoice == 2)
+    attackChoice = rand() % 5 + 1;
+    if (attackChoice == 1 || attackChoice == 2)
     {
         srand(time(NULL));
-        dmgDealt = (getDmg() + getDmg()) - rand() % 4 + 1;
+        dmgDealt = (rand() % 2 + 1) * (getDmg() + getDmg()) - (rand() %  2) * (dmg-4);
         std::cout << "You deal ";
         col(12);
         std::cout << dmgDealt;
