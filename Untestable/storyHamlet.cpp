@@ -1779,7 +1779,13 @@ int storyDialogue(int storyNum)
      	std::cout << "It seems like even the mightest or the most kind eventually go back to nature." << std::endl;
      	std::cout << "*** The King, Queen, Laertes, and dead Ophelia enter the graveyard." << std::endl;
      	std::cout << "You are silently watching them to see what's going on." << std::endl;
-     	printCharDialogue("");
+     	printCharDialogue("Laertes");
+     	std::cout << "Ophelia NO!!" << std::endl;
+     	std::cout << "***Laertes jumps onto Ophelia, crying." << std::endl;
+     	std::cout << "You pop out of nowhere." << std::endl;
+     	printCharDialogue("Hamlet");
+     	std::cout << "WHAT IS THIS MADNESS!!" << std::endl;
+     	
      	
 
      case 26:
