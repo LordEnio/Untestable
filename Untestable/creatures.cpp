@@ -313,7 +313,7 @@ int KingHamlet::Attack()
     int dmgDealt;
     srand(time(NULL));
     dmgDealt = standardAttack();
-    std::cout << "The Ghost ";
+    std::cout << "The Ghost deals ";
     col(12);
     std::cout << dmgDealt;
     col(7);
@@ -323,8 +323,8 @@ int KingHamlet::Attack()
 
 Claudius::Claudius()
 {
-    setHealth(400);
-    setMaxHealth(400);
+    setHealth(200);
+    setMaxHealth(200);
     setDmg(15);
 
     setIsDead(false);
@@ -373,3 +373,127 @@ bool Claudius::getIsDead()
 {
     return isDead;
 }
+
+bool Claudius::checkDeath()
+{
+    if (health > 0)
+    {
+        return false;
+    }
+
+    else
+    {
+        return true;
+    }
+}
+
+int Claudius::standardAttack()
+{
+    srand(time(NULL));
+    int dmgDealt;
+    dmgDealt = rand() % 4 + dmg;
+    return dmgDealt;
+}
+
+
+int Claudius::Attack()
+{
+    int dmgDealt;
+    srand(time(NULL));
+    dmgDealt = standardAttack();
+    std::cout << "Claudius deals ";
+    col(12);
+    std::cout << dmgDealt;
+    col(7);
+    std::cout << " to you!" << std::endl;
+    return dmgDealt;
+}
+
+Polonius::Polonius()
+{
+    setHealth(150);
+    setMaxHealth(150);
+    setDmg(15);
+
+    setIsDead(false);
+}
+
+void Polonius::setHealth(int h)
+{
+    health = h;
+    if (health < 0)
+    {
+        health = 0;
+    }
+}
+
+void Polonius::setMaxHealth(int m)
+{
+    maxHealth = m;
+}
+
+void Polonius::setDmg(int d)
+{
+    dmg = d;
+}
+
+void Polonius::setIsDead(bool d)
+{
+    isDead = d;
+}
+
+int Polonius::getHealth()
+{
+    return health;
+}
+
+int Polonius::getMaxHealth()
+{
+    return maxHealth;
+}
+
+int Polonius::getDmg()
+{
+    return dmg;
+}
+
+bool Polonius::getIsDead()
+{
+    return isDead;
+}
+
+bool Polonius::checkDeath()
+{
+    if (health > 0)
+    {
+        return false;
+    }
+
+    else
+    {
+        return true;
+    }
+}
+
+int Polonius::standardAttack()
+{
+    srand(time(NULL));
+    int dmgDealt;
+    dmgDealt = rand() % 4 + dmg;
+    return dmgDealt;
+}
+
+
+int Polonius::Attack()
+{
+    int dmgDealt;
+    srand(time(NULL));
+    dmgDealt = standardAttack();
+    std::cout << "Polonius deals ";
+    col(12);
+    std::cout << dmgDealt;
+    col(7);
+    std::cout << " to you!" << std::endl;
+    return dmgDealt;
+}
+
