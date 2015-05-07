@@ -486,12 +486,13 @@ void LaertesBattle()
         {
             system("cls");
             printStats();
-            std::cout << "\n You win the first round." << std::endl;
-            std::cout << "Gertrude celebrates, and moves a wine\n glass toward her lip to take a sip." << std::endl;
+            std::cout << "\nYou win the first round.\n" << std::endl;
+            getch();
+            std::cout << "Gertrude celebrates, and moves a wine\nglass toward her lip to take a sip.\n" << std::endl;
             getch();
             printCharDialogue("Claudius");
             std::cout << "Gertrude No!!!" << std::endl;
-            std::cout << "Too late for Claudius, she drinks a sip of wine." << std::endl;
+            std::cout << "\nToo late for Claudius, she drinks a sip of wine." << std::endl;
             std::cout << "You continue your battle." << std::endl;
             getch();
             Laertes1.setGertrudeEvent(true);
@@ -527,11 +528,11 @@ void LaertesBattle()
     Hamlet.setGold(Hamlet.getGold() + 5350);
     Hamlet.setExp(Hamlet.getExp() + 20);
     printStats();
-    std::cout << "Your rewards are: \n";
+    std::cout << "\nYour rewards are: \n";
     getch();
     system("cls");
     printStats();
-    std::cout << "Your rewards are: \n";
+    std::cout << "\nYour rewards are: \n";
     col(14);
     std::cout << "4200 Gold Coins" << std::endl;
     std::cout << "20 Experience Points" << std::endl;

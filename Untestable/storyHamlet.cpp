@@ -1679,8 +1679,6 @@ int storyDialogue(int storyNum)
 
     case 24:
 
-        LaertesBattle();
-
       system("cls");
       printStats();
 
@@ -1735,9 +1733,14 @@ int storyDialogue(int storyNum)
      	std::cout << "Why? she drowned herself." << std::endl;
      	printCharDialogue("Other_digger");
      	std::cout << "Yeah, I guess if she wasn't a young lady then\n she wouldn't even be considered." << std::endl;
-     	std::cout << "***After the two cross some more conversations, Hamlet and Horatio comes in." << std::endl;
+     	std::cout << "\n***After the two cross some more conversations, Hamlet and Horatio comes in." << std::endl;
      	std::cout << "***The Other grave digger exits the scene." << std::endl;
      	getch();
+
+     	system("cls");
+     	printStats();
+     	     	std::cout << "\n";
+
      	printCharDialogue("Hamlet");
      	std::cout << "What man's the grave for?" << std::endl;
      	printCharDialogue("Gravedigger");
@@ -1783,7 +1786,7 @@ int storyDialogue(int storyNum)
 
      	system("cls");
      	printStats();
-
+     	std::cout << "\n";
      	printCharDialogue("Gravedigger");
      	std::cout << "Yes, indeed." << std::endl;
      	std::cout << "***You find a skull." << std::endl;
@@ -1795,8 +1798,8 @@ int storyDialogue(int storyNum)
      	printCharDialogue("Hamlet");
      	std::cout << "Yorick! I loved that guy! Oh, poor Yorick!" << std::endl;
      	printCharDialogue("Hamlet");
-     	std::cout << "It seems like even the mightest or the most kind eventually go back to nature." << std::endl;
-     	std::cout << "*** The King, Queen, Laertes, and dead Ophelia enter the graveyard." << std::endl;
+     	std::cout << "It seems like even the mightest or the most kind eventually go back\nto nature." << std::endl;
+     	std::cout << "\n*** The King, Queen, Laertes, and dead Ophelia enter the graveyard." << std::endl;
      	std::cout << "You are silently watching them to see what's going on." << std::endl;
      	getch();
      	printCharDialogue("");
@@ -1814,7 +1817,7 @@ int storyDialogue(int storyNum)
         system("cls");
         printStats();
 
-        std::cout << "\nYou tell Horatio about all of your adventures out of Denmark." << std::endl;
+        std::cout << "\nYou tell Horatio about all of your adventures out of Denmark.\n" << std::endl;
 
         printCharDialogue("You");
         std::cout << "And you'll never guess what else, I found a letter to have me killed." << std::endl;
@@ -1846,6 +1849,8 @@ int storyDialogue(int storyNum)
 
         printCharDialogue("Laertes");
         std::cout << "I accept but we must still fight." << std::endl;
+
+        LaertesBattle();
 
     }
 
