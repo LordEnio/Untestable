@@ -482,20 +482,6 @@ void LaertesBattle()
         {
             break;
         }
-        else if (Laertes1.getHealth() < 450 && Laertes1.getGertrudeEvent() == false)
-        {
-            system("cls");
-            printStats();
-            std::cout << "\n You win the first round." << std::endl;
-            std::cout << "Gertrude celebrates, and moves a wine\n glass toward her lip to take a sip." << std::endl;
-            getch();
-            printCharDialogue("Claudius");
-            std::cout << "Gertrude No!!!" << std::endl;
-            std::cout << "Too late for Claudius, she drinks a sip of wine." << std::endl;
-            std::cout << "You continue your battle." << std::endl;
-            getch();
-            Laertes1.setGertrudeEvent(true);
-        }
         system("cls");
         printStats();
         std::cout << "\nLaertes moves into attack!\n" << std::endl;
@@ -515,6 +501,127 @@ void LaertesBattle()
             exit(0);
         }
         Laertes1.setIsDead(Laertes1.checkDeath());
+    }
+
+    system("cls");
+    printStats();
+    std::cout << "\nThe skirmish between you and Laertes is stopped" << std::endl;
+    std::cout << "Laertes spits blood at your shoes." << std::endl;
+    std::cout << "You exit the scene....." << std::endl;
+    getch();
+    system("cls");
+    Hamlet.setGold(Hamlet.getGold() + 5350);
+    Hamlet.setExp(Hamlet.getExp() + 20);
+    printStats();
+    std::cout << "Your rewards are: \n";
+    getch();
+    system("cls");
+    printStats();
+    std::cout << "Your rewards are: \n";
+    col(14);
+    std::cout << "4200 Gold Coins" << std::endl;
+    std::cout << "20 Experience Points" << std::endl;
+    getch();
+    system("cls");
+    printStats();
+    Hamlet.levelUp();
+    getch();
+}
+
+void LaertesFinalBattle()
+{
+    system("cls");
+    Laertes Laertes2;
+
+
+    while (Laertes2.getIsDead() == false)
+    {
+        system("cls");
+        printStats();
+        int dmgDealt;
+        int oldDmg;
+        std::cout << "\nWhat would you like to do?\n" << std::endl;
+        std::cout << "1. Standard Attack " << std::endl;
+        std::cout << "2. Critical Attack " << std::endl;
+        std::cout << "3. Do Nothing " << std::endl;
+        int choice;
+        std::cin >> choice;
+        system("cls");
+        switch (choice)
+        {
+            case 1:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.Attack();
+                Laertes2.setHealth(Laertes2.getHealth() - dmgDealt);
+                std::cout << "\nLaertes\'s health is now at ";
+                col(2);
+                std::cout << Laertes2.getHealth() << "/" << Laertes2.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+            case 2:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.criticalAttack();
+                Laertes2.setHealth(Laertes2.getHealth() - dmgDealt);
+                std::cout << "\nLaertes\'s health is now at ";
+                col(2);
+                std::cout << Laertes2.getHealth() << "/" << Laertes2.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+            case 3:
+                break;
+            case 69:
+                printStats();
+                std::cout << "\n";
+                dmgDealt = Hamlet.cheatAttack();
+                Laertes2.setHealth(Laertes2.getHealth() - dmgDealt);
+                std::cout << " \nLaertes\'s health is now at ";
+                col(2);
+                std::cout << Laertes2.getHealth() << "/" << Laertes2.getMaxHealth() << std::endl;
+                col(7);
+                getch();
+                break;
+        }
+        if (Laertes2.getHealth() <= 0)
+        {
+            break;
+        }
+        else if (Laertes2.getHealth() < 450 && Laertes2.getGertrudeEvent() == false)
+        {
+            system("cls");
+            printStats();
+            std::cout << "\n You win the first round." << std::endl;
+            std::cout << "Gertrude celebrates, and moves a wine\n glass toward her lip to take a sip." << std::endl;
+            getch();
+            printCharDialogue("Claudius");
+            std::cout << "Gertrude No!!!" << std::endl;
+            std::cout << "Too late for Claudius, she drinks a sip of wine." << std::endl;
+            std::cout << "You continue your battle." << std::endl;
+            getch();
+            Laertes2.setGertrudeEvent(true);
+        }
+        system("cls");
+        printStats();
+        std::cout << "\nLaertes moves into attack!\n" << std::endl;
+        getch();
+        oldDmg = Laertes2.Attack();
+        Hamlet.setHealth(Hamlet.getHealth() - oldDmg);
+        oldDmg = Laertes2.poisonAttack();
+        Hamlet.setHealth(Hamlet.getHealth() - oldDmg);
+        std::cout << "\nYour health is now at ";
+        col(2);
+        std::cout << Hamlet.getHealth() << "/" << Hamlet.getMaxHealth();
+        getch();
+        col(7);
+        Hamlet.checkDeath();
+        if (Hamlet.getIsDead() == true)
+        {
+            exit(0);
+        }
+        Laertes2.setIsDead(Laertes2.checkDeath());
     }
 
     system("cls");
