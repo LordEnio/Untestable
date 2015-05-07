@@ -157,7 +157,7 @@
 
 1430461660 c:\users\enio h\skydrive\documents\untestable\untestable\battle.h
 
-1430778644 source:c:\users\enio h\documents\github\main.cpp
+1430984474 source:c:\users\enio h\documents\github\main.cpp
 	<iostream>
 	<Windows.h>
 	<string>
@@ -175,7 +175,7 @@
 
 1430461660 c:\users\enio h\documents\github\untestable\global.h
 
-1430461660 source:c:\users\enio h\documents\github\untestable\battle.cpp
+1430984796 source:c:\users\enio h\documents\github\untestable\battle.cpp
 	"battle.h"
 	"player.h"
 	"screen.h"
@@ -184,11 +184,11 @@
 	<conio.h>
 	<windows.h>
 
-1430461660 c:\users\enio h\documents\github\untestable\battle.h
+1430984278 c:\users\enio h\documents\github\untestable\battle.h
 
-1430461660 c:\users\enio h\documents\github\untestable\creatures.h
+1430983706 c:\users\enio h\documents\github\untestable\creatures.h
 
-1430695225 source:c:\users\enio h\documents\github\untestable\creatures.cpp
+1430984574 source:c:\users\enio h\documents\github\untestable\creatures.cpp
 	"creatures.h"
 	"screen.h"
 	<stdio.h>
@@ -200,7 +200,7 @@
 	"global.h"
 	"player.h"
 
-1430695489 source:c:\users\enio h\documents\github\untestable\player.cpp
+1430982950 source:c:\users\enio h\documents\github\untestable\player.cpp
 	"player.h"
 	"screen.h"
 	<stdio.h>
@@ -216,7 +216,7 @@
 	"screen.h"
 	"player.h"
 
-1430894474 source:c:\users\enio h\documents\github\untestable\storyhamlet.cpp
+1430984696 source:c:\users\enio h\documents\github\untestable\storyhamlet.cpp
 	"storyHamlet.h"
 	"player.h"
 	"screen.h"

@@ -258,7 +258,7 @@ bool KingHamlet::getIsDead()
 
 bool KingHamlet::checkDeath()
 {
-    if (getHealth() > 0)
+    if (health > 0)
     {
         return false;
     }
@@ -333,7 +333,7 @@ Claudius::Claudius()
 void Claudius::setHealth(int h)
 {
     health = h;
-    if (health < 0)
+    if (h < 0)
     {
         health = 0;
     }
@@ -421,7 +421,7 @@ Polonius::Polonius()
 void Polonius::setHealth(int h)
 {
     health = h;
-    if (health < 0)
+    if (h < 0)
     {
         health = 0;
     }
@@ -490,7 +490,7 @@ int Polonius::Attack()
     int attackChoice;
     srand(time(NULL));
     attackChoice = rand() % 6 + 1;
-    if (Polonius::getHealth() > 150)
+    if (health > 150)
     {
         dmgDealt = standardAttack();
         std::cout << "Polonius deals ";
@@ -499,8 +499,8 @@ int Polonius::Attack()
         col(7);
         std::cout << " to you!" << std::endl;
     }
-    
-    else if(Polonius::getHealth() < 150 && attackChoice = 1 || attackChoice = 2 || attackChoice = 3 || attackChoice = 4 || attackChoice = 5)
+
+    else if(health < 150 && (attackChoice == 1 || attackChoice == 2 || attackChoice == 3 || attackChoice == 4 || attackChoice == 5))
     {
         dmgDealt = standardAttack();
         std::cout << "Polonius deals ";
@@ -509,18 +509,18 @@ int Polonius::Attack()
         col(7);
         std::cout << " to you!" << std::endl;
     }
-    
-    else if(Polonius::getHealth() < 150 && attackChoice == 6)
+
+    else if(health < 150 && attackChoice == 6)
     {
-        dmgDealt = standardAttack() * (rand() % 2 + 2;) + rand() % 4;
+        dmgDealt = standardAttack() * (rand() % 2 + 2);
         std::cout << "Polonius goes BERSERK!! He deals ";
         col(12);
         std::cout << dmgDealt;
         col(7);
         std::cout << " to you!" << std::endl;
     }
-    
-    
+
+
     return dmgDealt;
 }
 
@@ -537,7 +537,7 @@ Laertes::Laertes()
 void Laertes::setHealth(int h)
 {
     health = h;
-    if (health < 0)
+    if (h < 0)
     {
         health = 0;
     }
@@ -612,7 +612,7 @@ int Laertes::standardAttack()
 
 int Laertes::poisonAttack()
 {
-    if (Laertes::getPoison() = true)
+    if (poison == true)
     {
         srand(time(NULL));
         int dmgDealt;
@@ -625,12 +625,12 @@ int Laertes::poisonAttack()
         std::cout << " to you!" << std::endl;
         return dmgDealt;
     }
-    
-    else()
+
+    else
     {
         return 0;
     }
-    
+
 }
 
 
@@ -639,10 +639,10 @@ int Laertes::Attack()
     int dmgDealt;
     srand(time(NULL));
     dmgDealt = standardAttack();
-    if (Laertes::getHealth() < 200 && Laertes::getPoison() == false)
+    if (health < 200 && poison == false)
     {
-        std::cout << "Laertes stabs you with his poison sword!!\n You will now take continous damage!" << std:endl;
-        setPoison() = true;
+        std::cout << "Laertes stabs you with his poison sword!!\n You will now take continous damage!" << std::endl;
+        poison = true;
     }
     std::cout << "Laertes deals ";
     col(12);

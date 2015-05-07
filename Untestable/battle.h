@@ -3,6 +3,7 @@
 
 void oldManBattle();
 void battleActI();
+void PoloniusBattle();
 
 
 #endif // BATTLE_H

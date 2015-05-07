@@ -313,7 +313,7 @@ void oldManBattle()
     printStats();
     Hamlet.levelUp();
     getch();
-    
+
 }
 
 void PoloniusBattle()
@@ -395,11 +395,10 @@ void PoloniusBattle()
         }
         Polonius1.setIsDead(Polonius1.checkDeath());
     }
-    
+
     system("cls");
     printStats();
-    std::cout << "\nThe person you stabbed was Polonius!\n" <<;
-    std::cout << "He quietly falls to the ground." << std::endl
+    std::cout << "He quietly falls to the ground." << std::endl;
     getch();
     system("cls");
     printStats();
@@ -501,22 +500,22 @@ void LaertesBattle()
         }
         Laertes1.setIsDead(Laertes1.checkDeath());
     }
-    
+
     system("cls");
     printStats();
-    std::cout << "\nThe skirmish between you and Laertes is stopped\n" <<;
-    std::cout << "Laertes spits blood at your shoes." << std::endl
+    std::cout << "\nThe skirmish between you and Laertes is stopped" << std::endl;
+    std::cout << "Laertes spits blood at your shoes." << std::endl;
     std::cout << "You exit the scene....." << std::endl;
     getch();
     system("cls");
     Hamlet.setGold(Hamlet.getGold() + 5350);
     Hamlet.setExp(Hamlet.getExp() + 20);
     printStats();
-    std::cout << "Your rewards are: \n" <<;
+    std::cout << "Your rewards are: \n";
     getch();
     system("cls");
     printStats();
-    std::cout << "Your rewards are: \n" <<;
+    std::cout << "Your rewards are: \n";
     col(14);
     std::cout << "4200 Gold Coins" << std::endl;
     std::cout << "20 Experience Points" << std::endl;

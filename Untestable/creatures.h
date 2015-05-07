@@ -147,6 +147,34 @@ class Polonius
         int Attack();
 };
 
+class Laertes
+{
+private:
+    unsigned int health;
+    unsigned int maxHealth;
+    unsigned int dmg;
 
+    bool poison;
+    bool isDead;
+
+public:
+    Laertes();
+
+    void setHealth(int);
+    void setMaxHealth(int);
+    void setDmg(int);
+    void setPoison(bool);
+    void setIsDead(bool);
+
+    int getHealth();
+    int getMaxHealth();
+    int getDmg();
+    bool getPoison();
+    bool getIsDead();
+    bool checkDeath();
+    int standardAttack();
+    int poisonAttack();
+    int Attack();
+};
 
 #endif // CREATURES_H
