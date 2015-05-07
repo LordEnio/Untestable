@@ -156,6 +156,7 @@ private:
 
     bool poison;
     bool isDead;
+    bool gertrudeEvent;
 
 public:
     Laertes();
@@ -165,12 +166,14 @@ public:
     void setDmg(int);
     void setPoison(bool);
     void setIsDead(bool);
+    void setGertrudeEvent(bool);
 
     int getHealth();
     int getMaxHealth();
     int getDmg();
     bool getPoison();
     bool getIsDead();
+    bool getGertrudeEvent();
     bool checkDeath();
     int standardAttack();
     int poisonAttack();

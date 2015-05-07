@@ -1679,6 +1679,8 @@ int storyDialogue(int storyNum)
 
     case 24:
 
+        LaertesBattle();
+
       system("cls");
       printStats();
 
@@ -1714,7 +1716,7 @@ int storyDialogue(int storyNum)
 	  goto endSwitch;
 
        case 25:
-     	system("cls")
+     	system("cls");
      	printStats();
      	col(8);
         std::cout << "\n              ";
@@ -1724,7 +1726,7 @@ int storyDialogue(int storyNum)
         col(8);
         std::cout << " ***\n" << std::endl;
         col(7);
-        
+
         printCharDialogue("Gravedigger");
      	std::cout << "Hey should this girl get a Christian burial?" << std::endl;
      	printCharDialogue("Other_digger");
@@ -1735,37 +1737,53 @@ int storyDialogue(int storyNum)
      	std::cout << "Yeah, I guess if she wasn't a young lady then\n she wouldn't even be considered." << std::endl;
      	std::cout << "***After the two cross some more conversations, Hamlet and Horatio comes in." << std::endl;
      	std::cout << "***The Other grave digger exits the scene." << std::endl;
+     	getch();
      	printCharDialogue("Hamlet");
      	std::cout << "What man's the grave for?" << std::endl;
      	printCharDialogue("Gravedigger");
      	std::cout << "Aye not for any man sir." << std::endl;
      	printCharDialogue("Hamlet");
      	std::cout << "Then what woman?" << std::endl;
+     	getch();
      	printCharDialogue("Gravedigger");
      	std::cout << "For none neither." << std::endl;
      	printCharDialogue("Hamlet");
      	std::cout << "Then who?" << std::endl;
      	printCharDialogue("Gravedigger");
      	std::cout << "A woman, but she is dead now." << std::endl;
+     	getch();
+
+     	system("cls");
+     	printStats();
+
+     	std::cout << "\n";
+
      	printCharDialogue("Hamlet");
-     	std::cout << "You're playing with me." << std:endl;
+     	std::cout << "You're playing with me." << std::endl;
      	std::cout << "How long have you been doing this job?" << std::endl;
      	printCharDialogue("Gravedigger");
      	std::cout << "You don't know? Any fool can tell that!" << std::endl;
      	printCharDialogue("Gravedigger");
      	std::cout << "I've been serving ever since prince Hamlet was born." << std::endl;
+     	getch();
      	printCharDialogue("Gravedigger");
      	std::cout << "It doesn't matter anymore though, he's going to england. " << std::endl;
      	printCharDialogue("Hamlet");
      	std::cout << "Why is he going to England?" << std::endl;
      	printCharDialogue("Gravedigger");
      	std::cout << "Because he was mad. He should recover his sanity\n there. It doesn't matter though..." << std::endl;
+     	getch();
      	printCharDialogue("Hamlet");
      	std::cout << "How come?" << std::endl;
      	printCharDialogue("Gravedigger");
      	std::cout << "He won't last in England,\n there are a lot of crazy people there." << std::endl;
      	printCharDialogue("Hamlet");
      	std::cout << "Oh, is that so?" << std::endl;
+     	getch();
+
+     	system("cls");
+     	printStats();
+
      	printCharDialogue("Gravedigger");
      	std::cout << "Yes, indeed." << std::endl;
      	std::cout << "***You find a skull." << std::endl;
@@ -1773,14 +1791,16 @@ int storyDialogue(int storyNum)
      	std::cout << "Oh, whose skull is this?" << std::endl;
      	printCharDialogue("Gravedigger");
      	std::cout << "Yorick's" << std::endl;
+     	getch();
      	printCharDialogue("Hamlet");
      	std::cout << "Yorick! I loved that guy! Oh, poor Yorick!" << std::endl;
      	printCharDialogue("Hamlet");
      	std::cout << "It seems like even the mightest or the most kind eventually go back to nature." << std::endl;
      	std::cout << "*** The King, Queen, Laertes, and dead Ophelia enter the graveyard." << std::endl;
      	std::cout << "You are silently watching them to see what's going on." << std::endl;
+     	getch();
      	printCharDialogue("");
-     	
+
 
      case 26:
 

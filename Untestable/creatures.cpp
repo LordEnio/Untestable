@@ -610,7 +610,7 @@ void Laertes::setGertrudeEvent(bool g)
 
 bool Laertes::getGertrudeEvent()
 {
-    return g;
+    return gertrudeEvent;
 }
 
 int Laertes::standardAttack()
