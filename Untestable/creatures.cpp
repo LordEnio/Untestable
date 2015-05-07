@@ -612,30 +612,24 @@ int Laertes::standardAttack()
 
 int Laertes::poisonAttack()
 {
-    srand(time(NULL));
-    int dmgDealt;
-    int dmgPoison;
-    int dmgTotal;
-    dmgPoison = rand() % 3 + 8;
-    dmgDealt = standardAttack();
-    dmgTotal = dmgDealt + dmgPoison;
-    if (Laertes::getPoison() == false)
+    if (Laertes::getPoison() = true)
     {
-        std::cout << "Laertes stabs you with his poison sword!!\n You will now take continous damage!" << std:endl;
-        setPoison() = true;
+        srand(time(NULL));
+        int dmgDealt;
+        dmgDealt = rand() % 3 + 8;
+
+        std::cout << "The poison deals ";
+        col(10);
+        std::cout << dmgDealt;
+        col(7);
+        std::cout << " to you!" << std::endl;
+        return dmgDealt;
     }
     
-    std::cout << "Laertes deals ";
-    col(12);
-    std::cout << dmgDealt;
-    col(7);
-    std::cout << " to you!" << std::endl;
-    std::cout << "The poison deals ";
-    col(10);
-    std::cout << dmgPoison;
-    col(7);
-    std::cout << " to you!" << std::endl;
-    return dmgTotal;
+    else()
+    {
+        return 0;
+    }
     
 }
 
@@ -645,6 +639,11 @@ int Laertes::Attack()
     int dmgDealt;
     srand(time(NULL));
     dmgDealt = standardAttack();
+    if (Laertes::getHealth() < 200 && Laertes::getPoison() == false)
+    {
+        std::cout << "Laertes stabs you with his poison sword!!\n You will now take continous damage!" << std:endl;
+        setPoison() = true;
+    }
     std::cout << "Laertes deals ";
     col(12);
     std::cout << dmgDealt;
