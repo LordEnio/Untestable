@@ -431,7 +431,6 @@ void LaertesBattle()
     {
         system("cls");
         printStats();
-        int battleNum = 1;
         int dmgDealt;
         int oldDmg;
         std::cout << "\nWhat would you like to do?\n" << std::endl;
@@ -512,11 +511,11 @@ void LaertesBattle()
     Hamlet.setGold(Hamlet.getGold() + 5350);
     Hamlet.setExp(Hamlet.getExp() + 20);
     printStats();
-    std::cout << "Your rewards are: \n";
+    std::cout << "\nYour rewards are: \n";
     getch();
     system("cls");
     printStats();
-    std::cout << "Your rewards are: \n";
+    std::cout << "\nYour rewards are: \n\n";
     col(14);
     std::cout << "4200 Gold Coins" << std::endl;
     std::cout << "20 Experience Points" << std::endl;
@@ -530,10 +529,9 @@ void LaertesBattle()
 void LaertesFinalBattle()
 {
     system("cls");
-    int battleNum = 2;
     Laertes Laertes2;
     Laertes2.setHealth(550);
-
+    Laertes2.setBattleNum(2);
 
     while (Laertes2.getIsDead() == false)
     {
@@ -627,7 +625,7 @@ void LaertesFinalBattle()
 
     system("cls");
     printStats();
-    std::cout << "Gertrude falls to the ground dead."
+    std::cout << "Gertrude falls to the ground dead.";
     std::cout << "\nLaertes falls to the ground." << std::endl;
     std::cout << "I am justly killed with my own treachery." << std::endl;
     getch();

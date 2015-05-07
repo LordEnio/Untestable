@@ -1798,8 +1798,9 @@ int storyDialogue(int storyNum)
 
      	system("cls");
      	printStats();
+     	std::cout << "\n";
      	printCharDialogue("Hamlet");
-     	std::cout << "\nYorick! I loved that guy! Oh, poor Yorick!" << std::endl;
+     	std::cout << "Yorick! I loved that guy! Oh, poor Yorick!" << std::endl;
      	printCharDialogue("Hamlet");
      	std::cout << "It seems like even the mightest or the most kind eventually go back\nto nature." << std::endl;
      	std::cout << "\n*** The King, Queen, Laertes, and dead Ophelia enter the graveyard." << std::endl;
@@ -1808,9 +1809,9 @@ int storyDialogue(int storyNum)
      	system("cls");
      	printStats();
 
-
+        std::cout << "\n";
      	printCharDialogue("Laertes");
-     	std::cout << "\nOphelia NO!!" << std::endl;
+     	std::cout << "Ophelia NO!!" << std::endl;
      	std::cout << "\n***Laertes jumps onto Ophelia, crying." << std::endl;
      	std::cout << "\nYou pop out of nowhere." << std::endl;
      	printCharDialogue("Hamlet");
@@ -1825,6 +1826,7 @@ int storyDialogue(int storyNum)
      	system("cls");
      	printStats();
 
+        std::cout << "\n";
      	printCharDialogue("Hamlet");
      	std::cout << "SHUT UP LAERTES!!" << std::endl;
      	printCharDialogue("Hamlet");
@@ -1838,17 +1840,16 @@ int storyDialogue(int storyNum)
      	printCharDialogue("Laertes");
      	std::cout << "AAAAAAAAA!!!!!!!!" << std::endl;
      	printCharDialogue("Hamlet");
-<<<<<<< HEAD
      	std::cout << "AAAAAAAAA!!!!!!!!" << std::endl;
+     	getch();
      	LaertesBattle();
 
      	storyNum = 26;
      	goto endSwitch;
-=======
-     	std::cout << "AAAAAAAAA!!!!!!!!" << std:endl;
-     	
-     	laertesBattle();
->>>>>>> 23b93b168a8650ecb470e534fd7154aa82042f1a
+
+     	std::cout << "AAAAAAAAA!!!!!!!!" << std::endl;
+
+     	LaertesBattle();
 
      case 26:
 
