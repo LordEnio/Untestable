@@ -1591,8 +1591,8 @@ int storyDialogue(int storyNum)
 	  goto endSwitch;
 
 	}
-
-    case 23:
+     
+     case 23:
 
       system("cls");
       printStats();
@@ -1668,41 +1668,33 @@ int storyDialogue(int storyNum)
       storyNum = 24;
 
       goto endSwitch;
+
 	}
+	
 
-    case 24:
-
-      system("cls");
-      printStats();
-
-      col(8);
-	  std::cout << "\n              ";
-	  std::cout << "*** You are currently playing as";
-	  col(3);
-	  std::cout << " Horatio";
-	  col(8);
-	  std::cout << " ***\n" << std::endl;
-	  col(7);
-
-	  std::cout << "While you are in the palace, some sailors approach you.\n" << std::endl;
-
-	  printCharDialogue("Sailors");
-	  std::cout << "We have some letters for you, from Hamlet." << std::endl;
-
-	  printCharDialogue("You");
-	  std::cout << "Thank you, carry on.\n" << std::endl;
-
-	  getch();
-
-	  printCharDialogue("Letter");
-	  std::cout << "Our ship for England was attacked by pirates. Luckily, I was the only\n";
-	  std::cout << "one taken prisoner and able to live. Get these letters to the King\n";
-	  std::cout << "and Queen and meet me later. \n";
-	  std::cout << "                                              <3 <3 <3\n";
-	  std::cout << "                                               Hamlet";
-	  getch();
-
-
+     case 30:
+     	system("cls")
+     	printStats();
+     	col(8);
+        std::cout << "\n              ";
+        std::cout << "*** You are currently playing as";
+        col(3);
+        std::cout << " Hamlet";
+        col(8);
+        std::cout << " ***\n" << std::endl;
+        col(7);
+        
+        printCharDialogue("Gravedigger");
+     	std::cout << "Hey should this girl get a Christian burial?" << std::endl;
+     	printCharDialogue("Other_digger");
+     	std::cout << "Yeah she should." << std::endl;
+     	printCharDialogue("Gravedigger");
+     	std::cout << "Why? she drowned herself." << std::endl;
+     	printCharDialogue("Other_digger");
+     	std::cout << "Yeah, I guess if she wasn't a young lady then\n she wouldn't even be considered." << std::endl;
+     	std::cout << "***After the two cross some more conversations, Hamlet and Horatio comes in." << std::endl;
+     	printCharDialogue("Other_digger");
+     	
 
     }
 
