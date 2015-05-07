@@ -1725,7 +1725,8 @@ int storyDialogue(int storyNum)
      	printCharDialogue("Other_digger");
      	std::cout << "Yeah, I guess if she wasn't a young lady then\n she wouldn't even be considered." << std::endl;
      	std::cout << "***After the two cross some more conversations, Hamlet and Horatio comes in." << std::endl;
-     	printCharDialogue("Other_digger");
+     	std::cout << "***The Other grave digger "
+     	printCharDialogue("Hamlet");
      	
 
     }
