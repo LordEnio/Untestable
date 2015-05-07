@@ -1802,6 +1802,13 @@ int storyDialogue(int storyNum)
      	printCharDialogue("");
 
 
+     	printCharDialogue("Laertes");
+     	std::cout << "Ophelia NO!!" << std::endl;
+     	std::cout << "***Laertes jumps onto Ophelia, crying." << std::endl;
+     	std::cout << "You pop out of nowhere." << std::endl;
+     	printCharDialogue("Hamlet");
+     	std::cout << "WHAT IS THIS MADNESS!!" << std::endl;
+
      case 26:
 
         system("cls");
@@ -1839,13 +1846,6 @@ int storyDialogue(int storyNum)
 
         printCharDialogue("Laertes");
         std::cout << "I accept but we must still fight." << std::endl;
-
-
-
-
-
-
-
 
     }
 
